@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import { useState } from 'react'
-import { projects, categories } from '@/data/projects'
+import type { Metadata } from "next";
+import Image from "next/image";
+import { useState } from "react";
+import { projects, categories } from "@/data/projects";
 
 export default function Portafolio() {
-  const [activeCategory, setActiveCategory] = useState('Todo')
+  const [activeCategory, setActiveCategory] = useState("Todo");
 
   const filtered =
-    activeCategory === 'Todo'
+    activeCategory === "Todo"
       ? projects
-      : projects.filter((p) => p.category === activeCategory)
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section className="content__page content__portfolio">
@@ -24,7 +24,7 @@ export default function Portafolio() {
           {categories.map((cat) => (
             <li
               key={cat}
-              className={`portfolio__option${activeCategory === cat ? ' portfolio__option--active' : ''}`}
+              className={`portfolio__option${activeCategory === cat ? " portfolio__option--active" : ""}`}
             >
               <button
                 className="portfolio__link"
@@ -42,13 +42,15 @@ export default function Portafolio() {
           <figure key={project.id} className="gallery__item">
             <div className="gallery__container-image">
               <a href={project.url} className="gallery__link">
-                <Image
-                  src={project.image}
-                  className="gallery__image"
-                  alt={project.title}
-                  width={400}
-                  height={300}
-                />
+                <div className="gallery__image-wrapper">
+                  <Image
+                    src={project.image}
+                    className="gallery__image"
+                    alt={project.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
               </a>
             </div>
             <figcaption className="gallery__title">{project.title}</figcaption>
@@ -58,5 +60,5 @@ export default function Portafolio() {
         ))}
       </section>
     </section>
-  )
+  );
 }
