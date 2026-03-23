@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import { personal } from '@/data/personal'
+import type { Metadata } from "next";
+import Image from "next/image";
+import { personal } from "@/data/personal";
 
 export const metadata: Metadata = {
-  title: 'Sobre Mí',
-  description: 'Información personal y profesional de Juan Fontalvo, Desarrollador Web.',
-}
+  title: "Sobre Mí",
+  description:
+    "Información personal y profesional de Juan Fontalvo, Desarrollador Web.",
+};
 
 export default function SobreMi() {
   return (
@@ -32,20 +33,12 @@ export default function SobreMi() {
               <span className="personal-info__value">{personal.country}</span>
             </li>
             <li className="personal-info__option">
-              <span className="personal-info__title">Dirección</span>
-              <span className="personal-info__value">{personal.address}</span>
-            </li>
-            <li className="personal-info__option">
               <span className="personal-info__title">Municipio</span>
               <span className="personal-info__value">{personal.city}</span>
             </li>
             <li className="personal-info__option">
               <span className="personal-info__title">Correo</span>
               <span className="personal-info__value">{personal.email}</span>
-            </li>
-            <li className="personal-info__option">
-              <span className="personal-info__title">Teléfono</span>
-              <span className="personal-info__value">{personal.phone}</span>
             </li>
           </ul>
         </div>
@@ -66,8 +59,8 @@ export default function SobreMi() {
             <div className="service__content">
               <h3 className="service__title">Programación</h3>
               <p className="service__description">
-                Desarrollo de aplicaciones web y soluciones tecnológicas a medida con las
-                mejores prácticas del sector.
+                Desarrollo de aplicaciones web y soluciones tecnológicas a
+                medida con las mejores prácticas del sector.
               </p>
             </div>
           </article>
@@ -78,8 +71,8 @@ export default function SobreMi() {
             <div className="service__content">
               <h3 className="service__title">Formación</h3>
               <p className="service__description">
-                Enseñanza de programación y desarrollo web a estudiantes y profesionales
-                que quieren crecer en el área tecnológica.
+                Enseñanza de programación y desarrollo web a estudiantes y
+                profesionales que quieren crecer en el área tecnológica.
               </p>
             </div>
           </article>
@@ -90,8 +83,8 @@ export default function SobreMi() {
             <div className="service__content">
               <h3 className="service__title">Desarrollo Web</h3>
               <p className="service__description">
-                Creación de sitios web modernos, responsivos y optimizados usando
-                tecnologías actuales como React, Next.js y más.
+                Creación de sitios web modernos, responsivos y optimizados
+                usando tecnologías actuales como React, Next.js y más.
               </p>
             </div>
           </article>
@@ -102,8 +95,8 @@ export default function SobreMi() {
             <div className="service__content">
               <h3 className="service__title">Administración</h3>
               <p className="service__description">
-                Gestión y mantenimiento de sistemas informáticos, redes y servidores
-                para empresas y particulares.
+                Gestión y mantenimiento de sistemas informáticos, redes y
+                servidores para empresas y particulares.
               </p>
             </div>
           </article>
@@ -128,8 +121,8 @@ export default function SobreMi() {
             </div>
             <div className="review__description">
               <p className="review__text">
-                Excelente profesional, entregó el proyecto a tiempo y con una calidad
-                excepcional. Muy recomendado.
+                Excelente profesional, entregó el proyecto a tiempo y con una
+                calidad excepcional. Muy recomendado.
               </p>
             </div>
             <div className="review__author">
@@ -154,8 +147,8 @@ export default function SobreMi() {
             </div>
             <div className="review__description">
               <p className="review__text">
-                Gran desarrollador, con mucho conocimiento técnico y excelente comunicación
-                durante todo el proceso.
+                Gran desarrollador, con mucho conocimiento técnico y excelente
+                comunicación durante todo el proceso.
               </p>
             </div>
             <div className="review__author">
@@ -179,7 +172,12 @@ export default function SobreMi() {
         <div className="clients__container">
           {[1, 2, 3, 4, 5].map((n) => (
             <article key={n} className="clients__item">
-              <a href="#" className="clients__link" target="_blank" rel="noopener noreferrer">
+              <a
+                href="#"
+                className="clients__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src={`/assets/img/cliente-${n}.png`}
                   className="clients__image"
@@ -208,7 +206,9 @@ export default function SobreMi() {
               <small className="prices__advice">Al mes</small>
             </div>
             <div className="prices__buy">
-              <a href="#" className="prices__btn">Prueba Gratis</a>
+              <a href="#" className="prices__btn">
+                Prueba Gratis
+              </a>
             </div>
             <div className="prices__reward">Un curso de desarrollo Web</div>
             <div className="prices__reward">Soporte a preguntas y dudas</div>
@@ -223,7 +223,9 @@ export default function SobreMi() {
               <small className="prices__advice">Al mes</small>
             </div>
             <div className="prices__buy">
-              <a href="#" className="prices__btn">Prueba Gratis</a>
+              <a href="#" className="prices__btn">
+                Prueba Gratis
+              </a>
             </div>
             <div className="prices__reward">Cinco cursos de desarrollo Web</div>
             <div className="prices__reward">Soporte a preguntas y dudas</div>
@@ -258,5 +260,5 @@ export default function SobreMi() {
         </div>
       </section>
     </section>
-  )
+  );
 }

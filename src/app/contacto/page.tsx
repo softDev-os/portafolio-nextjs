@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
-import { personal } from '@/data/personal'
+import type { Metadata } from "next";
+import { personal } from "@/data/personal";
 
 export const metadata: Metadata = {
-  title: 'Contacto',
-  description: 'Contáctame para proyectos web y consultas profesionales.',
-}
+  title: "Contacto",
+  description: "Contáctame para proyectos web y consultas profesionales.",
+};
 
 export default function Contacto() {
   return (
@@ -22,7 +22,9 @@ export default function Contacto() {
           </div>
           <div className="contact__data">
             <i className="contact__icon fa-solid fa-phone"></i>
-            <h2 className="contact__subtitle">+57 {personal.phone}</h2>
+            <a href={`tel:+57${personal.phone}`} className="contact__subtitle">
+              +57 {personal.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3")}
+            </a>
           </div>
           <div className="contact__data">
             <i className="contact__icon fa-solid fa-envelope"></i>
@@ -64,7 +66,9 @@ export default function Contacto() {
                     placeholder=" "
                     id="name"
                   />
-                  <label htmlFor="name" className="form__label">Nombre</label>
+                  <label htmlFor="name" className="form__label">
+                    Nombre
+                  </label>
                 </div>
                 <div className="form__form-group">
                   <input
@@ -76,7 +80,9 @@ export default function Contacto() {
                     placeholder=" "
                     id="email"
                   />
-                  <label htmlFor="email" className="form__label">Email</label>
+                  <label htmlFor="email" className="form__label">
+                    Email
+                  </label>
                 </div>
                 <div className="form__form-group">
                   <input
@@ -88,7 +94,9 @@ export default function Contacto() {
                     placeholder=" "
                     id="subject"
                   />
-                  <label htmlFor="subject" className="form__label">Asunto</label>
+                  <label htmlFor="subject" className="form__label">
+                    Asunto
+                  </label>
                 </div>
               </section>
               <section className="form__right">
@@ -101,14 +109,20 @@ export default function Contacto() {
                     placeholder=" "
                     id="message"
                   />
-                  <label htmlFor="message" className="form__label">Mensaje</label>
+                  <label htmlFor="message" className="form__label">
+                    Mensaje
+                  </label>
                 </div>
               </section>
             </div>
-            <input type="submit" className="form__button" value="Enviar Mensaje" />
+            <input
+              type="submit"
+              className="form__button"
+              value="Enviar Mensaje"
+            />
           </form>
         </section>
       </div>
     </section>
-  )
+  );
 }
