@@ -75,7 +75,7 @@ export default function Sidebar() {
           </div>
 
           {/* LinkedIn */}
-          <div className="sidebar__social-item">
+          <div className="sidebar__social-item sidebar__social-item--linkedin">
             <a
               href="https://www.linkedin.com/in/juan-fontalvo-softdev"
               target="_blank"
@@ -110,6 +110,7 @@ export default function Sidebar() {
             href="/CV_Juan_Fontalvo_IT_Specialist.pdf"
             download
             className="sidebar__cv-btn"
+            aria-label="Descargar currículum en PDF"
           >
             Descargar CV
           </a>
