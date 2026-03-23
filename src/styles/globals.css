@@ -666,6 +666,16 @@ img {
   }
 }
 
+@keyframes contactFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-hero__eyebrow,
   .home-hero .page__name.home-hero__name,
@@ -874,12 +884,26 @@ img {
 }
 
 .contact__data {
+  display: block;
   width: 100%;
   margin-bottom: 1.5rem;
   padding: 2rem 1rem;
   text-align: center;
   background-color: var(--background-color-contact);
   border: 0.1rem solid var(--color-border-reviews);
+  cursor: pointer;
+  transition:
+    transform 280ms var(--ease-sidebar),
+    box-shadow 280ms var(--ease-sidebar);
+}
+
+a.contact__data {
+  animation: contactFloat 3s ease-in-out infinite;
+}
+
+.contact__data:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(12, 13, 28, 0.12);
 }
 
 .contact__icon {

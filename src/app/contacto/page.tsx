@@ -20,16 +20,16 @@ export default function Contacto() {
             <i className="contact__icon fa-solid fa-location-dot"></i>
             <h2 className="contact__subtitle">{personal.city}</h2>
           </div>
-          <div className="contact__data">
+          <a href={`tel:+57${personal.phone}`} className="contact__data">
             <i className="contact__icon fa-solid fa-phone"></i>
-            <a href={`tel:+57${personal.phone}`} className="contact__subtitle">
+            <span className="contact__subtitle">
               +57 {personal.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3")}
-            </a>
-          </div>
-          <div className="contact__data">
+            </span>
+          </a>
+          <a href={`mailto:${personal.email}`} className="contact__data">
             <i className="contact__icon fa-solid fa-envelope"></i>
-            <h2 className="contact__subtitle">{personal.email}</h2>
-          </div>
+            <span className="contact__subtitle">{personal.email}</span>
+          </a>
           <div className="contact__data">
             <i className="contact__icon fa-solid fa-circle-check"></i>
             <h2 className="contact__subtitle">Desarrollador Freelance</h2>
