@@ -45,6 +45,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="layout__main">{children}</main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
