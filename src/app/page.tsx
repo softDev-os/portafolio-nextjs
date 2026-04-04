@@ -1,9 +1,10 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Juan Fontalvo — Desarrollador Web',
-  description: 'Portafolio de Juan Fontalvo, Desarrollador Web.',
-}
+  title: "Juan Fontalvo — Desarrollador Web",
+  description: "Portafolio de Juan Fontalvo, Desarrollador Web.",
+};
 
 export default function Home() {
   return (
@@ -18,7 +19,15 @@ export default function Home() {
         <p className="home-hero__tagline">
           Interfaces claras, código mantenible y atención al detalle.
         </p>
+        <div className="home-hero__cta">
+          <Link href="/portafolio" className="home-hero__cta-link home-hero__cta-link--primary">
+            Ver portafolio
+          </Link>
+          <Link href="/contacto" className="home-hero__cta-link home-hero__cta-link--secondary">
+            Contactame
+          </Link>
+        </div>
       </header>
     </section>
-  )
+  );
 }

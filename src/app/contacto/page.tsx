@@ -44,6 +44,7 @@ export default function Contacto() {
               title="Ubicación en Bogotá"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin"
             />
           </div>
 

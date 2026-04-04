@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 import { Analytics } from "@vercel/analytics/next";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/globals.css";
 
 const poppins = Poppins({
@@ -33,18 +34,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className={poppins.className}>
         <div className="layout">
           <Sidebar />
           <main className="layout__main">{children}</main>
         </div>
+        <Analytics />
       </body>
     </html>
   );

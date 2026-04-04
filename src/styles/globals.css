@@ -508,6 +508,27 @@ img {
   align-items: center;
 }
 
+.content__page:not(.content__page--home) {
+  animation: pageEnter 0.45s ease both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content__page:not(.content__page--home) {
+    animation: none;
+  }
+}
+
 .page__name {
   font-size: 6rem;
   margin-bottom: 1rem;
@@ -647,6 +668,53 @@ img {
   animation: homeHeroIn 0.85s var(--ease-sidebar) 0.58s forwards;
 }
 
+.home-hero__cta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.8rem;
+  opacity: 0;
+  animation: homeHeroIn 0.85s var(--ease-sidebar) 0.72s forwards;
+}
+
+.home-hero__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.1rem 2.6rem;
+  border-radius: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.home-hero__cta-link--primary {
+  background: var(--principal-color);
+  color: var(--terciario-color);
+  box-shadow: 0 4px 16px rgba(247, 185, 53, 0.35);
+}
+
+.home-hero__cta-link--primary:hover,
+.home-hero__cta-link--primary:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(247, 185, 53, 0.5);
+}
+
+.home-hero__cta-link--secondary {
+  border: 2px solid var(--terciario-color);
+  color: var(--terciario-color);
+  background: transparent;
+}
+
+.home-hero__cta-link--secondary:hover,
+.home-hero__cta-link--secondary:focus-visible {
+  transform: translateY(-3px);
+  background: var(--terciario-color);
+  color: var(--color-principal);
+}
+
 @keyframes homeHeroIn {
   from {
     opacity: 0;
@@ -681,7 +749,8 @@ img {
   .home-hero .page__name.home-hero__name,
   .home-hero__rule,
   .home-hero .page__job.home-hero__job,
-  .home-hero__tagline {
+  .home-hero__tagline,
+  .home-hero__cta {
     animation: none;
     opacity: 1;
     transform: none;
@@ -689,6 +758,10 @@ img {
 
   .home-hero__rule {
     transform: scaleX(1);
+  }
+
+  .home-hero__cta-link {
+    transition: none;
   }
 }
 
