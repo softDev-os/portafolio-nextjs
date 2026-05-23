@@ -8,7 +8,7 @@ export type TimelineItem = {
 export type Certificate = {
   image: string
   title: string
-  id: string
+  id?: string
   date: string
 }
 
@@ -16,16 +16,16 @@ export const education: TimelineItem[] = [
   {
     year: '2023',
     company: 'Udemy',
-    title: 'Desarrollo Web',
+    title: 'Desarrollo web moderno',
     description:
-      'Formación completa en desarrollo web moderno incluyendo HTML, CSS, JavaScript, React, PHP y más.',
+      'Base técnica para construir interfaces, integrar servicios y sostener automatizaciones con criterios de mantenibilidad.',
   },
   {
     year: '2019',
     company: 'Armada Nacional De Colombia',
     title: 'Servicio Militar',
     description:
-      'Servicio militar prestado en la Armada Nacional de Colombia con apoyo en sistemas de información.',
+      'Experiencia en entornos con disciplina operativa, registro de información y soporte a sistemas internos.',
   },
 ]
 
@@ -33,23 +33,23 @@ export const experience: TimelineItem[] = [
   {
     year: '2022-Actualidad',
     company: 'Allpc21',
-    title: 'Venta e Instalacion de sistemas informaticos',
+    title: 'Venta e instalación de sistemas informáticos',
     description:
-      'Responsable de la venta, instalación y configuración de sistemas informáticos para clientes corporativos y particulares.',
+      'Trabajo directo con necesidades de clientes, instalación de soluciones informáticas y traducción de requerimientos en entregas concretas.',
   },
   {
     year: '2021-2022',
     company: 'New Tecnology',
-    title: 'Tecnico en mantenimiento de computadoras',
+    title: 'Técnico en mantenimiento de computadoras',
     description:
-      'Técnico especializado en mantenimiento preventivo y correctivo de equipos de cómputo.',
+      'Diagnóstico y resolución de problemas técnicos con foco en continuidad operativa para usuarios finales.',
   },
   {
     year: '2019-2020',
     company: 'Armada Nacional De Colombia',
     title: 'Servicio Militar',
     description:
-      'Apoyo técnico en sistemas de información durante el servicio militar.',
+      'Apoyo técnico en sistemas de información dentro de un contexto institucional y operativo.',
   },
 ]
 
@@ -57,13 +57,11 @@ export const certificates: Certificate[] = [
   {
     image: '/assets/img/certificado-1.png',
     title: 'Master en PHP, SQL, POO, MVC, +',
-    id: 'XXXXXX',
     date: '10 de junio 2023',
   },
   {
     image: '/assets/img/certificado-1.png',
     title: 'Master en maquetación Web avanzada',
-    id: 'XXXXXX',
     date: '10 de agosto 2023',
   },
 ]

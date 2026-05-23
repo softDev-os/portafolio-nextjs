@@ -2,7 +2,6 @@ export const personal = {
   name: "Juan Fontalvo",
   job: "Architect / AI Engineer",
   bio: "Arquitecto y AI Engineer enfocado en automatización operativa, flujos de WhatsApp, handoff humano y memoria persistente para equipos que necesitan convertir procesos reales en sistemas confiables.",
-  age: 24,
   country: "Colombia",
   city: "Bogotá",
   phone: "312-867-0860",
@@ -10,7 +9,6 @@ export const personal = {
   github: "https://github.com/softDev-os",
   linkedin: "https://www.linkedin.com/in/juan-fontalvo-softdev",
   instagram: "https://www.instagram.com/__softdev__/",
-  cv: "/CV_Juan_Fontalvo_IT_Specialist.pdf",
 };
 
 export const primarySalesContact = {

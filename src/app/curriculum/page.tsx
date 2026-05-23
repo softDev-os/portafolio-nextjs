@@ -1,22 +1,27 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { education, experience, certificates } from '@/data/experience'
-import { designSkills, codeSkills, competences } from '@/data/skills'
+import { capabilityGroups } from '@/data/skills'
 
 export const metadata: Metadata = {
-  title: 'Curriculum',
-  description: 'Formación, experiencia laboral y habilidades de Juan Fontalvo.',
+  title: 'Credenciales',
+  description:
+    'Credenciales y señales de autoridad de Juan Fontalvo como Architect / AI Engineer consultor.',
+}
+
+function hasVerifiableCertificateId(id: string | undefined) {
+  return Boolean(id && id.trim() !== '' && !id.includes('XXXXXX'))
 }
 
 export default function Curriculum() {
   return (
     <section className="content__page content__curriculum">
       <header className="curriculum__header">
-        <h1 className="curriculum__title">Curriculum</h1>
+        <h1 className="curriculum__title">Credenciales</h1>
       </header>
 
       <div className="curriculum__container">
-        {/* Columna izquierda — Formación y Experiencia */}
+        {/* Columna izquierda — Formación y experiencia */}
         <section className="curriculum__left">
           <header className="curriculum__subheader">
             <h2 className="curriculum__subtitle">Formación</h2>
@@ -57,55 +62,27 @@ export default function Curriculum() {
           </div>
         </section>
 
-        {/* Columna derecha — Habilidades y Competencias */}
+        {/* Columna derecha — Capacidades */}
         <section className="curriculum__right">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">
-              Habilidades de <span className="subtitles__color">Diseño</span>
-            </h2>
+            <h2 className="curriculum__subtitle">Capacidades</h2>
           </header>
-          <div className="curriculum__skills">
-            {designSkills.map((skill) => (
-              <div key={skill.name}>
-                <article className="skills__title">
-                  <h4 className="skills__text">{skill.name}</h4>
-                  <span className="skills__number">{skill.percentage}%</span>
-                </article>
-                <div className="skills__progressbar">
-                  <div className={`skills__percentage ${skill.className}`}></div>
-                </div>
-              </div>
+          <div className="curriculum__capabilities">
+            {capabilityGroups.map((group) => (
+              <article key={group.id} className="capability-card">
+                <h3 className="capability-card__title">{group.title}</h3>
+                <ul className="capability-card__evidence">
+                  {group.evidence.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <ul className="capability-card__tools">
+                  {group.tools.map((tool) => (
+                    <li key={tool}>{tool}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </div>
-
-          <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">
-              Habilidades de <span className="subtitles__color">Código</span>
-            </h2>
-          </header>
-          <div className="curriculum__skills">
-            {codeSkills.map((skill) => (
-              <div key={skill.name}>
-                <article className="skills__title">
-                  <h4 className="skills__text">{skill.name}</h4>
-                  <span className="skills__number">{skill.percentage}%</span>
-                </article>
-                <div className="skills__progressbar">
-                  <div className={`skills__percentage ${skill.className}`}></div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Competencias</h2>
-          </header>
-          <div className="curriculum__knowledges">
-            <ul className="knowledges__list">
-              {competences.map((item) => (
-                <li key={item} className="knowledges__option">{item}</li>
-              ))}
-            </ul>
           </div>
         </section>
       </div>
@@ -127,10 +104,12 @@ export default function Curriculum() {
                   height={100}
                 />
               </div>
-              <div className="certificate__content">
-                <h4 className="certificate__title">{cert.title}</h4>
-                <span className="certificate__id">ID Verificación: {cert.id}</span>
-                <span className="certificate__date">{cert.date}</span>
+                <div className="certificate__content">
+                  <h4 className="certificate__title">{cert.title}</h4>
+                  {hasVerifiableCertificateId(cert.id) ? (
+                    <span className="certificate__id">ID Verificación: {cert.id}</span>
+                  ) : null}
+                  <span className="certificate__date">{cert.date}</span>
               </div>
             </article>
           ))}
