@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Artículos y tutoriales de desarrollo web por Juan Fontalvo.',
+  description: 'Notas públicas de arquitectura y automatización de Juan Fontalvo.',
 }
 
 const articles = [
@@ -47,6 +46,10 @@ export default function Blog() {
     <section className="content__page content__blog">
       <header className="blog__header">
         <h1 className="blog__title">Blog</h1>
+        <p className="blog__intro">
+          Archivo editorial en revisión. Las entradas se muestran como temas
+          pendientes de publicación para evitar enlaces a páginas vacías.
+        </p>
       </header>
 
       <section className="blog__articles">
@@ -54,7 +57,7 @@ export default function Blog() {
           <article key={article.slug} className="articles__article">
             <div className="article__top">
               <div className="article__category">{article.category}</div>
-              <Link href={`/blog/${article.slug}`} className="article__image-link">
+              <div className="article__image-link article__image-link--disabled">
                 <div className="article__mask">
                   <Image
                     src={article.image}
@@ -67,15 +70,14 @@ export default function Blog() {
                 <div className="article__logo">
                   <i className="article__icon fa-solid fa-book"></i>
                 </div>
-              </Link>
+              </div>
             </div>
             <div className="article__bottom">
               <time dateTime={article.date} className="article__date">
                 {article.dateDisplay}
               </time>
-              <Link href={`/blog/${article.slug}`} className="article__link">
-                <h2 className="article__title">{article.title}</h2>
-              </Link>
+              <h2 className="article__title">{article.title}</h2>
+              <p className="article__status">Entrada pendiente de publicación.</p>
             </div>
           </article>
         ))}
