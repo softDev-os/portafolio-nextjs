@@ -1,0 +1,60 @@
+schema: spec-driven
+
+context: |
+  Stack: Next.js 16.2.0 App Router + React 19.2.4 + TypeScript 5.
+  Architecture: src/app routes, src/components UI, src/data content modules.
+  Quality: ESLint 9 (next/core-web-vitals + next/typescript), TS strict enabled.
+  Testing: No test runner configured yet.
+
+strict_tdd: false
+
+testing:
+  detected_at: 2026-05-22
+  runner:
+    available: false
+    framework: none
+    command: ""
+  layers:
+    unit:
+      available: false
+      tool: ""
+    integration:
+      available: false
+      tool: ""
+    e2e:
+      available: false
+      tool: ""
+  coverage:
+    available: false
+    command: ""
+  quality:
+    linter:
+      available: true
+      command: npm run lint
+    type_checker:
+      available: false
+      command: ""
+    formatter:
+      available: false
+      command: ""
+
+rules:
+  proposal:
+    - Define success criteria and rollback notes for risky changes.
+  specs:
+    - Use RFC 2119 keywords (MUST/SHOULD/MAY).
+    - Use Given/When/Then scenarios.
+  design:
+    - Explain tradeoffs and impacted modules.
+  tasks:
+    - Keep tasks small and session-completable.
+  apply:
+    tdd: false
+    test_command: ""
+    - Follow existing Next.js App Router conventions.
+  verify:
+    test_command: ""
+    build_command: npm run build
+    coverage_threshold: 0
+  archive:
+    - Confirm deltas are merged before archival.
