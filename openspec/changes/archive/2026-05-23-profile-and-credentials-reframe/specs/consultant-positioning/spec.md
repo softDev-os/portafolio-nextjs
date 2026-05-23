@@ -1,14 +1,11 @@
-# consultant-positioning Specification
+# Delta for consultant-positioning
 
-## Purpose
-
-Define premium consultant messaging and conversion boundaries so the site presents verified credibility before lead capture.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Premium Role Positioning
 
 The system MUST present the primary role as Architect / AI Engineer consultant for companies and service clients across homepage and global identity surfaces, including `Perfil` and `Credenciales` content.
+(Previously: Positioning consistency was required on homepage/key entry points but not explicitly extended to identity pages.)
 
 #### Scenario: Role appears consistently on key entry points
 
@@ -33,6 +30,7 @@ The system MUST present the primary role as Architect / AI Engineer consultant f
 ### Requirement: Proof-First Conversion Order
 
 The system MUST prioritize verified proof review before contact actions in primary navigation and above-the-fold CTAs, and identity surfaces MUST NOT introduce CV-download or similar shortcuts that bypass proof-first flow.
+(Previously: Proof-first order covered homepage/navigation actions but did not explicitly prohibit CV-download shortcuts on identity surfaces.)
 
 #### Scenario: Primary CTA routes to proof
 
@@ -52,20 +50,3 @@ The system MUST prioritize verified proof review before contact actions in prima
 - WHEN identity-page actions are rendered
 - THEN no CV download action is offered as a primary shortcut
 - AND proof-first navigation remains the dominant conversion path
-
-### Requirement: Claim Safety and Trust Boundaries
-
-The system SHALL only present central claims backed by verified evidence and SHALL NOT make voice automation or reservation systems central claims for this change.
-
-#### Scenario: Unsupported central claims are excluded
-
-- GIVEN site credibility sections are rendered
-- WHEN claim blocks are displayed
-- THEN unverifiable testimonials/counters/pricing are removed or reduced
-- AND unsupported central claims are not presented as delivered outcomes
-
-#### Scenario: Flagship narrative scope is enforced
-
-- GIVEN flagship case-study links are highlighted
-- WHEN users review the promoted solution themes
-- THEN emphasis stays on WhatsApp intake, support handoff, and persistent memory
