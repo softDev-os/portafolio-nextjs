@@ -64,7 +64,7 @@ export default function Contacto() {
 
           <div className="contact__qualified-box">
             <p className="contact__intro">
-              Este sitio no tiene formulario conectado a un backend. Para evitar mensajes perdidos y filtrar mejor los casos, el primer paso comercial es el bot de WhatsApp con un mensaje inicial preparado.
+              El primer paso comercial es el bot de WhatsApp: permite capturar contexto mínimo, calificar la consulta y decidir si corresponde avanzar a una conversación directa con alcance claro.
             </p>
             <ol className="contact__steps">
               {inquirySteps.map((step) => (

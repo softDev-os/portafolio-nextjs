@@ -6,7 +6,7 @@ import { capabilityGroups } from '@/data/skills'
 export const metadata: Metadata = {
   title: 'Credenciales',
   description:
-    'Credenciales y señales de autoridad de Juan Fontalvo como Architect / AI Engineer consultor.',
+    'Credenciales estratégicas de Juan Fontalvo para arquitectura de automatización, IA aplicada y entrega técnica.',
 }
 
 function hasVerifiableCertificateId(id: string | undefined) {
@@ -24,7 +24,7 @@ export default function Curriculum() {
         {/* Columna izquierda — Formación y experiencia */}
         <section className="curriculum__left">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Formación</h2>
+            <h2 className="curriculum__subtitle">Base técnica</h2>
           </header>
           <div className="curriculum__timelines">
             {education.map((item, index) => (
@@ -43,7 +43,7 @@ export default function Curriculum() {
           </div>
 
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Experiencia</h2>
+            <h2 className="curriculum__subtitle">Trayectoria operativa</h2>
           </header>
           <div className="curriculum__timelines">
             {experience.map((item, index) => (
@@ -65,7 +65,7 @@ export default function Curriculum() {
         {/* Columna derecha — Capacidades */}
         <section className="curriculum__right">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Capacidades</h2>
+            <h2 className="curriculum__subtitle">Capacidades aplicadas</h2>
           </header>
           <div className="curriculum__capabilities">
             {capabilityGroups.map((group) => (
@@ -90,7 +90,7 @@ export default function Curriculum() {
       {/* Certificados */}
       <div className="curriculum__certificates">
         <header className="curriculum__subheader">
-          <h2 className="curriculum__subtitle">Certificados</h2>
+          <h2 className="curriculum__subtitle">Evidencia formativa</h2>
         </header>
         <section className="certificates__container">
           {certificates.map((cert, index) => (

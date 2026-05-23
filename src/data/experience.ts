@@ -18,14 +18,7 @@ export const education: TimelineItem[] = [
     company: 'Udemy',
     title: 'Desarrollo web moderno',
     description:
-      'Base técnica para construir interfaces, integrar servicios y sostener automatizaciones con criterios de mantenibilidad.',
-  },
-  {
-    year: '2019',
-    company: 'Armada Nacional De Colombia',
-    title: 'Servicio Militar',
-    description:
-      'Experiencia en entornos con disciplina operativa, registro de información y soporte a sistemas internos.',
+      'Fundamento técnico para construir interfaces, integrar servicios y sostener automatizaciones con criterios de mantenibilidad.',
   },
 ]
 
@@ -33,23 +26,16 @@ export const experience: TimelineItem[] = [
   {
     year: '2022-Actualidad',
     company: 'Allpc21',
-    title: 'Venta e instalación de sistemas informáticos',
+    title: 'Implementación y soporte de soluciones informáticas',
     description:
       'Trabajo directo con necesidades de clientes, instalación de soluciones informáticas y traducción de requerimientos en entregas concretas.',
   },
   {
     year: '2021-2022',
     company: 'New Tecnology',
-    title: 'Técnico en mantenimiento de computadoras',
+    title: 'Continuidad técnica para usuarios finales',
     description:
       'Diagnóstico y resolución de problemas técnicos con foco en continuidad operativa para usuarios finales.',
-  },
-  {
-    year: '2019-2020',
-    company: 'Armada Nacional De Colombia',
-    title: 'Servicio Militar',
-    description:
-      'Apoyo técnico en sistemas de información dentro de un contexto institucional y operativo.',
   },
 ]
 

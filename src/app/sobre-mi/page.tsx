@@ -5,7 +5,7 @@ import { personal } from "@/data/personal";
 export const metadata: Metadata = {
   title: "Perfil",
   description:
-    "Perfil profesional de Juan Fontalvo como Architect / AI Engineer para automatización operativa con IA.",
+    "Perfil profesional de Juan Fontalvo para arquitectura de automatización, IA aplicada y mejora operativa.",
 };
 
 const consultantCapabilities = [
@@ -73,14 +73,14 @@ export default function SobreMi() {
       </header>
 
       <section className="profile__hero" aria-label="Perfil estratégico">
-        <p className="profile__eyebrow">Architect / AI Engineer consultant</p>
+        <p className="profile__eyebrow">Arquitectura de automatización e IA aplicada</p>
         <h2 className="profile__headline">
-          Diseño automatización con IA para operaciones que necesitan claridad, control y continuidad.
+          Diseño sistemas de automatización para operaciones que necesitan decidir mejor, responder más rápido y sostener el control.
         </h2>
         <article className="profile__summary">
           <p>{personal.bio}</p>
           <p>
-            Mi trabajo está en convertir conversaciones, soporte y conocimiento operativo en sistemas que un equipo pueda usar, auditar y mejorar sin depender de promesas vagas.
+            Trabajo con equipos que necesitan ordenar conversaciones, soporte y conocimiento operativo en flujos claros, auditables y sostenibles. La tecnología entra cuando ayuda a reducir fricción real, no para sumar complejidad innecesaria.
           </p>
         </article>
         <div className="profile__actions" aria-label="Siguientes pasos recomendados">
@@ -113,7 +113,7 @@ export default function SobreMi() {
       <section className="about__services">
         <header className="services__header">
           <h2 className="services__title">
-            Temas donde puedo <span className="title__color">aportar</span>
+            Frentes estratégicos donde puedo <span className="title__color">intervenir</span>
           </h2>
         </header>
         <div className="services__container">

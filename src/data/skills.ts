@@ -44,9 +44,9 @@ export const capabilityGroups: CapabilityGroup[] = [
   },
   {
     id: CAPABILITY_GROUP.IMPLEMENTATION_DELIVERY,
-    title: 'Implementación web',
+    title: 'Entrega técnica',
     evidence: [
-      'Construcción de interfaces y contenido estático orientado a prueba antes del contacto.',
+      'Construcción de interfaces y contenido estático orientado a prueba antes de la conversación comercial.',
       'Entrega con validación de calidad mediante lint y build cuando el proyecto lo permite.',
     ],
     tools: ['React', 'CSS', 'Vercel'],
