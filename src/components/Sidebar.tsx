@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { personal } from "@/data/personal";
 
 const navLinks = [
   {
@@ -15,8 +16,17 @@ const navLinks = [
     ),
   },
   {
+    href: "/portafolio",
+    label: "Casos reales",
+    icon: (
+      <svg viewBox="0 0 24 24" className="nav-float__icon">
+        <path d="M20 6h-2.18c.07-.44.18-.86.18-1.3C18 2.99 16.54 2 14.7 2c-1.05 0-1.96.54-2.57 1.32L12 3.9l-.13-.59C11.26 2.54 10.35 2 9.3 2 7.46 2 6 2.99 6 4.7c0 .44.1.86.18 1.3H4C2.9 6 2 6.9 2 8v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
+      </svg>
+    ),
+  },
+  {
     href: "/sobre-mi",
-    label: "Sobre mí",
+    label: "Perfil",
     icon: (
       <svg viewBox="0 0 24 24" className="nav-float__icon">
         <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
@@ -25,19 +35,10 @@ const navLinks = [
   },
   {
     href: "/curriculum",
-    label: "Curriculum",
+    label: "CV",
     icon: (
       <svg viewBox="0 0 24 24" className="nav-float__icon">
         <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-      </svg>
-    ),
-  },
-  {
-    href: "/portafolio",
-    label: "Portafolio",
-    icon: (
-      <svg viewBox="0 0 24 24" className="nav-float__icon">
-        <path d="M20 6h-2.18c.07-.44.18-.86.18-1.3C18 2.99 16.54 2 14.7 2c-1.05 0-1.96.54-2.57 1.32L12 3.9l-.13-.59C11.26 2.54 10.35 2 9.3 2 7.46 2 6 2.99 6 4.7c0 .44.1.86.18 1.3H4C2.9 6 2 6.9 2 8v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
       </svg>
     ),
   },
@@ -78,13 +79,13 @@ export default function Sidebar() {
               priority
             />
           </div>
-          <h1 className="sidebar__name">Juan Fontalvo</h1>
-          <p className="sidebar__role">Desarrollador Web</p>
+          <h1 className="sidebar__name">{personal.name}</h1>
+          <p className="sidebar__role">{personal.job}</p>
         </div>
 
         <div className="sidebar__social">
           <a
-            href="https://github.com/softDev-os"
+            href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
             className="sidebar__social-item"
@@ -98,7 +99,7 @@ export default function Sidebar() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/juan-fontalvo-softdev"
+            href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="sidebar__social-item sidebar__social-item--linkedin"
@@ -112,7 +113,7 @@ export default function Sidebar() {
           </a>
 
           <a
-            href="https://www.instagram.com/__softdev__/"
+            href={personal.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="sidebar__social-item"
@@ -128,7 +129,7 @@ export default function Sidebar() {
 
         <div className="user-info__buttons">
           <a
-            href="/CV_Juan_Fontalvo_IT_Specialist.pdf"
+            href={personal.cv}
             download
             className="sidebar__cv-btn"
             aria-label="Descargar currículum en PDF"

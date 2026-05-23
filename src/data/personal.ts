@@ -1,7 +1,7 @@
 export const personal = {
   name: "Juan Fontalvo",
-  job: "Desarrollador Web",
-  bio: "Soy un desarrollador web apasionado por crear experiencias digitales únicas y funcionales. Me especializo en el desarrollo de aplicaciones web modernas usando tecnologías como React, Next.js, PHP y Laravel. Siempre en búsqueda de nuevos retos que me permitan crecer profesionalmente.",
+  job: "Architect / AI Engineer",
+  bio: "Arquitecto y AI Engineer enfocado en automatización operativa, flujos de WhatsApp, handoff humano y memoria persistente para equipos que necesitan convertir procesos reales en sistemas confiables.",
   age: 24,
   country: "Colombia",
   city: "Bogotá",
@@ -11,4 +11,13 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/juan-fontalvo-softdev",
   instagram: "https://www.instagram.com/__softdev__/",
   cv: "/CV_Juan_Fontalvo_IT_Specialist.pdf",
+};
+
+export const primarySalesContact = {
+  label: "WhatsApp de ventas",
+  phone: "3117056806",
+  displayPhone: "311 705 6806",
+  message:
+    "Hola, quiero consultar sobre automatización con IA para mi negocio. Vengo desde el portafolio y ya revisé los casos reales.",
+  url: "https://wa.me/573117056806?text=Hola%2C%20quiero%20consultar%20sobre%20automatizaci%C3%B3n%20con%20IA%20para%20mi%20negocio.%20Vengo%20desde%20el%20portafolio%20y%20ya%20revis%C3%A9%20los%20casos%20reales.",
 };

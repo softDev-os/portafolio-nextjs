@@ -13,11 +13,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Juan Fontalvo — Desarrollador Web",
+    default: "Juan Fontalvo — Architect / AI Engineer",
     template: "%s | Juan Fontalvo",
   },
   description:
-    "Portafolio y blog de Juan Fontalvo, Desarrollador Web especializado en tecnologías modernas.",
+    "Consultoría en arquitectura de software, automatización con IA y workflows operativos con prueba real antes del contacto.",
   authors: [{ name: "Juan Fontalvo" }],
   openGraph: {
     type: "website",
