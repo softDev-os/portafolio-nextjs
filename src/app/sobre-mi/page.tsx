@@ -1,12 +1,44 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { personal } from "@/data/personal";
 
 export const metadata: Metadata = {
   title: "Sobre Mí",
   description:
-    "Información personal y profesional de Juan Fontalvo, Desarrollador Web.",
+    "Perfil profesional de Juan Fontalvo como Architect / AI Engineer para automatización operativa con IA.",
 };
+
+const consultantCapabilities = [
+  {
+    icon: "fa-solid fa-sitemap",
+    title: "Arquitectura de automatización",
+    description:
+      "Diseño flujos de negocio que conectan conversaciones, herramientas internas y reglas operativas sin prometer resultados que no puedan auditarse.",
+  },
+  {
+    icon: "fa-brands fa-whatsapp",
+    title: "Intake y calificación por WhatsApp",
+    description:
+      "Construyo entradas de venta para capturar intención, ordenar contexto y preparar el seguimiento humano o automatizado según el caso.",
+  },
+  {
+    icon: "fa-solid fa-headset",
+    title: "Soporte con handoff humano",
+    description:
+      "Estructuro asistentes que atienden preguntas repetibles y reconocen cuándo escalar a una persona con el contexto necesario.",
+  },
+  {
+    icon: "fa-solid fa-brain",
+    title: "Memoria persistente para agentes",
+    description:
+      "Integro memoria y registro de decisiones para que los agentes trabajen con continuidad, trazabilidad y menos repetición operativa.",
+  },
+] as const;
+
+const trustBoundaries = [
+  "Los casos publicados se describen con lenguaje cualitativo cuando no existe una métrica pública verificable.",
+  "No uso logos, reseñas o contadores si no hay autorización o evidencia visible para respaldarlos.",
+  "El alcance comercial se valida por conversación: primero se entiende el proceso, luego se propone una solución.",
+] as const;
 
 export default function SobreMi() {
   return (
@@ -52,212 +84,34 @@ export default function SobreMi() {
           </h2>
         </header>
         <div className="services__container">
-          <article className="services__service">
-            <div className="service__icons">
-              <i className="service__icon fa-solid fa-code"></i>
-            </div>
-            <div className="service__content">
-              <h3 className="service__title">Programación</h3>
-              <p className="service__description">
-                Desarrollo de aplicaciones web y soluciones tecnológicas a
-                medida con las mejores prácticas del sector.
-              </p>
-            </div>
-          </article>
-          <article className="services__service">
-            <div className="service__icons">
-              <i className="service__icon fa-solid fa-chalkboard-user"></i>
-            </div>
-            <div className="service__content">
-              <h3 className="service__title">Formación</h3>
-              <p className="service__description">
-                Enseñanza de programación y desarrollo web a estudiantes y
-                profesionales que quieren crecer en el área tecnológica.
-              </p>
-            </div>
-          </article>
-          <article className="services__service">
-            <div className="service__icons">
-              <i className="service__icon fa-solid fa-computer"></i>
-            </div>
-            <div className="service__content">
-              <h3 className="service__title">Desarrollo Web</h3>
-              <p className="service__description">
-                Creación de sitios web modernos, responsivos y optimizados
-                usando tecnologías actuales como React, Next.js y más.
-              </p>
-            </div>
-          </article>
-          <article className="services__service">
-            <div className="service__icons">
-              <i className="service__icon fa-solid fa-terminal"></i>
-            </div>
-            <div className="service__content">
-              <h3 className="service__title">Administración</h3>
-              <p className="service__description">
-                Gestión y mantenimiento de sistemas informáticos, redes y
-                servidores para empresas y particulares.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      {/* Reseñas */}
-      <section className="about__reviews">
-        <header className="reviews__header">
-          <h2 className="reviews__title">Reseñas</h2>
-        </header>
-        <div className="reviews__containers">
-          <article className="reviews__review">
-            <div className="review__image-container">
-              <Image
-                src="/assets/img/testimonio1.jpg"
-                className="review__image"
-                alt="Imagen de Testimonio"
-                width={90}
-                height={90}
-              />
-            </div>
-            <div className="review__description">
-              <p className="review__text">
-                Excelente profesional, entregó el proyecto a tiempo y con una
-                calidad excepcional. Muy recomendado.
-              </p>
-            </div>
-            <div className="review__author">
-              <div className="review__author-info">
-                <h4 className="review__name">Anna Lopez</h4>
-                <h5 className="review__company">Developers S.A</h5>
+          {consultantCapabilities.map((capability) => (
+            <article key={capability.title} className="services__service">
+              <div className="service__icons">
+                <i className={`service__icon ${capability.icon}`} aria-hidden="true"></i>
               </div>
-              <div className="review__author-icon">
-                <i className="review__icon fa-solid fa-quote-right"></i>
+              <div className="service__content">
+                <h3 className="service__title">{capability.title}</h3>
+                <p className="service__description">{capability.description}</p>
               </div>
-            </div>
-          </article>
-          <article className="reviews__review">
-            <div className="review__image-container">
-              <Image
-                src="/assets/img/testimonio2.jpg"
-                className="review__image"
-                alt="Imagen de Testimonio"
-                width={90}
-                height={90}
-              />
-            </div>
-            <div className="review__description">
-              <p className="review__text">
-                Gran desarrollador, con mucho conocimiento técnico y excelente
-                comunicación durante todo el proceso.
-              </p>
-            </div>
-            <div className="review__author">
-              <div className="review__author-info">
-                <h4 className="review__name">Ruben Martinez</h4>
-                <h5 className="review__company">Full Stack S.A.S</h5>
-              </div>
-              <div className="review__author-icon">
-                <i className="review__icon fa-solid fa-quote-right"></i>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      {/* Clientes */}
-      <section className="about__clients">
-        <header className="clients__header">
-          <h2 className="clients__title">Clientes</h2>
-        </header>
-        <div className="clients__container">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <article key={n} className="clients__item">
-              <a
-                href="#"
-                className="clients__link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={`/assets/img/cliente-${n}.png`}
-                  className="clients__image"
-                  alt={`Logo Cliente ${n}`}
-                  width={140}
-                  height={80}
-                />
-              </a>
             </article>
           ))}
         </div>
       </section>
 
-      {/* Precios */}
-      <section className="about__prices">
-        <header className="prices__header">
-          <h2 className="prices__title">Precios</h2>
-        </header>
-        <div className="prices__container">
-          <article className="prices__box">
-            <div className="prices__subtitle">
-              <span className="prices__text">Normal</span>
-            </div>
-            <div className="prices__price">
-              <span className="prices__number">$90.000</span>
-              <small className="prices__advice">Al mes</small>
-            </div>
-            <div className="prices__buy">
-              <a href="#" className="prices__btn">
-                Prueba Gratis
-              </a>
-            </div>
-            <div className="prices__reward">Un curso de desarrollo Web</div>
-            <div className="prices__reward">Soporte a preguntas y dudas</div>
-            <div className="prices__reward">Certificado de finalización</div>
-          </article>
-          <article className="prices__box">
-            <div className="prices__subtitle">
-              <span className="prices__text">Premium</span>
-            </div>
-            <div className="prices__price">
-              <span className="prices__number">$140.000</span>
-              <small className="prices__advice">Al mes</small>
-            </div>
-            <div className="prices__buy">
-              <a href="#" className="prices__btn">
-                Prueba Gratis
-              </a>
-            </div>
-            <div className="prices__reward">Cinco cursos de desarrollo Web</div>
-            <div className="prices__reward">Soporte a preguntas y dudas</div>
-            <div className="prices__reward">Certificado de finalización</div>
-          </article>
-        </div>
-      </section>
-
-      {/* Información Extra */}
-      <section className="about__extra">
-        <header className="extra__header">
-          <h2 className="extra__title">
-            Información <span className="title__color">Extra</span>
+      {/* Límites de confianza */}
+      <section className="about__trust">
+        <header className="trust__header">
+          <h2 className="trust__title">
+            Cómo manejo la <span className="title__color">confianza</span>
           </h2>
         </header>
-        <div className="extra__container">
-          <article className="extra__info">
-            <i className="extra__icon fa-solid fa-heart"></i>
-            <h4 className="extra__subtitle">Alumnos Contentos</h4>
-            <span className="extra__quantity">375.000</span>
-          </article>
-          <article className="extra__info">
-            <i className="extra__icon fa-solid fa-clock"></i>
-            <h4 className="extra__subtitle">Horas de contenido</h4>
-            <span className="extra__quantity">800</span>
-          </article>
-          <article className="extra__info">
-            <i className="extra__icon fa-solid fa-star"></i>
-            <h4 className="extra__subtitle">Puntos</h4>
-            <span className="extra__quantity">10</span>
-          </article>
-        </div>
+        <ul className="trust__list">
+          {trustBoundaries.map((boundary) => (
+            <li key={boundary} className="trust__item">
+              {boundary}
+            </li>
+          ))}
+        </ul>
       </section>
     </section>
   );

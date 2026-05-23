@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { personal } from "@/data/personal";
+import Link from "next/link";
+import { personal, primarySalesContact } from "@/data/personal";
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description: "Contáctame para proyectos web y consultas profesionales.",
+  description:
+    "Contacto calificado para consultas de automatización con IA y arquitectura de software.",
 };
+
+const inquirySteps = [
+  "Comparte qué proceso querés automatizar y qué canal usa hoy tu equipo.",
+  "Incluí volumen aproximado, dolores operativos y restricciones importantes.",
+  "Si el caso encaja, seguimos por una conversación directa con alcance claro.",
+] as const;
 
 export default function Contacto() {
   return (
@@ -16,112 +24,70 @@ export default function Contacto() {
       <div className="contact__container">
         {/* Info de contacto */}
         <section className="contact__info">
-          <div className="contact__data">
-            <i className="contact__icon fa-solid fa-location-dot"></i>
-            <h2 className="contact__subtitle">{personal.city}</h2>
-          </div>
+          <a
+            href={primarySalesContact.url}
+            className="contact__data contact__data--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="contact__icon fa-brands fa-whatsapp"></i>
+            <span className="contact__label">Opción principal</span>
+            <span className="contact__subtitle">{primarySalesContact.label}</span>
+            <span className="contact__note">+57 {primarySalesContact.displayPhone}</span>
+          </a>
           <a href={`tel:+57${personal.phone}`} className="contact__data">
             <i className="contact__icon fa-solid fa-phone"></i>
+            <span className="contact__label">Canal secundario</span>
             <span className="contact__subtitle">
               +57 {personal.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3")}
             </span>
           </a>
           <a href={`mailto:${personal.email}`} className="contact__data">
             <i className="contact__icon fa-solid fa-envelope"></i>
+            <span className="contact__label">Canal secundario</span>
             <span className="contact__subtitle">{personal.email}</span>
           </a>
           <div className="contact__data">
             <i className="contact__icon fa-solid fa-circle-check"></i>
-            <h2 className="contact__subtitle">Desarrollador Freelance</h2>
+            <span className="contact__label">Ubicación</span>
+            <h2 className="contact__subtitle">{personal.city}, {personal.country}</h2>
           </div>
         </section>
 
-        {/* Formulario */}
+        {/* Consulta calificada */}
         <section className="contact__form-box">
-          <div className="contact__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127176.58090830856!2d-74.24771!3d4.6482839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
-              title="Ubicación en Bogotá"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              sandbox="allow-scripts allow-same-origin"
-            />
-          </div>
-
           <header className="contact__form-header">
             <h3 className="form-header__title">
-              ¿Como puedo <span className="title__color">ayudarte?</span>
+              Consulta <span className="title__color">calificada</span>
             </h3>
           </header>
 
-          <form action="#" className="contact__form">
-            <div className="form__container">
-              <section className="form__left">
-                <div className="form__form-group">
-                  <input
-                    type="text"
-                    className="form__input"
-                    autoComplete="off"
-                    name="name"
-                    required
-                    placeholder=" "
-                    id="name"
-                  />
-                  <label htmlFor="name" className="form__label">
-                    Nombre
-                  </label>
-                </div>
-                <div className="form__form-group">
-                  <input
-                    type="email"
-                    className="form__input"
-                    autoComplete="off"
-                    name="email"
-                    required
-                    placeholder=" "
-                    id="email"
-                  />
-                  <label htmlFor="email" className="form__label">
-                    Email
-                  </label>
-                </div>
-                <div className="form__form-group">
-                  <input
-                    type="text"
-                    className="form__input"
-                    autoComplete="off"
-                    name="subject"
-                    required
-                    placeholder=" "
-                    id="subject"
-                  />
-                  <label htmlFor="subject" className="form__label">
-                    Asunto
-                  </label>
-                </div>
-              </section>
-              <section className="form__right">
-                <div className="form__form-group form__group--textarea">
-                  <textarea
-                    className="form__input form__input--textarea"
-                    autoComplete="off"
-                    name="message"
-                    required
-                    placeholder=" "
-                    id="message"
-                  />
-                  <label htmlFor="message" className="form__label">
-                    Mensaje
-                  </label>
-                </div>
-              </section>
+          <div className="contact__qualified-box">
+            <p className="contact__intro">
+              Este sitio no tiene formulario conectado a un backend. Para evitar mensajes perdidos y filtrar mejor los casos, el primer paso comercial es el bot de WhatsApp con un mensaje inicial preparado.
+            </p>
+            <ol className="contact__steps">
+              {inquirySteps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+            <div className="contact__actions">
+              <a
+                href={primarySalesContact.url}
+                className="home-hero__cta-link home-hero__cta-link--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir WhatsApp de ventas
+              </a>
+              <Link href="/portafolio" className="home-hero__cta-link home-hero__cta-link--secondary">
+                Revisar casos antes
+              </Link>
             </div>
-            <input
-              type="submit"
-              className="form__button"
-              value="Enviar Mensaje"
-            />
-          </form>
+            <p className="contact__fine-print">
+              Los canales personales quedan como respaldo. La priorización por WhatsApp ayuda a separar consultas de negocio de conversaciones personales o soporte no relacionado.
+            </p>
+          </div>
         </section>
       </div>
     </section>
