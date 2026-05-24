@@ -2295,7 +2295,6 @@ a.contact__data {
 .contact__title {
   font-size: 3.2rem;
   position: relative;
-  isolation: isolate;
 }
 
 .about__title::after,
@@ -2305,11 +2304,10 @@ a.contact__data {
 .contact__title::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: -1.6rem;
+  top: 2rem;
+  right: -2.5rem;
   width: 5rem;
   height: 3rem;
-  transform: translateY(-42%);
   background-image: repeating-radial-gradient(
     circle,
     var(--principal-color),
@@ -2318,9 +2316,7 @@ a.contact__data {
     transparent 100%
   );
   background-size: 6px 6px;
-  opacity: 0.45;
-  pointer-events: none;
-  z-index: -1;
+  opacity: 0.5;
 }
 
 .title__color,
