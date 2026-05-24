@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { personal } from "@/data/personal";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   {
@@ -126,6 +127,8 @@ export default function Sidebar() {
             <span className="sidebar__social-name">Instagram</span>
           </a>
         </div>
+
+        <ThemeToggle />
 
         <p className="sidebar__copy">
           © {new Date().getFullYear()} Juan Fontalvo

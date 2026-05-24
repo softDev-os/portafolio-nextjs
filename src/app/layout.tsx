@@ -35,6 +35,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "!function(){try{var t=localStorage.getItem(\"theme\")||(matchMedia(\"(prefers-color-scheme:dark)\").matches?\"dark\":\"light\");document.documentElement.dataset.theme=t}catch(e){}}()",
+          }}
+        />
+      </head>
       <body className={poppins.className}>
         <div className="layout">
           <Sidebar />

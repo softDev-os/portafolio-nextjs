@@ -3096,6 +3096,79 @@ a.contact__data {
   }
 }
 
+/* =====================
+   Dark Mode Overrides
+   ===================== */
+[data-theme="dark"] {
+  --color-principal: #1a1b30;
+  --color-background: #0f1023;
+  --terciario-color: #e2e2ec;
+  --color-titles: #e2e2ec;
+  --color-texts: #a8a8c0;
+  --color-subtitles: #8a8aa0;
+  --color-border-reviews: #2a2b42;
+  --color-company-reviews: #7a7a90;
+  --background-color-contact: #1a1b30;
+  --backgroud-color-certificate: #1a1b30;
+  --color-icon: #6a6a80;
+  --sidebar-surface: linear-gradient(
+    168deg,
+    #1e1f3a 0%,
+    #151630 45%,
+    #0f1023 100%
+  );
+  --sidebar-shadow-bar:
+    0 10px 36px -14px rgba(0, 0, 0, 0.5),
+    0 4px 12px -6px rgba(0, 0, 0, 0.3);
+  --sidebar-highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --sidebar-edge: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .sidebar__name {
+  color: #e2e2ec;
+}
+
+[data-theme="dark"] body {
+  background-image: none;
+}
+
+/* Theme toggle button */
+.sidebar__theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+  margin: 0 auto;
+}
+
+.sidebar__theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.08);
+}
+
+.sidebar__theme-toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar__theme-toggle {
+    transition-duration: 0.01ms;
+  }
+}
+
 @media (max-width: 480px) {
   .curriculum__title,
   .curriculum__subtitle,
