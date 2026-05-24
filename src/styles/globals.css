@@ -434,21 +434,21 @@ img {
 
 .nav-float__overlay {
   position: absolute;
+  top: 50%;
   right: 0;
-  margin-top: -2.9rem;
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.1rem 0.6rem 1.2rem;
   opacity: 0;
   visibility: hidden;
   color: var(--color-principal);
   background-color: var(--principal-color);
   white-space: nowrap;
-  transform: translate3d(0.4rem, 0, 0);
+  transform: translate3d(0.4rem, -50%, 0);
   transition:
     opacity 220ms ease,
     transform 220ms ease,
     visibility 220ms ease;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 600;
   line-height: 1;
   pointer-events: none;
@@ -461,7 +461,7 @@ img {
   opacity: 1;
   visibility: visible;
   right: 100%;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -50%, 0);
 }
 
 .nav-float__link {
