@@ -1789,7 +1789,7 @@ a.contact__data {
     column-gap: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0.7rem 1.1rem 0.75rem;
+    padding: 0.7rem 6.8rem 0.75rem 1.1rem;
     padding-top: calc(0.7rem + env(safe-area-inset-top, 0px));
     min-width: unset;
     overflow: visible;
@@ -1849,17 +1849,17 @@ a.contact__data {
 
   .sidebar__social-item:nth-child(1):hover,
   .sidebar__social-item:nth-child(1):focus-within {
-    width: 9.8rem;
+    width: 3.4rem;
   }
 
   .sidebar__social-item--linkedin:hover,
   .sidebar__social-item--linkedin:focus-within {
-    width: 10.5rem;
+    width: 3.4rem;
   }
 
   .sidebar__social-item:nth-child(3):hover,
   .sidebar__social-item:nth-child(3):focus-within {
-    width: 12.5rem;
+    width: 3.4rem;
   }
 
   .sidebar__social-link {
@@ -1874,9 +1874,7 @@ a.contact__data {
   }
 
   .sidebar__social-name {
-    font-size: 1.4rem;
-    line-height: 3.4rem;
-    padding-right: 0.8rem;
+    display: none;
   }
 
   .sidebar__copy {
@@ -2083,6 +2081,15 @@ a.contact__data {
 
   .sidebar__social-item {
     height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .sidebar__social-item:nth-child(1):hover,
+  .sidebar__social-item:nth-child(1):focus-within,
+  .sidebar__social-item--linkedin:hover,
+  .sidebar__social-item--linkedin:focus-within,
+  .sidebar__social-item:nth-child(3):hover,
+  .sidebar__social-item:nth-child(3):focus-within {
     width: 3.2rem;
   }
 
@@ -2976,6 +2983,8 @@ a.contact__data {
 
 .certificate__image {
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .certificate__content {
@@ -3190,6 +3199,17 @@ a.contact__data {
 @media (prefers-reduced-motion: reduce) {
   .sidebar__theme-toggle {
     transition-duration: 0.01ms;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar__theme-toggle {
+    top: calc(0.55rem + env(safe-area-inset-top, 0px));
+    right: 1.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    min-width: 3.6rem;
+    min-height: 3.6rem;
   }
 }
 

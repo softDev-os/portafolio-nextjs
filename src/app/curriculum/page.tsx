@@ -30,7 +30,7 @@ export default function Curriculum() {
             {education.map((item, index) => (
               <article key={index} className="timelines__timeline">
                 <header className="timeline__header">
-                  <h4 className="timeline__year">{item.year}</h4>
+                  <span className="timeline__year">{item.year}</span>
                   <span className="timeline__company">{item.company}</span>
                 </header>
                 <div className="timeline__divider"></div>
@@ -49,7 +49,7 @@ export default function Curriculum() {
             {experience.map((item, index) => (
               <article key={index} className="timelines__timeline">
                 <header className="timeline__header">
-                  <h4 className="timeline__year">{item.year}</h4>
+                  <span className="timeline__year">{item.year}</span>
                   <span className="timeline__company">{item.company}</span>
                 </header>
                 <div className="timeline__divider"></div>
@@ -99,17 +99,17 @@ export default function Curriculum() {
                 <Image
                   src={cert.image}
                   className="certificate__image"
-                  alt="Certificado"
-                  width={100}
-                  height={100}
+                  alt={`Certificado: ${cert.title}`}
+                  width={128}
+                  height={38}
                 />
               </div>
-                <div className="certificate__content">
-                  <h4 className="certificate__title">{cert.title}</h4>
-                  {hasVerifiableCertificateId(cert.id) ? (
-                    <span className="certificate__id">ID Verificación: {cert.id}</span>
-                  ) : null}
-                  <span className="certificate__date">{cert.date}</span>
+              <div className="certificate__content">
+                <h3 className="certificate__title">{cert.title}</h3>
+                {hasVerifiableCertificateId(cert.id) ? (
+                  <span className="certificate__id">ID Verificación: {cert.id}</span>
+                ) : null}
+                <span className="certificate__date">{cert.date}</span>
               </div>
             </article>
           ))}

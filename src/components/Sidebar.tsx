@@ -89,6 +89,7 @@ export default function Sidebar() {
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub de Juan Fontalvo"
             className="sidebar__social-item"
           >
             <span className="sidebar__social-link">
@@ -103,6 +104,7 @@ export default function Sidebar() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn de Juan Fontalvo"
             className="sidebar__social-item sidebar__social-item--linkedin"
           >
             <span className="sidebar__social-link">
@@ -117,6 +119,7 @@ export default function Sidebar() {
             href={personal.instagram}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram de Juan Fontalvo"
             className="sidebar__social-item"
           >
             <span className="sidebar__social-link">
@@ -143,6 +146,8 @@ export default function Sidebar() {
               <span className="nav-float__overlay">{label}</span>
               <Link
                 href={href}
+                aria-label={label}
+                aria-current={pathname === href ? "page" : undefined}
                 className={`nav-float__link ${pathname === href ? "nav-float__link--active" : ""}`}
               >
                 {icon}
