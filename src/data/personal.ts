@@ -4,7 +4,7 @@ export const personal = {
   bio: "Arquitecto y AI Engineer enfocado en automatización operativa, flujos de WhatsApp, handoff humano y memoria persistente para equipos que necesitan convertir procesos reales en sistemas confiables.",
   country: "Colombia",
   city: "Bogotá",
-  phone: "312-867-0860",
+  phone: "3128670860",
   email: "softdev.iso@gmail.com",
   github: "https://github.com/softDev-os",
   linkedin: "https://www.linkedin.com/in/juan-fontalvo-softdev",

@@ -3088,3 +3088,86 @@ a.contact__data {
   height: 100%;
   border: 0;
 }
+
+/* =====================
+   Responsive fixes — curriculum and contact
+   ===================== */
+@media (max-width: 767px) {
+  .curriculum__container {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .curriculum__left,
+  .curriculum__right {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .curriculum__capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .timelines__timeline {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-left: 2.2rem;
+  }
+
+  .timeline__header,
+  .timeline__description-container {
+    width: 100%;
+    flex-basis: auto;
+    text-align: left;
+    padding: 0;
+  }
+
+  .timeline__divider {
+    left: 0.7rem;
+    top: 0.5rem;
+    bottom: 0;
+  }
+
+  .curriculum__certificates,
+  .certificates__container {
+    margin-top: 2.4rem;
+    gap: 1.6rem;
+  }
+
+  .certificates__certificate {
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+
+  .certificate__logo {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .curriculum__title,
+  .curriculum__subtitle,
+  .timeline__title,
+  .capability-card__title {
+    text-wrap: balance;
+  }
+
+  .timeline__year,
+  .timeline__company {
+    display: inline;
+  }
+
+  .timeline__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: baseline;
+  }
+
+  .contact__note,
+  .contact__subtitle {
+    overflow-wrap: anywhere;
+  }
+}
