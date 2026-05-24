@@ -11,14 +11,29 @@ export default function ClientScrollReset({
   const pathname = usePathname();
 
   useEffect(() => {
+    const main = document.querySelector(".layout__main") as HTMLElement | null;
+    const layout = document.querySelector(".layout") as HTMLElement | null;
+
     const reset = () => {
-      const main = document.querySelector(
-        ".layout__main",
-      ) as HTMLElement | null;
       if (!main) return;
       main.style.scrollBehavior = "auto";
       main.scrollTop = 0;
     };
+
+    // Debug: log layout metrics on every route change
+    console.log("[ClientScrollReset]", {
+      route: pathname,
+      layoutOffsetTop: layout?.offsetTop,
+      layoutHeight: layout?.offsetHeight,
+      layoutRectTop: layout?.getBoundingClientRect().top,
+      layoutRectBottom: layout?.getBoundingClientRect().bottom,
+      main: main ? {
+        scrollTop: main.scrollTop,
+        offsetHeight: main.offsetHeight,
+      } : null,
+      bodyHeight: document.body.offsetHeight,
+      viewportHeight: window.innerHeight,
+    });
 
     // immediate attempt
     reset();

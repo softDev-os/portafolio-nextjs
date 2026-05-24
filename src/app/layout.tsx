@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
-import ClientScrollReset from "@/components/ClientScrollReset";
+// import ClientScrollReset from "@/components/ClientScrollReset";
 import { Analytics } from "@vercel/analytics/next";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/globals.css";
@@ -39,7 +39,8 @@ export default function RootLayout({
         <div className="layout">
           <Sidebar />
           <main className="layout__main">
-            <ClientScrollReset>{children}</ClientScrollReset>
+            {/* <ClientScrollReset>{children}</ClientScrollReset> */}
+            {children}
           </main>
         </div>
         <Analytics />
