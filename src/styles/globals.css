@@ -2407,8 +2407,44 @@ a.contact__data {
   position: relative;
 }
 
-.curriculum__right .curriculum__subtitle {
-  max-width: 18.8rem;
+.curriculum__subtitle:not(.curriculum__subtitle--split),
+.form-header__title {
+  white-space: nowrap;
+}
+
+.curriculum__subtitle--split {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-right: 0;
+}
+
+.curriculum__subtitle--split::after {
+  content: none;
+}
+
+.curriculum__subtitle-line:first-child {
+  display: inline-block;
+  padding-right: 1.2rem;
+  position: relative;
+}
+
+.curriculum__subtitle-line:first-child::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  width: 3rem;
+  height: 2rem;
+  background-image: repeating-radial-gradient(
+    circle,
+    var(--principal-color),
+    var(--principal-color) 1px,
+    transparent 0,
+    transparent 100%
+  );
+  background-size: 6px 6px;
+  opacity: 0.6;
 }
 
 .services__title::after,

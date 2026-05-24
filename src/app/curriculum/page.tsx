@@ -65,7 +65,13 @@ export default function Curriculum() {
         {/* Columna derecha — Capacidades */}
         <section className="curriculum__right">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Capacidades aplicadas</h2>
+            <h2
+              className="curriculum__subtitle curriculum__subtitle--split"
+              aria-label="Capacidades aplicadas"
+            >
+              <span className="curriculum__subtitle-line">Capacidades</span>
+              <span className="curriculum__subtitle-line">aplicadas</span>
+            </h2>
           </header>
           <div className="curriculum__capabilities">
             {capabilityGroups.map((group) => (
