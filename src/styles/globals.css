@@ -2386,7 +2386,7 @@ a.contact__data {
 .curriculum__subheader,
 .contact__form-header {
   display: inline-block;
-  padding-right: 1.2rem;
+  padding-right: 0;
   position: relative;
   margin-bottom: 2.5rem;
 }
@@ -2401,7 +2401,10 @@ a.contact__data {
 .trust__title,
 .curriculum__subtitle,
 .form-header__title {
+  display: inline-block;
   font-size: 2.1rem;
+  padding-right: 1.2rem;
+  position: relative;
 }
 
 .services__title::after,
