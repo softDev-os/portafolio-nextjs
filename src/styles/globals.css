@@ -409,10 +409,11 @@ img {
 .nav-float__item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   text-align: center;
   position: relative;
+  padding-right: 0.6rem;
 }
 
 .nav-float__icon {
@@ -420,7 +421,8 @@ img {
   font-size: 2.5rem;
   width: 2.5rem;
   height: 2.5rem;
-  transition: all 300ms ease-in-out;
+  opacity: 0.38;
+  transition: all 220ms ease-in-out;
   fill: currentColor;
 }
 
@@ -428,36 +430,38 @@ img {
 .nav-float__link--active .nav-float__icon {
   color: var(--principal-color);
   fill: var(--principal-color);
+  opacity: 1;
 }
 
 .nav-float__overlay {
   position: absolute;
   top: 50%;
-  right: calc(100% + 0.6rem);
+  right: calc(100% - 1rem);
   display: inline-flex;
   align-items: center;
-  padding: 0.7rem 1.2rem;
+  padding: 0.85rem 1.6rem 0.85rem 1.8rem;
   opacity: 0;
   visibility: hidden;
-  color: var(--color-principal);
-  background-color: rgba(22, 25, 43, 0.92);
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(135deg, rgba(247, 185, 53, 0.88), rgba(235, 174, 42, 0.72));
   white-space: nowrap;
-  transform: translate3d(0.45rem, -50%, 0);
+  transform: translate3d(0.35rem, -50%, 0);
   transform-origin: right center;
   transition:
     opacity 220ms ease,
     transform 220ms ease,
     visibility 220ms ease;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   pointer-events: none;
   border-radius: 999px;
-  box-shadow: 0 1.2rem 2.4rem rgba(12, 13, 28, 0.18);
-  z-index: 20;
+  box-shadow: 0 1rem 2.4rem rgba(247, 185, 53, 0.22);
+  z-index: 10;
 }
 
-.nav-float__item:hover .nav-float__overlay {
+.nav-float__item:hover .nav-float__overlay,
+.nav-float__item:has(.nav-float__link--active) .nav-float__overlay {
   opacity: 1;
   visibility: visible;
   transform: translate3d(0, -50%, 0);
@@ -467,8 +471,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.6rem;
-  height: 4.6rem;
+  position: relative;
+  z-index: 20;
+  width: 4.8rem;
+  height: 4.8rem;
   border-radius: 50%;
   transition:
     background-color 220ms ease,
@@ -476,13 +482,16 @@ img {
     box-shadow 220ms ease;
 }
 
-.nav-float__item:hover .nav-float__link,
 .nav-float__link--active {
-  background-color: rgba(247, 185, 53, 0.16);
+  background-color: rgba(247, 185, 53, 0.14);
 }
 
 .nav-float__item:hover .nav-float__link {
-  transform: translateX(-0.2rem);
+  transform: translateX(-0.12rem);
+}
+
+.nav-float__item:has(.nav-float__link--active) .nav-float__link {
+  transform: translateX(-0.18rem);
 }
 
 /* =====================
