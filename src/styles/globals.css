@@ -3135,13 +3135,18 @@ a.contact__data {
 
 /* Theme toggle button */
 .sidebar__theme-toggle {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  min-width: 4.4rem;
+  min-height: 4.4rem;
   border: 2px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   cursor: pointer;
@@ -3149,10 +3154,7 @@ a.contact__data {
     background 0.25s ease,
     transform 0.25s ease,
     border-color 0.25s ease;
-  margin: 1.2rem auto 0;
-
-  /* ensure it stays in the flow and visible on desktop */
-  flex-shrink: 0;
+  z-index: 15;
 }
 
 .sidebar__theme-toggle:hover {

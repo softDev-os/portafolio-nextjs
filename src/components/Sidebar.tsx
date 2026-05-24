@@ -128,11 +128,11 @@ export default function Sidebar() {
           </a>
         </div>
 
-        <ThemeToggle />
-
         <p className="sidebar__copy">
           © {new Date().getFullYear()} Juan Fontalvo
         </p>
+
+        <ThemeToggle />
       </aside>
 
       {/* Nav flotante */}
