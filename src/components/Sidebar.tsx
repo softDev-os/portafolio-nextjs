@@ -141,7 +141,6 @@ export default function Sidebar() {
               <Link
                 href={href}
                 className={`nav-float__link ${pathname === href ? "nav-float__link--active" : ""}`}
-                title={label}
               >
                 {icon}
               </Link>

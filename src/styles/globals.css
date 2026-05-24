@@ -433,7 +433,7 @@ img {
 .nav-float__overlay {
   position: absolute;
   top: 50%;
-  right: calc(100% + 1.2rem);
+  right: calc(100% + 0.6rem);
   display: inline-flex;
   align-items: center;
   padding: 0.7rem 1.2rem;
@@ -442,7 +442,7 @@ img {
   color: var(--color-principal);
   background-color: rgba(22, 25, 43, 0.92);
   white-space: nowrap;
-  transform: translate3d(0.8rem, -50%, 0);
+  transform: translate3d(0.45rem, -50%, 0);
   transform-origin: right center;
   transition:
     opacity 220ms ease,
