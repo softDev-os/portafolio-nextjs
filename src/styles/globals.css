@@ -2407,6 +2407,10 @@ a.contact__data {
   position: relative;
 }
 
+.curriculum__right .curriculum__subtitle {
+  max-width: 18.8rem;
+}
+
 .services__title::after,
 .method__title::after,
 .principles__title::after,
