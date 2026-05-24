@@ -39,8 +39,7 @@ export default function RootLayout({
         <div className="layout">
           <Sidebar />
           <main className="layout__main">
-            <ClientScrollReset />
-            {children}
+            <ClientScrollReset>{children}</ClientScrollReset>
           </main>
         </div>
         <Analytics />
