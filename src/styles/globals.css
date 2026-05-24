@@ -35,6 +35,20 @@
   --sidebar-edge: rgba(12, 13, 28, 0.07);
   --ease-sidebar: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Profile / sidebar identity */
+  --profile-text: #ffffff;
+  --profile-muted: rgba(255, 255, 255, 0.88);
+
+  /* Social icon pills */
+  --social-bg: #ffffff;
+  --social-color: #0c0d1c;
+  --social-icon-hover: #ffffff;
+  --social-gh-bg: #333;
+  --social-gh-text: #333;
+  --social-li-bg: #0a66c2;
+  --social-li-text: #0a66c2;
+  --social-ig-text: #d92e7f;
 }
 
 /* =====================
@@ -252,8 +266,8 @@ img {
   border-radius: 5rem;
   overflow: hidden;
   margin: 0;
-  background-color: #fff;
-  color: var(--terciario-color);
+  background-color: var(--social-bg);
+  color: var(--social-color);
   transition:
     width 400ms var(--ease-sidebar),
     box-shadow 280ms ease,
@@ -304,24 +318,24 @@ img {
 
 .sidebar__social-item:nth-child(1):hover .sidebar__social-link,
 .sidebar__social-item:nth-child(1):focus-within .sidebar__social-link {
-  background: #333;
+  background: var(--social-gh-bg);
 }
 
 .sidebar__social-item--linkedin:hover .sidebar__social-link,
 .sidebar__social-item--linkedin:focus-within .sidebar__social-link {
-  background: #0a66c2;
+  background: var(--social-li-bg);
 }
 
 .sidebar__social-item:nth-child(3):hover .sidebar__social-link,
 .sidebar__social-item:nth-child(3):focus-within .sidebar__social-link {
-  background: radial-gradient(
+  background: var(--social-ig-gradient, radial-gradient(
     circle at 33% 100%,
     #fed373 4%,
     #f15245 30%,
     #d92e7f 62%,
     #9b36b7 85%,
     #515ecf
-  );
+  ));
 }
 
 .sidebar__social-icon {
@@ -333,8 +347,8 @@ img {
 
 .sidebar__social-item:hover .sidebar__social-icon,
 .sidebar__social-item:focus-within .sidebar__social-icon {
-  color: #fff;
-  fill: #fff;
+  color: var(--social-icon-hover);
+  fill: var(--social-icon-hover);
 }
 
 .sidebar__social-name {
@@ -349,18 +363,18 @@ img {
 /* Texto del nombre sobre fondo blanco del pill — colores de marca (como el HTML original) */
 .sidebar__social-item:nth-child(1):hover .sidebar__social-name,
 .sidebar__social-item:nth-child(1):focus-within .sidebar__social-name {
-  color: #333;
+  color: var(--social-gh-text);
 }
 
 /* Azul marca LinkedIn — texto sobre pill blanco */
 .sidebar__social-item--linkedin:hover .sidebar__social-name,
 .sidebar__social-item--linkedin:focus-within .sidebar__social-name {
-  color: #0a66c2;
+  color: var(--social-li-text);
 }
 
 .sidebar__social-item:nth-child(3):hover .sidebar__social-name,
 .sidebar__social-item:nth-child(3):focus-within .sidebar__social-name {
-  color: #d92e7f;
+  color: var(--social-ig-text);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3122,6 +3136,11 @@ a.contact__data {
     0 4px 12px -6px rgba(0, 0, 0, 0.3);
   --sidebar-highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.05);
   --sidebar-edge: rgba(255, 255, 255, 0.06);
+
+  /* Dark mode social — keep pills crisp against navy sidebar */
+  --social-bg: #ffffff;
+  --social-color: #0c0d1c;
+  --social-icon-hover: #ffffff;
 }
 
 [data-theme="dark"] .sidebar,
