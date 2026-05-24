@@ -38,6 +38,9 @@ export default function Portafolio() {
             <article key={caseStudy.id} className="portfolio__case-card">
               <p className="portfolio__case-index">Caso {index + 1}</p>
               <p className="portfolio__case-audience">{caseStudy.audience}</p>
+              {caseStudy.metadataLabel && (
+                <span className="portfolio__metadata-badge">{caseStudy.metadataLabel}</span>
+              )}
               <h2 className="portfolio__case-title">{caseStudy.title}</h2>
               <div className="portfolio__case-grid">
                 <section>

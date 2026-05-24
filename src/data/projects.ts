@@ -23,6 +23,7 @@ export interface CaseStudy {
   outcomes: string[];
   evidenceNote: string;
   stack: string[];
+  metadataLabel?: string;
 }
 
 export interface FlagshipCompletenessResult {
@@ -40,6 +41,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: FLAGSHIP_CASE_STUDY_ID.WHATSAPP_LEAD_INTAKE,
     kind: CASE_STUDY_KIND.FLAGSHIP,
+    metadataLabel: "Automatización",
     title: "WhatsApp lead intake and qualification",
     audience: "Service businesses that receive high-intent inquiries through WhatsApp.",
     problem:
@@ -66,6 +68,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: FLAGSHIP_CASE_STUDY_ID.AGENT_MEMORY,
     kind: CASE_STUDY_KIND.FLAGSHIP,
+    metadataLabel: "IA Aplicada",
     title: "Persistent memory for agents",
     audience: "AI-enabled operations that need continuity across sessions and tools.",
     problem:
