@@ -2293,6 +2293,7 @@ a.contact__data {
 .portfolio__title,
 .blog__title,
 .contact__title {
+  display: inline-block;
   font-size: 3.2rem;
   position: relative;
 }
