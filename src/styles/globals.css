@@ -2410,26 +2410,17 @@ a.contact__data {
 .curriculum__subtitle:not(.curriculum__subtitle--split),
 .form-header__title {
   white-space: nowrap;
-}
-
-.curriculum__subtitle--split {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.15rem;
   padding-right: 0;
 }
 
-.curriculum__subtitle--split::after {
-  content: none;
-}
-
-.curriculum__subtitle-line:first-child {
-  display: inline-block;
-  padding-right: 1.2rem;
+.curriculum__subtitle .title__color,
+.form-header__title .title__color {
   position: relative;
+  padding-right: 1.2rem;
 }
 
-.curriculum__subtitle-line:first-child::after {
+.curriculum__subtitle .title__color::after,
+.form-header__title .title__color::after {
   content: "";
   position: absolute;
   top: 1.5rem;
@@ -2454,9 +2445,7 @@ a.contact__data {
 .clients__title::after,
 .prices__title::after,
 .extra__title::after,
-.trust__title::after,
-.curriculum__subtitle::after,
-.form-header__title::after {
+.trust__title::after {
   content: "";
   position: absolute;
   top: 1.5rem;

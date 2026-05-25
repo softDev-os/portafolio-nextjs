@@ -24,7 +24,7 @@ export default function Curriculum() {
         {/* Columna izquierda — Formación y experiencia */}
         <section className="curriculum__left">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Base técnica</h2>
+            <h2 className="curriculum__subtitle">Base <span className="title__color">técnica</span></h2>
           </header>
           <div className="curriculum__timelines">
             {education.map((item, index) => (
@@ -43,7 +43,7 @@ export default function Curriculum() {
           </div>
 
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Trayectoria operativa</h2>
+            <h2 className="curriculum__subtitle">Trayectoria <span className="title__color">operativa</span></h2>
           </header>
           <div className="curriculum__timelines">
             {experience.map((item, index) => (
@@ -65,13 +65,7 @@ export default function Curriculum() {
         {/* Columna derecha — Capacidades */}
         <section className="curriculum__right">
           <header className="curriculum__subheader">
-            <h2
-              className="curriculum__subtitle curriculum__subtitle--split"
-              aria-label="Capacidades aplicadas"
-            >
-              <span className="curriculum__subtitle-line">Capacidades</span>
-              <span className="curriculum__subtitle-line">aplicadas</span>
-            </h2>
+            <h2 className="curriculum__subtitle">Capacidades <span className="title__color">aplicadas</span></h2>
           </header>
           <div className="curriculum__capabilities">
             {capabilityGroups.map((group) => (
@@ -96,7 +90,7 @@ export default function Curriculum() {
       {/* Certificados */}
       <div className="curriculum__certificates">
         <header className="curriculum__subheader">
-          <h2 className="curriculum__subtitle">Evidencia formativa</h2>
+          <h2 className="curriculum__subtitle">Evidencia <span className="title__color">formativa</span></h2>
         </header>
         <section className="certificates__container">
           {certificates.map((cert, index) => (
