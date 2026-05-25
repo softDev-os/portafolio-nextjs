@@ -4,7 +4,13 @@ import {
   checkFlagshipCompleteness,
   getFlagshipCaseStudies,
 } from "@/data/projects";
-import CaseDiagram from "@/components/CaseDiagram";
+import Image from "next/image";
+
+const caseImages = [
+  "/assets/img/caso-1-whatsapp.png",
+  "/assets/img/caso-2-soporte.png",
+  "/assets/img/caso-3-memoria.png",
+];
 
 export const metadata: Metadata = {
   title: "Casos reales de automatización e IA",
@@ -43,7 +49,15 @@ export default function Portafolio() {
                 <span className="portfolio__metadata-badge">{caseStudy.metadataLabel}</span>
               )}
               <h2 className="portfolio__case-title">{caseStudy.title}</h2>
-              <CaseDiagram caseIndex={index} />
+              <div className="portfolio__case-image">
+                <Image
+                  src={caseImages[index]}
+                  alt={`Diagrama del caso: ${caseStudy.title}`}
+                  width={680}
+                  height={340}
+                  className="case-image"
+                />
+              </div>
               <div className="portfolio__case-grid">
                 <section>
                   <h3>Problema</h3>
