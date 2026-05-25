@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/next";
 import { siteOrigin } from "@/lib/seo";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/globals.css";
 
 const poppins = Poppins({
@@ -47,6 +46,33 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Juan Fontalvo",
+  jobTitle: "Arquitecto de software / Ingeniero IA",
+  description:
+    "Arquitectura de automatización e IA aplicada para operaciones que necesitan decidir mejor, responder más rápido y sostener el control.",
+  url: siteOrigin,
+  sameAs: [
+    "https://github.com/softDev-os",
+    "https://www.linkedin.com/in/juan-fontalvo-softdev",
+    "https://www.instagram.com/__softdev__/",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bogotá",
+    addressCountry: "CO",
+  },
+  knowsAbout: [
+    "Arquitectura de software",
+    "Automatización con IA",
+    "Workflows operativos",
+    "WhatsApp automation",
+    "Human handoff",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -75,6 +101,10 @@ export default function RootLayout({
         </div>
         <Analytics />
         <ScrollToTop />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
