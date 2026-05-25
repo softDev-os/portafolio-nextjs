@@ -17,7 +17,7 @@ const navLinks = [
     ),
   },
   {
-    href: "/portafolio",
+    href: "/casos-reales",
     label: "Casos reales",
     icon: (
       <svg viewBox="0 0 24 24" className="nav-float__icon">
@@ -26,7 +26,7 @@ const navLinks = [
     ),
   },
   {
-    href: "/sobre-mi",
+    href: "/perfil",
     label: "Perfil",
     icon: (
       <svg viewBox="0 0 24 24" className="nav-float__icon">
@@ -35,7 +35,7 @@ const navLinks = [
     ),
   },
   {
-    href: "/curriculum",
+    href: "/credenciales",
     label: "Credenciales",
     icon: (
       <svg viewBox="0 0 24 24" className="nav-float__icon">

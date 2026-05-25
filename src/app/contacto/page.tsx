@@ -80,7 +80,7 @@ export default function Contacto() {
               >
                 Abrir WhatsApp de ventas
               </a>
-              <Link href="/portafolio" className="home-hero__cta-link home-hero__cta-link--secondary">
+              <Link href="/casos-reales" className="home-hero__cta-link home-hero__cta-link--secondary">
                 Revisar casos antes
               </Link>
             </div>

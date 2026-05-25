@@ -29,7 +29,7 @@ export default function Home() {
           ))}
         </ul>
         <div className="home-hero__cta">
-          <Link href="/portafolio" className="home-hero__cta-link home-hero__cta-link--primary">
+          <Link href="/casos-reales" className="home-hero__cta-link home-hero__cta-link--primary">
             Ver casos reales
           </Link>
           <Link href="/contacto" className="home-hero__cta-link home-hero__cta-link--secondary">

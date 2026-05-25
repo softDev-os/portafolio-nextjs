@@ -5,9 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     { path: "", freq: "weekly", prio: 1 },
-    { path: "/portafolio", freq: "monthly", prio: 0.8 },
-    { path: "/sobre-mi", freq: "monthly", prio: 0.8 },
-    { path: "/curriculum", freq: "monthly", prio: 0.8 },
+    { path: "/casos-reales", freq: "monthly", prio: 0.8 },
+    { path: "/perfil", freq: "monthly", prio: 0.8 },
+    { path: "/credenciales", freq: "monthly", prio: 0.8 },
     { path: "/blog", freq: "weekly", prio: 0.7 },
     { path: "/blog/automatizacion-whatsapp-n8n-calificacion-leads", freq: "monthly", prio: 0.6 },
     { path: "/blog/memoria-persistente-agentes-ia-engram", freq: "monthly", prio: 0.6 },

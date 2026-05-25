@@ -84,7 +84,7 @@ export default function SobreMi() {
           </p>
         </article>
         <div className="profile__actions" aria-label="Siguientes pasos recomendados">
-          <Link href="/portafolio" className="home-hero__cta-link home-hero__cta-link--primary">
+          <Link href="/casos-reales" className="home-hero__cta-link home-hero__cta-link--primary">
             Ver casos reales primero
           </Link>
           <Link href="/contacto" className="home-hero__cta-link home-hero__cta-link--secondary">
