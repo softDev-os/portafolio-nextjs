@@ -12,6 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://tech-local.com"),
   title: {
     default: "Juan Fontalvo — Architect / AI Engineer",
     template: "%s | Juan Fontalvo",
