@@ -734,7 +734,7 @@ img {
 
 .home-hero__cta-link--primary {
   background: var(--principal-color);
-  color: var(--terciario-color);
+  color: #0c0d1c;
   box-shadow: 0 4px 16px rgba(247, 185, 53, 0.35);
 }
 
@@ -2989,6 +2989,10 @@ a.contact__data {
   font-size: 1.3rem;
   font-weight: 300;
   color: var(--color-company-reviews);
+}
+
+[data-theme="dark"] .timeline__company {
+  color: #9a9ab0;
 }
 
 .timeline__description-container {
