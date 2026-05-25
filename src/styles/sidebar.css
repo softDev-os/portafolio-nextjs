@@ -1,0 +1,378 @@
+/* =====================
+   Sidebar (aside)
+   ===================== */
+.sidebar {
+	z-index: 5;
+	grid-area: aside;
+	border-radius: 4rem 0 0 4rem;
+	overflow-x: visible;
+	overflow-y: auto;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	min-width: 30rem;
+	background: var(--sidebar-surface);
+	color: var(--color-principal);
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Brillo suave en el borde curvo (desktop) */
+.sidebar::before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	border-top-left-radius: 4rem;
+	border-bottom-left-radius: 4rem;
+	box-shadow: var(--sidebar-highlight-top);
+	z-index: 0;
+}
+
+.sidebar > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* Foto de perfil */
+.sidebar__profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 1rem;
+}
+
+.sidebar__avatar-wrapper {
+	position: relative;
+	display: inline-block;
+	margin-top: 3rem;
+	width: 18rem;
+	z-index: 1;
+}
+
+.sidebar__avatar-wrapper::after {
+	content: "";
+	position: absolute;
+	top: 5%;
+	left: 9%;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-repeating-radial-gradient(
+		center center,
+		#fff,
+		#fff 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	border-radius: 30rem;
+	opacity: 0.4;
+}
+
+.sidebar__avatar {
+	width: 100% !important;
+	height: auto !important;
+	background-color: var(--color-principal);
+	border: 3px solid var(--color-principal);
+	border-radius: 20rem;
+	object-fit: cover;
+}
+
+.sidebar__name {
+	margin-top: 2.6rem;
+	color: var(--color-principal);
+	font-size: 3.2rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	text-shadow: 0 1px 1px rgba(12, 13, 28, 0.08);
+}
+
+.sidebar__role {
+	font-size: 1.7rem;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.92);
+	letter-spacing: 0.04em;
+}
+
+/* Redes sociales */
+.sidebar__social {
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.sidebar__social-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	height: 3.5rem;
+	width: 3.5rem;
+	font-size: 2.6rem;
+	line-height: 3.2rem;
+	border-radius: 5rem;
+	overflow: hidden;
+	margin: 0;
+	background-color: var(--social-bg);
+	color: var(--social-color);
+	transition:
+		width 400ms var(--ease-sidebar),
+		box-shadow 280ms ease,
+		transform 240ms var(--ease-sidebar);
+	cursor: pointer;
+	box-shadow:
+		0 6px 16px -8px rgba(12, 13, 28, 0.22),
+		0 2px 6px -2px rgba(12, 13, 28, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.85);
+	position: relative;
+}
+
+.sidebar__social-item:hover,
+.sidebar__social-item:focus-within {
+	z-index: 6;
+	transform: translateY(-2px);
+	box-shadow:
+		0 10px 22px -10px rgba(12, 13, 28, 0.28),
+		0 4px 10px -4px rgba(12, 13, 28, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.sidebar__social-item:nth-child(1):hover,
+.sidebar__social-item:nth-child(1):focus-within {
+	width: 11rem;
+}
+
+.sidebar__social-item--linkedin:hover,
+.sidebar__social-item--linkedin:focus-within {
+	width: 12rem;
+}
+
+.sidebar__social-item:nth-child(3):hover,
+.sidebar__social-item:nth-child(3):focus-within {
+	width: 14.2rem;
+}
+
+.sidebar__social-link {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	height: 3.5rem;
+	width: 3.5rem;
+	text-align: center;
+	border-radius: 5rem;
+}
+
+.sidebar__social-item:nth-child(1):hover .sidebar__social-link,
+.sidebar__social-item:nth-child(1):focus-within .sidebar__social-link {
+	background: var(--social-gh-bg);
+}
+
+.sidebar__social-item--linkedin:hover .sidebar__social-link,
+.sidebar__social-item--linkedin:focus-within .sidebar__social-link {
+	background: var(--social-li-bg);
+}
+
+.sidebar__social-item:nth-child(3):hover .sidebar__social-link,
+.sidebar__social-item:nth-child(3):focus-within .sidebar__social-link {
+	background: var(
+		--social-ig-gradient,
+		radial-gradient(
+			circle at 33% 100%,
+			#fed373 4%,
+			#f15245 30%,
+			#d92e7f 62%,
+			#9b36b7 85%,
+			#515ecf
+		)
+	);
+}
+
+.sidebar__social-icon {
+	font-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+	fill: currentColor;
+}
+
+.sidebar__social-item:hover .sidebar__social-icon,
+.sidebar__social-item:focus-within .sidebar__social-icon {
+	color: var(--social-icon-hover);
+	fill: var(--social-icon-hover);
+}
+
+.sidebar__social-name {
+	flex-shrink: 0;
+	font-size: 1.8rem;
+	font-weight: 550;
+	line-height: 3.5rem;
+	white-space: nowrap;
+	padding-right: 1rem;
+}
+
+/* Texto del nombre sobre fondo blanco del pill — colores de marca (como el HTML original) */
+.sidebar__social-item:nth-child(1):hover .sidebar__social-name,
+.sidebar__social-item:nth-child(1):focus-within .sidebar__social-name {
+	color: var(--social-gh-text);
+}
+
+/* Azul marca LinkedIn — texto sobre pill blanco */
+.sidebar__social-item--linkedin:hover .sidebar__social-name,
+.sidebar__social-item--linkedin:focus-within .sidebar__social-name {
+	color: var(--social-li-text);
+}
+
+.sidebar__social-item:nth-child(3):hover .sidebar__social-name,
+.sidebar__social-item:nth-child(3):focus-within .sidebar__social-name {
+	color: var(--social-ig-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sidebar__social-item {
+		transition-duration: 0.01ms;
+	}
+
+	.sidebar__social-item:hover,
+	.sidebar__social-item:focus-within {
+		transform: none;
+	}
+}
+
+/* Copyright */
+.sidebar__copy {
+	position: absolute;
+	bottom: 2rem;
+	font-size: 1.2rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* =====================
+   Nav flotante derecha
+   ===================== */
+.nav-float {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -7rem;
+	min-width: 6rem;
+}
+
+.nav-float__list {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	min-height: 29.8rem;
+	background-color: var(--color-principal);
+	border-radius: 2.54rem;
+	padding: 2rem 0;
+	box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.15);
+}
+
+.nav-float__item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.nav-float__icon {
+	color: var(--color-icon);
+	font-size: 2.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	opacity: 0.38;
+	transition: all 220ms ease-in-out;
+	fill: currentColor;
+}
+
+.nav-float__item:hover .nav-float__icon,
+.nav-float__link--active .nav-float__icon {
+	color: var(--principal-color);
+	fill: var(--principal-color);
+	opacity: 1;
+}
+
+.nav-float__overlay {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	display: block;
+	padding: 0.6rem 1.1rem 0.6rem 1.2rem;
+	opacity: 0;
+	visibility: hidden;
+	color: var(--color-principal);
+	background-color: var(--principal-color);
+	white-space: nowrap;
+	transform: translate3d(0.4rem, -50%, 0);
+	transition:
+		opacity 220ms ease,
+		transform 220ms ease,
+		visibility 220ms ease;
+	font-size: 1.55rem;
+	font-weight: 600;
+	line-height: 1;
+	pointer-events: none;
+	border-radius: 2rem 0 0 2rem;
+	box-shadow: 0 0.8rem 2rem rgba(12, 13, 28, 0.12);
+	z-index: 10;
+}
+
+.nav-float__item:hover .nav-float__overlay {
+	opacity: 1;
+	visibility: visible;
+	right: 100%;
+	transform: translate3d(0, -50%, 0);
+}
+
+.nav-float__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 20;
+	width: 4.8rem;
+	height: 4.8rem;
+	border-radius: 50%;
+	transition:
+		background-color 220ms ease,
+		transform 220ms ease,
+		box-shadow 220ms ease;
+}
+
+.nav-float__link--active {
+	background-color: rgba(247, 185, 53, 0.14);
+}
+
+.nav-float__item:hover .nav-float__link {
+	transform: translateX(-0.12rem);
+}
+
+.nav-float__link:focus-visible,
+.home-hero__cta-link:focus-visible,
+.contact__data:focus-visible,
+.footer__link:focus-visible,
+.footer__social-link:focus-visible {
+	outline: 0.3rem solid var(--principal-color);
+	outline-offset: 0.35rem;
+	box-shadow: 0 0 0 0.6rem rgba(247, 185, 53, 0.18);
+}
+

@@ -7,7 +7,16 @@ import { Analytics } from "@vercel/analytics/next";
 import { siteOrigin } from "@/lib/seo";
 import "@/styles/variables.css";
 import "@/styles/reset.css";
-import "@/styles/globals.css";
+import "@/styles/layout.css";
+import "@/styles/sidebar.css";
+import "@/styles/home.css";
+import "@/styles/portfolio.css";
+import "@/styles/blog.css";
+import "@/styles/contact.css";
+import "@/styles/pages.css";
+import "@/styles/footer.css";
+import "@/styles/responsive.css";
+import "@/styles/dark-mode.css";
 
 const poppins = Poppins({
 	subsets: ["latin"],

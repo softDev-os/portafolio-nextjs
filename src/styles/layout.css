@@ -1,0 +1,105 @@
+/* =====================
+   Layout principal
+   ===================== */
+.layout {
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 85vh;
+	width: 75%;
+	min-height: 80vh;
+	display: grid;
+	grid-template-areas: "aside content";
+	grid-template-columns: 30% 70%;
+	border-radius: 4rem;
+	box-shadow: 0 0 100px -5px rgba(0, 0, 0, 0.25);
+}
+
+.layout__main {
+	grid-area: content;
+	background: var(--background-color-contact);
+	border-radius: 0 2rem 2rem 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: var(--principal-color) transparent;
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+	padding: 3rem 3.5rem;
+}
+
+/* Home: sin padding ni scroll interno; el hero ocupa el panel completo */
+.layout__main:has(.content__page--home) {
+	padding: 0;
+	overflow: hidden;
+}
+
+.layout__main:has(.content__page--home) .footer {
+	display: none;
+}
+
+.layout__main::-webkit-scrollbar {
+	width: 6px;
+}
+
+.layout__main::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.layout__main::-webkit-scrollbar-thumb {
+	background: var(--principal-color);
+	border-radius: 999px;
+	opacity: 0.6;
+}
+
+.layout__main::-webkit-scrollbar-thumb:hover {
+	background: var(--principal-color);
+	opacity: 0.85;
+}
+
+/* =====================
+   Contenido páginas
+   ===================== */
+.content__page {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content__page:not(.content__page--home) {
+	animation: pageEnter 0.45s ease both;
+}
+
+@keyframes pageEnter {
+	from {
+		opacity: 0;
+		transform: translateY(1.2rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.content__page:not(.content__page--home) {
+		animation: none;
+	}
+}
+
+.page__name {
+	font-size: 6rem;
+	margin-bottom: 1rem;
+	color: var(--color-titles);
+}
+
+.page__job {
+	font-size: 2.1rem;
+	font-weight: lighter;
+	color: var(--color-subtitles);
+	margin-bottom: 6rem;
+}
+
