@@ -1,4 +1,4 @@
-interface BlogArticle {
+export interface BlogArticle {
   slug: string;
   title: string;
   category: string;
@@ -12,7 +12,8 @@ interface BlogArticle {
 const articles: BlogArticle[] = [
   {
     slug: "automatizacion-whatsapp-n8n-calificacion-leads",
-    title: "Automatización con n8n: cómo calificar leads por WhatsApp sin intervención humana",
+    title:
+      "Automatización con n8n: cómo calificar leads por WhatsApp sin intervención humana",
     category: "Automatización",
     date: "2026-05-20",
     dateDisplay: "20/05/2026",
@@ -35,7 +36,8 @@ const articles: BlogArticle[] = [
   },
   {
     slug: "memoria-persistente-agentes-ia-engram",
-    title: "Memoria persistente para agentes de IA: por qué importa y cómo la armé",
+    title:
+      "Memoria persistente para agentes de IA: por qué importa y cómo la armé",
     category: "IA Aplicada",
     date: "2026-05-15",
     dateDisplay: "15/05/2026",
@@ -79,5 +81,12 @@ const articles: BlogArticle[] = [
   },
 ];
 
+export function getArticles(): BlogArticle[] {
+  return articles;
+}
+
+export function getArticleBySlug(slug: string): BlogArticle | undefined {
+  return articles.find((article) => article.slug === slug);
+}
+
 export default articles;
-export type { BlogArticle };

@@ -6,12 +6,6 @@ import {
 } from "@/data/projects";
 import Image from "next/image";
 
-const caseImages = [
-  "/assets/img/caso-1-whatsapp.png",
-  "/assets/img/caso-2-soporte.png",
-  "/assets/img/caso-3-memoria.png",
-];
-
 export const metadata: Metadata = {
   title: "Casos reales de automatización e IA",
   description:
@@ -60,7 +54,7 @@ export default function Portafolio() {
               <h2 className="portfolio__case-title">{caseStudy.title}</h2>
               <div className="portfolio__case-image">
                 <Image
-                  src={caseImages[index]}
+                  src={caseStudy.image}
                   alt={`Diagrama del caso: ${caseStudy.title}`}
                   width={680}
                   height={340}

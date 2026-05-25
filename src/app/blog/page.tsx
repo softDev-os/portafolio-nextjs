@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import articles from "@/data/blog";
+import { getArticles } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
+  const articles = getArticles();
+
   return (
     <section className="content__page content__blog">
       <header className="blog__header">
