@@ -132,11 +132,16 @@ img {
   scrollbar-color: var(--principal-color) transparent;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  padding: 3rem 3.5rem;
 }
 
 /* Home: sin padding en el main para que la sección cubra todo el fondo */
 .layout__main:has(.content__page--home) {
   padding: 0;
+}
+
+.layout__main:has(.content__page--home) .footer {
+  display: none;
 }
 
 .layout__main::-webkit-scrollbar {
@@ -575,7 +580,7 @@ img {
   position: relative;
   min-height: min(72vh, 52rem);
   justify-content: center;
-  padding: 3rem 2rem 4rem;
+  padding: 0 0 4rem;
   overflow: hidden;
 }
 
@@ -1865,10 +1870,6 @@ a.contact__data {
     padding: 0;
     overflow: hidden;
     height: 100%;
-  }
-
-  .layout__main:has(.content__page--home) .footer {
-    display: none;
   }
 
   .content__page--home {
@@ -3314,9 +3315,9 @@ a.contact__data {
    Footer
    ===================== */
 .footer {
-  padding: 2.5rem 0 1.5rem;
+  padding: 2rem 0 1.5rem;
   border-top: 1px solid var(--color-border-reviews);
-  margin-top: auto;
+  margin-top: 2rem;
 }
 
 .footer__inner {
