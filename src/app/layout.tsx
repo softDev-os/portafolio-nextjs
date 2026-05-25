@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="layout__main">
             {children}
+            <Footer />
           </main>
         </div>
         <Analytics />
