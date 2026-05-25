@@ -3323,15 +3323,16 @@ a.contact__data {
 .footer__inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.4rem;
 }
 
@@ -3347,7 +3348,9 @@ a.contact__data {
 
 .footer__social {
   display: flex;
+  justify-content: center;
   gap: 1.2rem;
+  width: 100%;
 }
 
 .footer__social-link {
