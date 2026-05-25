@@ -26,7 +26,7 @@ The system MUST keep existing identity routes while reframing their rendered sem
 
 ### Requirement: Identity Navigation and CTA Contract
 
-The system MUST expose `Perfil` and `Credenciales` labels in identity navigation and MUST NOT expose a downloadable CV action.
+The system MUST expose `Perfil` and `Credenciales` labels in identity navigation and MUST NOT expose a downloadable CV action. The homepage navigation link MUST render as "Inicio".
 
 #### Scenario: Sidebar labels follow new IA
 
@@ -39,6 +39,13 @@ The system MUST expose `Perfil` and `Credenciales` labels in identity navigation
 - GIVEN a visitor reviews sidebar identity actions
 - WHEN actionable links and buttons are displayed
 - THEN no downloadable CV CTA is available
+
+#### Scenario: Homepage nav label is "Inicio"
+
+- GIVEN a visitor opens any page
+- WHEN the sidebar navigation renders
+- THEN the first navigation item (homepage) displays "Inicio"
+- AND it does not display "Home"
 
 ### Requirement: Evidence-Safe Credential Presentation
 

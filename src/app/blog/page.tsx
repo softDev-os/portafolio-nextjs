@@ -12,7 +12,7 @@ const articles = [
     category: 'Desarrollo',
     date: '2023-07-23',
     dateDisplay: '23/07/2023',
-    title: 'Como aprender a programar en 2023',
+    title: 'Cómo aprender a programar en 2023',
     image: '/assets/img/articulo-1.jpg',
   },
   {
@@ -20,7 +20,7 @@ const articles = [
     category: 'Desarrollo',
     date: '2023-07-10',
     dateDisplay: '10/07/2023',
-    title: 'Como hacer animaciones en CSS',
+    title: 'Cómo hacer animaciones en CSS',
     image: '/assets/img/articulo-2.jpg',
   },
   {
@@ -36,7 +36,7 @@ const articles = [
     category: 'Desarrollo',
     date: '2023-05-05',
     dateDisplay: '05/05/2023',
-    title: 'Como maquetar una web desde cero',
+    title: 'Cómo maquetar una web desde cero',
     image: '/assets/img/articulo-4.jpg',
   },
 ]

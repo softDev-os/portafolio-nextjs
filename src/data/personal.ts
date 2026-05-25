@@ -1,7 +1,7 @@
 export const personal = {
   name: "Juan Fontalvo",
   job: "Architect / AI Engineer",
-  bio: "Arquitecto y AI Engineer enfocado en automatización operativa, flujos de WhatsApp, handoff humano y memoria persistente para equipos que necesitan convertir procesos reales en sistemas confiables.",
+  bio: "Arquitecto y AI Engineer enfocado en automatización operativa, workflows de WhatsApp, handoff humano y memoria persistente para equipos que necesitan convertir procesos reales en sistemas confiables.",
   country: "Colombia",
   city: "Bogotá",
   phone: "3128670860",

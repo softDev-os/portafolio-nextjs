@@ -43,26 +43,26 @@ export const caseStudies: CaseStudy[] = [
     kind: CASE_STUDY_KIND.FLAGSHIP,
     metadataLabel: "Automatización",
     title: "WhatsApp lead intake and qualification",
-    audience: "Service businesses that receive high-intent inquiries through WhatsApp.",
+    audience: "Empresas de servicios que reciben consultas de alta intención a través de WhatsApp.",
     problem:
-      "Inbound conversations were difficult to qualify consistently before a human reviewed them.",
+      "Las conversaciones entrantes eran difíciles de calificar de manera consistente antes de que un humano las revisara.",
     solution:
-      "Built an n8n-led intake flow that captures structured context, evaluates lead fit, and keeps the conversation ready for human follow-up.",
-    outcomes: ["More consistent first-response context for incoming opportunities.", "Clearer separation between qualified inquiries and low-fit messages.", "A reusable automation pattern for WhatsApp-driven service sales."],
-    evidenceNote: "Public wording stays qualitative because private client and infrastructure data is not exposed.",
+      "Se construyó un flujo de intake liderado por n8n que captura contexto estructurado, evalúa la idoneidad del lead y deja la conversación lista para el seguimiento humano.",
+    outcomes: ["Contexto de primera respuesta más consistente para oportunidades entrantes.", "Separación más clara entre consultas calificadas y mensajes de baja prioridad.", "Un patrón de automatización reutilizable para ventas de servicios vía WhatsApp."],
+    evidenceNote: "El texto público se mantiene cualitativo porque no se exponen datos privados del cliente ni de la infraestructura.",
     stack: ["n8n", "WhatsApp workflows", "AI qualification", "Human review"],
   },
   {
     id: FLAGSHIP_CASE_STUDY_ID.SUPPORT_HUMAN_HANDOFF,
     kind: CASE_STUDY_KIND.FLAGSHIP,
     title: "Support triage with human handoff",
-    audience: "Teams that need automation without losing control of sensitive customer support.",
+    audience: "Equipos que necesitan automatización sin perder el control del soporte sensible al cliente.",
     problem:
-      "Support conversations needed faster triage while preserving a safe path to a person when automation should stop.",
+      "Las conversaciones de soporte necesitaban una clasificación más rápida, preservando una ruta segura hacia una persona cuando la automatización debía detenerse.",
     solution:
-      "Designed an AI-assisted support workflow that classifies requests, prepares context, and routes cases to human handling when needed.",
-    outcomes: ["Reduced ambiguity before a human takes ownership of a case.", "Safer automation boundaries for support conversations.", "A practical handoff pattern that can be reused across service operations."],
-    evidenceNote: "The case study describes verified workflow capability without claiming unsupported SLA or volume metrics.",
+      "Se diseñó un workflow de soporte asistido por IA que clasifica solicitudes, prepara contexto y enruta casos a atención humana cuando es necesario.",
+    outcomes: ["Menos ambigüedad antes de que un humano asuma un caso.", "Límites de automatización más seguros para conversaciones de soporte.", "Un patrón de handoff práctico y reutilizable en operaciones de servicio."],
+    evidenceNote: "El caso describe capacidad de workflow verificada sin reclamar métricas de SLA o volumen no respaldadas.",
     stack: ["n8n", "AI triage", "Human handoff", "Operational workflows"],
   },
   {
@@ -70,13 +70,13 @@ export const caseStudies: CaseStudy[] = [
     kind: CASE_STUDY_KIND.FLAGSHIP,
     metadataLabel: "IA Aplicada",
     title: "Persistent memory for agents",
-    audience: "AI-enabled operations that need continuity across sessions and tools.",
+    audience: "Operaciones habilitadas con IA que necesitan continuidad entre sesiones y herramientas.",
     problem:
-      "Agent workflows can lose context between sessions, making repeated decisions and project continuity harder to trust.",
+      "Los workflows de agente pueden perder contexto entre sesiones, dificultando la confianza en decisiones repetidas y la continuidad del proyecto.",
     solution:
-      "Integrated persistent memory patterns so agents can retain project decisions, discoveries, and implementation context across work sessions.",
-    outcomes: ["Better continuity for long-running AI-assisted work.", "A clearer audit trail of decisions, discoveries, and implementation notes.", "Reusable memory patterns for agentic engineering and operations workflows."],
-    evidenceNote: "Claims are limited to observed architecture and workflow behavior, not broad autonomous-agent guarantees.",
+      "Se integraron patrones de memoria persistente para que los agentes retengan decisiones, descubrimientos y contexto de implementación entre sesiones de trabajo.",
+    outcomes: ["Mejor continuidad para trabajo asistido por IA de larga duración.", "Un rastro de auditoría más claro de decisiones, descubrimientos y notas de implementación.", "Patrones de memoria reutilizables para workflows de ingeniería y operaciones con agentes."],
+    evidenceNote: "Las afirmaciones se limitan al comportamiento observado de arquitectura y workflow, no a garantías amplias de agentes autónomos.",
     stack: ["Engram", "OpenClaw", "MCP", "Agent workflows"],
   },
 ];
