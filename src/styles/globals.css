@@ -578,10 +578,11 @@ img {
    ===================== */
 .content__page--home {
   position: relative;
-  min-height: min(72vh, 52rem);
+  min-height: 100%;
   justify-content: center;
-  padding: 0 0 4rem;
+  padding: 4rem 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .content__page--home::before {
