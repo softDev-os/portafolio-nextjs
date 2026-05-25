@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Casos reales de automatización e IA",
   description:
     "Tres casos de prueba sobre WhatsApp, soporte con handoff humano y memoria persistente para agentes.",
+  alternates: {
+    canonical: "/casos-reales",
+  },
 };
 
 export default function Portafolio() {
@@ -26,9 +29,12 @@ export default function Portafolio() {
     <section className="content__page content__portfolio">
       <header className="portfolio__header">
         <p className="portfolio__eyebrow">Prueba antes de contacto</p>
-        <h1 className="portfolio__title">Casos <span className="title__color">reales</span></h1>
+        <h1 className="portfolio__title">
+          Casos <span className="title__color">reales</span>
+        </h1>
         <p className="portfolio__intro">
-          Un resumen conservador de sistemas de automatización e IA aplicados a operaciones reales.
+          Un resumen conservador de sistemas de automatización e IA aplicados a
+          operaciones reales.
         </p>
       </header>
 
@@ -36,7 +42,8 @@ export default function Portafolio() {
         <section className="portfolio__notice" aria-live="polite">
           <h2>Prueba incompleta</h2>
           <p>
-            Falta configurar parte del set flagship, así que esta página no afirma un conjunto completo de casos.
+            Falta configurar parte del set flagship, así que esta página no
+            afirma un conjunto completo de casos.
           </p>
         </section>
       ) : (
@@ -46,7 +53,9 @@ export default function Portafolio() {
               <p className="portfolio__case-index">Caso {index + 1}</p>
               <p className="portfolio__case-audience">{caseStudy.audience}</p>
               {caseStudy.metadataLabel && (
-                <span className="portfolio__metadata-badge">{caseStudy.metadataLabel}</span>
+                <span className="portfolio__metadata-badge">
+                  {caseStudy.metadataLabel}
+                </span>
               )}
               <h2 className="portfolio__case-title">{caseStudy.title}</h2>
               <div className="portfolio__case-image">
@@ -88,8 +97,14 @@ export default function Portafolio() {
       )}
 
       <div className="portfolio__next-step">
-        <p>Si estos problemas se parecen a tu operación, el siguiente paso es una conversación calificada.</p>
-        <Link href="/contacto" className="home-hero__cta-link home-hero__cta-link--secondary">
+        <p>
+          Si estos problemas se parecen a tu operación, el siguiente paso es una
+          conversación calificada.
+        </p>
+        <Link
+          href="/contacto"
+          className="home-hero__cta-link home-hero__cta-link--secondary"
+        >
           Contactar con contexto
         </Link>
       </div>

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Notas sobre automatización con IA, arquitectura de software y workflows operativos.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function Blog() {
@@ -48,10 +51,7 @@ export default function Blog() {
                 {article.dateDisplay}
               </time>
               <h2 className="article__title">
-                <Link
-                  href={`/blog/${article.slug}`}
-                  className="article__link"
-                >
+                <Link href={`/blog/${article.slug}`} className="article__link">
                   {article.title}
                 </Link>
               </h2>
@@ -59,6 +59,30 @@ export default function Blog() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section
+        className="portfolio__next-step"
+        aria-label="Siguiente paso después de leer el blog"
+      >
+        <p>
+          Si una nota conecta con un problema de tu operación, revisá los casos
+          o abrí una consulta calificada por WhatsApp.
+        </p>
+        <div className="home-hero__cta">
+          <Link
+            href="/casos-reales"
+            className="home-hero__cta-link home-hero__cta-link--primary"
+          >
+            Ver casos reales
+          </Link>
+          <Link
+            href="/contacto"
+            className="home-hero__cta-link home-hero__cta-link--secondary"
+          >
+            Consultar por WhatsApp
+          </Link>
+        </div>
       </section>
     </section>
   );

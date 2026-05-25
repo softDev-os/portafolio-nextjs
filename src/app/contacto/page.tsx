@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Contacto",
   description:
     "Contacto calificado para consultas de automatización con IA y arquitectura de software.",
+  alternates: {
+    canonical: "/contacto",
+  },
 };
 
 const inquirySteps = [
@@ -32,8 +35,12 @@ export default function Contacto() {
           >
             <i className="contact__icon fa-brands fa-whatsapp"></i>
             <span className="contact__label">Opción principal</span>
-            <span className="contact__subtitle">{primarySalesContact.label}</span>
-            <span className="contact__note">+57 {primarySalesContact.displayPhone}</span>
+            <span className="contact__subtitle">
+              {primarySalesContact.label}
+            </span>
+            <span className="contact__note">
+              +57 {primarySalesContact.displayPhone}
+            </span>
           </a>
           <a href={`tel:+57${personal.phone}`} className="contact__data">
             <i className="contact__icon fa-solid fa-phone"></i>
@@ -50,7 +57,9 @@ export default function Contacto() {
           <div className="contact__data">
             <i className="contact__icon fa-solid fa-circle-check"></i>
             <span className="contact__label">Ubicación</span>
-            <h2 className="contact__subtitle">{personal.city}, {personal.country}</h2>
+            <span className="contact__subtitle">
+              {personal.city}, {personal.country}
+            </span>
           </div>
         </section>
 
@@ -64,7 +73,9 @@ export default function Contacto() {
 
           <div className="contact__qualified-box">
             <p className="contact__intro">
-              El primer paso comercial es el bot de WhatsApp: permite capturar contexto mínimo, calificar la consulta y decidir si corresponde avanzar a una conversación directa con alcance claro.
+              El primer paso comercial es el bot de WhatsApp: permite capturar
+              contexto mínimo, calificar la consulta y decidir si corresponde
+              avanzar a una conversación directa con alcance claro.
             </p>
             <ol className="contact__steps">
               {inquirySteps.map((step) => (
@@ -80,12 +91,17 @@ export default function Contacto() {
               >
                 Abrir WhatsApp de ventas
               </a>
-              <Link href="/casos-reales" className="home-hero__cta-link home-hero__cta-link--secondary">
+              <Link
+                href="/casos-reales"
+                className="home-hero__cta-link home-hero__cta-link--secondary"
+              >
                 Revisar casos antes
               </Link>
             </div>
             <p className="contact__fine-print">
-              Los canales personales quedan como respaldo. La priorización por WhatsApp ayuda a separar consultas de negocio de conversaciones personales o soporte no relacionado.
+              Los canales personales quedan como respaldo. La priorización por
+              WhatsApp ayuda a separar consultas de negocio de conversaciones
+              personales o soporte no relacionado.
             </p>
           </div>
         </section>

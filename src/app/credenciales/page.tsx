@@ -1,16 +1,19 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import { education, experience, certificates } from '@/data/experience'
-import { capabilityGroups } from '@/data/skills'
+import type { Metadata } from "next";
+import Image from "next/image";
+import { education, experience, certificates } from "@/data/experience";
+import { capabilityGroups } from "@/data/skills";
 
 export const metadata: Metadata = {
-  title: 'Credenciales',
+  title: "Credenciales",
   description:
-    'Credenciales estratégicas de Juan Fontalvo para arquitectura de automatización, IA aplicada y entrega técnica.',
-}
+    "Credenciales estratégicas de Juan Fontalvo para arquitectura de automatización, IA aplicada y entrega técnica.",
+  alternates: {
+    canonical: "/credenciales",
+  },
+};
 
 function hasVerifiableCertificateId(id: string | undefined) {
-  return Boolean(id && id.trim() !== '' && !id.includes('XXXXXX'))
+  return Boolean(id && id.trim() !== "" && !id.includes("XXXXXX"));
 }
 
 export default function Curriculum() {
@@ -24,7 +27,9 @@ export default function Curriculum() {
         {/* Columna izquierda — Formación y experiencia */}
         <section className="curriculum__left">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Base <span className="title__color">técnica</span></h2>
+            <h2 className="curriculum__subtitle">
+              Base <span className="title__color">técnica</span>
+            </h2>
           </header>
           <div className="curriculum__timelines">
             {education.map((item, index) => (
@@ -43,7 +48,9 @@ export default function Curriculum() {
           </div>
 
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Trayectoria <span className="title__color">operativa</span></h2>
+            <h2 className="curriculum__subtitle">
+              Trayectoria <span className="title__color">operativa</span>
+            </h2>
           </header>
           <div className="curriculum__timelines">
             {experience.map((item, index) => (
@@ -65,7 +72,9 @@ export default function Curriculum() {
         {/* Columna derecha — Capacidades */}
         <section className="curriculum__right">
           <header className="curriculum__subheader">
-            <h2 className="curriculum__subtitle">Capacidades <span className="title__color">aplicadas</span></h2>
+            <h2 className="curriculum__subtitle">
+              Capacidades <span className="title__color">aplicadas</span>
+            </h2>
           </header>
           <div className="curriculum__capabilities">
             {capabilityGroups.map((group) => (
@@ -90,7 +99,9 @@ export default function Curriculum() {
       {/* Certificados */}
       <div className="curriculum__certificates">
         <header className="curriculum__subheader">
-          <h2 className="curriculum__subtitle">Evidencia <span className="title__color">formativa</span></h2>
+          <h2 className="curriculum__subtitle">
+            Evidencia <span className="title__color">formativa</span>
+          </h2>
         </header>
         <section className="certificates__container">
           {certificates.map((cert, index) => (
@@ -107,7 +118,9 @@ export default function Curriculum() {
               <div className="certificate__content">
                 <h3 className="certificate__title">{cert.title}</h3>
                 {hasVerifiableCertificateId(cert.id) ? (
-                  <span className="certificate__id">ID Verificación: {cert.id}</span>
+                  <span className="certificate__id">
+                    ID Verificación: {cert.id}
+                  </span>
                 ) : null}
                 <span className="certificate__date">{cert.date}</span>
               </div>
@@ -116,5 +129,5 @@ export default function Curriculum() {
         </section>
       </div>
     </section>
-  )
+  );
 }

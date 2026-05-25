@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/next";
+import { siteOrigin } from "@/lib/seo";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/styles/globals.css";
 
@@ -14,21 +15,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://tech-local.com"),
+  metadataBase: new URL(siteOrigin),
   title: {
-    default: "Juan Fontalvo — Architect / AI Engineer",
+    default: "Juan Fontalvo — Arquitectura de software e IA aplicada",
     template: "%s | Juan Fontalvo",
   },
   description:
     "Consultoría en arquitectura de software, automatización con IA y workflows operativos con prueba real antes del contacto.",
   authors: [{ name: "Juan Fontalvo" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/assets/img/logo.svg",
   },
   openGraph: {
     type: "website",
     locale: "es_CO",
-    url: process.env.NEXT_PUBLIC_SITE_URL,
     siteName: "Juan Fontalvo",
   },
 };
@@ -44,7 +58,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "!function(){try{var t=localStorage.getItem(\"theme\")||(matchMedia(\"(prefers-color-scheme:dark)\").matches?\"dark\":\"light\");document.documentElement.dataset.theme=t}catch(e){}}()",
+              '!function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}}()',
           }}
         />
       </head>

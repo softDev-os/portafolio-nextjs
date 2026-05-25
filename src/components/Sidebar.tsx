@@ -80,7 +80,7 @@ export default function Sidebar() {
               priority
             />
           </div>
-          <h1 className="sidebar__name">{personal.name}</h1>
+          <p className="sidebar__name">{personal.name}</p>
           <p className="sidebar__role">{personal.job}</p>
         </div>
 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Perfil",
   description:
     "Perfil profesional de Juan Fontalvo para arquitectura de automatización, IA aplicada y mejora operativa.",
+  alternates: {
+    canonical: "/perfil",
+  },
 };
 
 const consultantCapabilities = [
@@ -73,21 +76,36 @@ export default function SobreMi() {
       </header>
 
       <section className="profile__hero" aria-label="Perfil estratégico">
-        <p className="profile__eyebrow">Arquitectura de automatización e IA aplicada</p>
+        <p className="profile__eyebrow">
+          Arquitectura de automatización e IA aplicada
+        </p>
         <h2 className="profile__headline">
-          Diseño sistemas de automatización para operaciones que necesitan decidir mejor, responder más rápido y sostener el control.
+          Diseño sistemas de automatización para operaciones que necesitan
+          decidir mejor, responder más rápido y sostener el control.
         </h2>
         <article className="profile__summary">
           <p>{personal.bio}</p>
           <p>
-            Trabajo con equipos que necesitan ordenar conversaciones, soporte y conocimiento operativo en flujos claros, auditables y sostenibles. La tecnología entra cuando ayuda a reducir fricción real, no para sumar complejidad innecesaria.
+            Trabajo con equipos que necesitan ordenar conversaciones, soporte y
+            conocimiento operativo en flujos claros, auditables y sostenibles.
+            La tecnología entra cuando ayuda a reducir fricción real, no para
+            sumar complejidad innecesaria.
           </p>
         </article>
-        <div className="profile__actions" aria-label="Siguientes pasos recomendados">
-          <Link href="/casos-reales" className="home-hero__cta-link home-hero__cta-link--primary">
+        <div
+          className="profile__actions"
+          aria-label="Siguientes pasos recomendados"
+        >
+          <Link
+            href="/casos-reales"
+            className="home-hero__cta-link home-hero__cta-link--primary"
+          >
             Ver casos reales primero
           </Link>
-          <Link href="/contacto" className="home-hero__cta-link home-hero__cta-link--secondary">
+          <Link
+            href="/contacto"
+            className="home-hero__cta-link home-hero__cta-link--secondary"
+          >
             Conversar con contexto
           </Link>
         </div>
@@ -113,14 +131,18 @@ export default function SobreMi() {
       <section className="about__services">
         <header className="services__header">
           <h2 className="services__title">
-            Frentes estratégicos donde puedo <span className="title__color">intervenir</span>
+            Frentes estratégicos donde puedo{" "}
+            <span className="title__color">intervenir</span>
           </h2>
         </header>
         <div className="services__container">
           {consultantCapabilities.map((capability) => (
             <article key={capability.title} className="services__service">
               <div className="service__icons">
-                <i className={`service__icon ${capability.icon}`} aria-hidden="true"></i>
+                <i
+                  className={`service__icon ${capability.icon}`}
+                  aria-hidden="true"
+                ></i>
               </div>
               <div className="service__content">
                 <h3 className="service__title">{capability.title}</h3>

@@ -19,6 +19,16 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.summary,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: article.title,
+      description: article.summary,
+      url: `/blog/${article.slug}`,
+      publishedTime: article.date,
+    },
   };
 }
 
@@ -60,6 +70,30 @@ export default async function BlogArticle({
             <p key={i}>{paragraph}</p>
           ))}
         </div>
+
+        <footer
+          className="portfolio__next-step"
+          aria-label="Siguiente paso después del artículo"
+        >
+          <p>
+            Si querés llevar este tipo de automatización a una operación real,
+            empezá por los casos o por una consulta con contexto.
+          </p>
+          <div className="home-hero__cta">
+            <Link
+              href="/casos-reales"
+              className="home-hero__cta-link home-hero__cta-link--primary"
+            >
+              Ver casos reales
+            </Link>
+            <Link
+              href="/contacto"
+              className="home-hero__cta-link home-hero__cta-link--secondary"
+            >
+              Consultar por WhatsApp
+            </Link>
+          </div>
+        </footer>
       </article>
     </section>
   );
