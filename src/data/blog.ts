@@ -18,59 +18,63 @@ const articles: BlogArticle[] = [
     dateDisplay: "20/05/2026",
     image: "/assets/img/articulo-1.jpg",
     summary:
-      "Diseñé un flujo de intake que captura contexto, evalúa ajuste y deja la conversación lista para seguimiento humano. Comparto la arquitectura, las decisiones de diseño y lo que aprendí.",
+      "Armé un flujo de intake que captura contexto, evalúa ajuste y deja la conversación lista para que una persona haga el seguimiento. Cuento la arquitectura, qué decisiones tomé y qué aprendí.",
     content: [
-      "Cuando un negocio de servicios recibe consultas por WhatsApp, el mayor cuello de botella no es responder: es calificar. Sin un criterio consistente, las oportunidades reales se mezclan con mensajes de baja intención y el equipo pierde tiempo evaluando una por una.",
+      "Si tienes un negocio de servicios y recibes consultas por WhatsApp, el verdadero cuello de botella no es responder. Es calificar.",
 
-      "La automatización no reemplaza el criterio humano; lo enfoca. En los flujos que diseñé con n8n, el bot hace tres cosas antes de que una persona vea la conversación: captura datos estructurados del lead, evalúa ajuste contra criterios predefinidos del negocio, y organiza el contexto — canal, necesidad, urgencia — en un formato que el equipo puede revisar en segundos.",
+      "Sin un criterio parejo, las oportunidades reales se mezclan con mensajes sin intención de compra, y el equipo pierde tiempo revisando cada consulta a mano. Lo que hice fue poner orden a eso con n8n.",
 
-      "La arquitectura es simple por diseño. Un webhook de WhatsApp alimenta un workflow de n8n. El primer nodo extrae los campos relevantes del mensaje entrante. Un nodo de IA — liviano, con un prompt acotado al dominio del negocio — clasifica la intención y asigna un puntaje de ajuste. Si el puntaje supera el umbral, el caso avanza a una cola de revisión humana con todo el contexto empaquetado. Si no, se cierra con un mensaje de cortesía.",
+      "El bot no reemplaza a nadie. Hace tres cosas antes de que una persona toque la conversación: captura datos del lead de forma estructurada, evalúa si encaja con los criterios del negocio, y empaqueta el contexto (canal, necesidad, urgencia) para que el equipo lo revise en segundos.",
 
-      "La decisión más importante fue mantener el tono cualitativo, no métrico. Los resultados que puedo afirmar son acotados: contexto más consistente para el primer contacto, separación más clara entre consultas calificadas y mensajes de baja intención, y un patrón de automatización reusable para ventas de servicios por WhatsApp. No prometo tasas de conversión ni SLA: el valor está en la claridad operativa que gana el equipo.",
+      "La arquitectura es simple a propósito. Un webhook de WhatsApp dispara un workflow. El primer nodo extrae los campos del mensaje. Uno de IA, liviano y con un prompt acotado al dominio, clasifica la intención y asigna un puntaje. Si pasa el umbral, el caso va a una cola de revisión con todo listo. Si no, se cierra con cortesía.",
 
-      "Si estás evaluando automatizar la primera línea de contacto de tu negocio, empezá por definir los criterios de calificación antes de tocar una herramienta. La tecnología es el último paso; el primero es saber qué hace que un lead valga una conversación.",
+      "Algo que aprendí: manten el tono cualitativo. No prometo tasas de conversión ni SLA. Lo que sí mejoró fue la consistencia del contexto en el primer contacto, la separación entre leads calificados y mensajes sueltos, y la reutilización del patrón para otros servicios por WhatsApp.",
+
+      "Si estás pensando en automatizar la primera línea de tu negocio, empieza por definir los criterios de calificación. La herramienta va después. Primero define qué hace que un lead valga la pena.",
     ],
   },
   {
     slug: "memoria-persistente-agentes-ia-engram",
-    title: "Memoria persistente para agentes de IA: por qué importa y cómo la implementé",
+    title: "Memoria persistente para agentes de IA: por qué importa y cómo la armé",
     category: "IA Aplicada",
     date: "2026-05-15",
     dateDisplay: "15/05/2026",
     image: "/assets/img/articulo-3.jpg",
     summary:
-      "Los agentes de IA pierden contexto entre sesiones. Integré patrones de memoria persistente con Engram para que retengan decisiones, descubrimientos y notas de implementación. Comparto la arquitectura y los patrones reusables.",
+      "Un agente de IA sin memoria es como un dev que arranca cada día sin leer el historial del repo. Integré Engram para que los agentes retengan decisiones, bugs corregidos y contexto entre sesiones.",
     content: [
-      "El mayor punto ciego del trabajo asistido por IA no es la calidad de las respuestas: es la continuidad. Un agente puede producir una recomendación de arquitectura sólida en una sesión, y en la siguiente — sin contexto de lo que ya se decidió — sugerir algo contradictorio. Esa fricción no es un defecto del modelo; es una limitación de la memoria.",
+      "El problema más molesto del trabajo con agentes de IA no es que respondan mal. Es que no recuerdan lo que ya resolvieron.",
 
-      "La memoria persistente resuelve esto guardando el contexto entre sesiones. No es un concepto nuevo — cualquier aplicación con base de datos lo hace — pero aplicarlo al flujo de trabajo de agentes de IA requiere patrones distintos. El agente no solo necesita recordar; necesita saber qué recordar, cuándo actualizarlo y cómo presentarlo en la sesión siguiente.",
+      "Puedes tener una sesión donde el agente te da una recomendación de arquitectura impecable, y en la siguiente, sin contexto, te sugiere algo que la contradice. Eso no es culpa del modelo. Es falta de memoria.",
 
-      "En mi implementación usé Engram como backend de memoria. Cada sesión de trabajo — decisiones de arquitectura, bugs corregidos, patrones establecidos, convenciones del equipo — se guarda con un topic key estable que permite evolución sin sobrescritura destructiva. Cuando arranca una sesión nueva, el agente consume el contexto previo vía búsqueda semántica, no por carga completa. Esto mantiene el token budget bajo y la relevancia alta.",
+      "La memoria persistente guarda ese contexto entre sesiones. Suena obvio —cualquier app con base de datos lo hace—, pero aplicado a agentes de IA cambia la forma de trabajar. El agente no solo tiene que recordar; tiene que saber qué recordar, cuándo actualizarlo y cómo presentarlo cuando vuelvas.",
 
-      "El patrón que más valió la pena fue el resumen estructurado de cierre de sesión: Goal, Instructions, Discoveries, Accomplished, Next Steps, Relevant Files. Esas seis secciones le dan a la sesión siguiente un mapa claro de dónde estaba todo y qué falta. No es un log de chat; es un documento de traspaso.",
+      "Yo usé Engram como backend. Cada sesión guarda decisiones de arquitectura, bugs corregidos, patrones y convenciones del equipo con un topic key estable. Eso permite evolución sin machacar lo anterior. Cuando arranca una sesión nueva, el agente consume el contexto por búsqueda semántica, no por carga completa. Así mantienes bajo el uso de tokens y alta la relevancia.",
 
-      "Para equipos que trabajan con agentes de IA en proyectos de ingeniería, la memoria persistente deja de ser un nice-to-have cuando el proyecto cruza las tres sesiones. La trazabilidad de decisiones — poder responder «¿por qué tomamos esta decisión de arquitectura hace dos sprints?» — es el verdadero retorno de inversión. No se trata de que el agente sea más inteligente; se trata de que no olvide lo que ya resolvió.",
+      "Lo que más me sirvió fue un patrón de cierre con seis campos: Goal, Instructions, Discoveries, Accomplished, Next Steps, Relevant Files. No es un log de chat aburrido. Es un documento de traspaso que le dice a la sesión siguiente exactamente dónde estabas parado.",
+
+      "Para equipos que trabajan con agentes en proyectos de ingeniería, la memoria deja de ser un lujo cuando el proyecto pasa las tres sesiones. La trazabilidad real —poder responder «¿por qué decidimos esto hace dos sprints?»— vale más que cualquier benchmark.",
     ],
   },
   {
     slug: "handoff-humano-automatizacion-cuando-como",
-    title: "Handoff humano en automatización: cuándo y cómo pasar el control a una persona",
+    title: "Handoff humano en automatización: cuándo y cómo pasar el control",
     category: "Automatización",
     date: "2026-05-10",
     dateDisplay: "10/05/2026",
     image: "/assets/img/articulo-2.jpg",
     summary:
-      "Automatizar no significa eliminar al humano. Diseñé un flujo de soporte donde la IA clasifica y prepara contexto, pero el handoff a una persona ocurre cuando la automatización debe detenerse. Comparto los criterios de decisión y la arquitectura.",
+      "Automatizar no es eliminar personas. Diseñé un flujo donde la IA clasifica y prepara contexto, pero frena y deriva a un humano cuando corresponde. Te cuento los criterios y cómo lo armé.",
     content: [
-      "El error más común al diseñar automatización de soporte es asumir que el objetivo es eliminar la intervención humana. El objetivo real es reservar la atención humana para los casos que la necesitan, y automatizar todo lo demás con un límite claro y seguro.",
+      "El error más común cuando automatizas soporte es pensar que el objetivo es sacar al humano del todo. El objetivo real es reservar la atención humana para los casos que la necesitan.",
 
-      "En el flujo que diseñé para triage de soporte, la IA clasifica la consulta entrante, prepara contexto — canal, historial relevante, categoría del problema — y decide si el caso puede resolverse automáticamente o debe derivarse a una persona. La decisión no es binaria; es un espectro informado por reglas de negocio explícitas y un umbral de confianza del clasificador.",
+      "En el flujo que diseñé, la IA clasifica la consulta entrante y prepara contexto: canal, historial, categoría. Después decide si se puede resolver sola o si hay que derivar a una persona. No es un sí o no binario. Es una decisión basada en reglas claras y un umbral de confianza del clasificador.",
 
-      "Los criterios de handoff que definí fueron tres: sensibilidad del caso (datos personales, impacto financiero), ambigüedad de la consulta (confianza del clasificador por debajo del umbral), y preferencia explícita del cliente (solicitud de hablar con una persona). Si alguno de estos criterios se activa, el flujo frena la automatización y deriva a un humano con todo el contexto empaquetado.",
+      "Definí tres criterios de handoff: sensibilidad del caso (datos personales, impacto financiero), ambigüedad de la consulta (confianza baja del modelo), y pedido explícito del cliente de hablar con alguien. Si se activa cualquiera, el flujo frena y deriva con todo el contexto ya preparado.",
 
-      "La arquitectura es un patrón que se puede reusar en cualquier operación de servicio: intake → clasificación → decisión de handoff → derivación con contexto o resolución automática. Lo implementé con n8n para la orquestación y un modelo de clasificación liviano. El resultado práctico: menos ambigüedad antes de que un humano tome ownership del caso, y una frontera más segura para la automatización.",
+      "El patrón es simple y reusable: intake → clasificación → decisión → handoff con contexto o resolución automática. Lo implementé con n8n para la orquestación y un modelo liviano para clasificar. El resultado: menos incertidumbre antes de que alguien tome el caso, y un límite más claro de hasta dónde llega la máquina.",
 
-      "Si estás automatizando soporte, definí los criterios de handoff primero. No los descubras por ensayo y error con clientes reales. La confianza en la automatización se construye cuando el equipo sabe exactamente en qué punto el sistema va a pedir ayuda, no cuando se enteran después de un error.",
+      "Si estás automatizando soporte, define los criterios de handoff primero. No los improvises con clientes reales. La confianza en el sistema se construye cuando tu equipo sabe exactamente en qué momento la máquina va a pedir ayuda. No después de un error.",
     ],
   },
 ];
