@@ -13,9 +13,9 @@ Sitio estático generado con Next.js, desplegado en Vercel. Diseñado para conve
 | Capa | Tecnología |
 |------|-----------|
 | Framework | Next.js 16 (App Router, Turbopack) |
-| Estilos | CSS Modules + variables CSS |
+| Estilos | CSS global modularizado + variables CSS |
 | Tipografía | Poppins (Google Fonts) |
-| Iconos | Font Awesome Free |
+| Iconos | SVG inline |
 | Hosting | Vercel |
 | Analytics | Vercel Analytics |
 | CI/CD | GitHub → Vercel auto-deploy |
@@ -45,10 +45,13 @@ Sitio estático generado con Next.js, desplegado en Vercel. Diseñado para conve
 ## Desarrollo
 
 ```bash
-npm install
-npm run dev      # http://localhost:3000
-npm run build    # build de producción
-npm run lint     # ESLint
+pnpm install
+pnpm dev         # http://localhost:3000
+pnpm build       # build de producción
+pnpm lint        # ESLint
+pnpm typecheck   # TypeScript
+pnpm test        # Vitest
+pnpm test:e2e    # Playwright smoke tests
 ```
 
 Los artículos del blog se editan en `src/data/blog.ts`. No hay CMS — el contenido es estático y versionado.
@@ -64,7 +67,6 @@ Los artículos del blog se editan en `src/data/blog.ts`. No hay CMS — el conte
 ```
 src/
 ├── app/                  # App Router (rutas, layouts, metadata)
-│   ├── api/              # API routes
 │   ├── blog/[slug]/      # Artículos dinámicos (SSG)
 │   ├── casos-reales/     # Portfolio
 │   ├── contacto/         # Contacto + WhatsApp CTA
@@ -77,6 +79,8 @@ src/
 │   └── sitemap.ts
 ├── components/           # Sidebar, Footer, ThemeToggle, CaseDiagram
 ├── data/                 # Contenido (blog, personal, projects, skills)
-├── styles/               # globals.css con variables y temas
+├── styles/               # CSS global modularizado por tema/ruta
 └── public/assets/        # Imágenes, fuentes, favicon
 ```
+
+Ver `docs/css-modularization.md` para el orden de imports, reglas de cascada y plan opcional de split futuro.
