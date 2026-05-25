@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tech-local.com
 
-## Getting Started
+Portfolio profesional de **Juan Fontalvo — Architect / AI Engineer**.
 
-First, run the development server:
+Sitio estático generado con Next.js, desplegado en Vercel. Diseñado para convertir visitantes en leads calificados mostrando casos reales de automatización con IA, perfil profesional y credenciales verificables.
+
+**[tech-local.com](https://tech-local.com/)**
+
+---
+
+## Stack
+
+| Capa | Tecnología |
+|------|-----------|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Estilos | CSS Modules + variables CSS |
+| Tipografía | Poppins (Google Fonts) |
+| Iconos | Font Awesome Free |
+| Hosting | Vercel |
+| Analytics | Vercel Analytics |
+| CI/CD | GitHub → Vercel auto-deploy |
+
+## Rutas
+
+| Ruta | Página | Contenido |
+|------|--------|-----------|
+| `/` | Home | Hero + CTAs |
+| `/casos-reales` | Portfolio | 3 casos flagship con screenshots de n8n |
+| `/perfil` | Perfil | Bio profesional, stack, servicios |
+| `/credenciales` | Credenciales | Formación, experiencia, certificaciones |
+| `/blog` | Blog | 3 artículos sobre automatización, IA y handoff |
+| `/contacto` | Contacto | WhatsApp bot + canales secundarios |
+
+## Features
+
+- **Dark / light mode** con toggle y detección de preferencia del sistema
+- **Open Graph image** dinámica generada en el edge
+- **Sitemap + robots.txt** para indexación
+- **Custom 404** en español
+- **Scrollbar** personalizado marca
+- **Lighthouse 100/100/100/100** en las 5 páginas principales
+- **CSS variables** para temas, sin colores hardcodeados
+- **Diagramas de flujo** SVG + screenshots reales de workflows
+
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de producción
+npm run lint     # ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Los artículos del blog se editan en `src/data/blog.ts`. No hay CMS — el contenido es estático y versionado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Convenciones
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Idioma**: español neutro para contenido descriptivo. Inglés para marca, términos técnicos y títulos de caso.
+- **Commits**: [Conventional Commits](https://www.conventionalcommits.org/)
+- **Tono**: conservador, orientado a evidencia, sin claims inflados.
 
-## Learn More
+## Estructura
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/                  # App Router (rutas, layouts, metadata)
+│   ├── api/              # API routes
+│   ├── blog/[slug]/      # Artículos dinámicos (SSG)
+│   ├── casos-reales/     # Portfolio
+│   ├── contacto/         # Contacto + WhatsApp CTA
+│   ├── credenciales/     # Credenciales
+│   ├── perfil/           # Perfil profesional
+│   ├── layout.tsx        # Root layout (sidebar + footer + theme)
+│   ├── not-found.tsx     # 404 custom
+│   ├── opengraph-image.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/           # Sidebar, Footer, ThemeToggle, CaseDiagram
+├── data/                 # Contenido (blog, personal, projects, skills)
+├── styles/               # globals.css con variables y temas
+└── public/assets/        # Imágenes, fuentes, favicon
+```
