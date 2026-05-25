@@ -28,6 +28,12 @@ export async function generateMetadata({
       description: article.summary,
       url: `/blog/${article.slug}`,
       publishedTime: article.date,
+      images: [
+        {
+          url: article.image,
+          alt: article.title,
+        },
+      ],
     },
   };
 }

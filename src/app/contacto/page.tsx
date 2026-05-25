@@ -33,7 +33,7 @@ export default function Contacto() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="contact__icon fa-brands fa-whatsapp"></i>
+            <i className="contact__icon fa-brands fa-whatsapp" aria-hidden="true"></i>
             <span className="contact__label">Opción principal</span>
             <span className="contact__subtitle">
               {primarySalesContact.label}
@@ -43,19 +43,19 @@ export default function Contacto() {
             </span>
           </a>
           <a href={`tel:+57${personal.phone}`} className="contact__data">
-            <i className="contact__icon fa-solid fa-phone"></i>
+            <i className="contact__icon fa-solid fa-phone" aria-hidden="true"></i>
             <span className="contact__label">Canal secundario</span>
             <span className="contact__subtitle">
               +57 {personal.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3")}
             </span>
           </a>
           <a href={`mailto:${personal.email}`} className="contact__data">
-            <i className="contact__icon fa-solid fa-envelope"></i>
+            <i className="contact__icon fa-solid fa-envelope" aria-hidden="true"></i>
             <span className="contact__label">Canal secundario</span>
             <span className="contact__subtitle">{personal.email}</span>
           </a>
           <div className="contact__data">
-            <i className="contact__icon fa-solid fa-circle-check"></i>
+            <i className="contact__icon fa-solid fa-circle-check" aria-hidden="true"></i>
             <span className="contact__label">Ubicación</span>
             <span className="contact__subtitle">
               {personal.city}, {personal.country}
@@ -66,9 +66,9 @@ export default function Contacto() {
         {/* Consulta calificada */}
         <section className="contact__form-box">
           <header className="contact__form-header">
-            <h3 className="form-header__title">
+            <h2 className="form-header__title">
               Consulta <span className="title__color">calificada</span>
-            </h3>
+            </h2>
           </header>
 
           <div className="contact__qualified-box">

@@ -63,9 +63,12 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
+        <a href="#main-content" className="skip-link">
+          Saltar al contenido
+        </a>
         <div className="layout">
           <Sidebar />
-          <main className="layout__main">
+          <main id="main-content" className="layout__main" tabIndex={-1}>
             {children}
             <Footer />
           </main>

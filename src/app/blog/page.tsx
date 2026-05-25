@@ -44,7 +44,7 @@ export default function Blog() {
                   />
                 </div>
                 <div className="article__logo">
-                  <i className="article__icon fa-solid fa-book"></i>
+                  <i className="article__icon fa-solid fa-book" aria-hidden="true"></i>
                 </div>
               </Link>
             </div>
