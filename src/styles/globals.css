@@ -130,6 +130,8 @@ img {
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--principal-color) transparent;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 /* Home: sin padding en el main para que la sección cubra todo el fondo */
@@ -1844,6 +1846,7 @@ a.contact__data {
     border-radius: 0;
     padding: 1.5rem 1.15rem;
     padding-bottom: 8rem;
+    overflow: visible;
   }
 
   /* Home: sin scroll — el layout ocupa exactamente el viewport */
