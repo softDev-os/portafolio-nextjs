@@ -19,7 +19,7 @@ export default function Portafolio() {
     <section className="content__page content__portfolio">
       <header className="portfolio__header">
         <p className="portfolio__eyebrow">Prueba antes de contacto</p>
-        <h1 className="portfolio__title">Casos reales</h1>
+        <h1 className="portfolio__title">Casos <span className="title__color">reales</span></h1>
         <p className="portfolio__intro">
           Un resumen conservador de sistemas de automatización e IA aplicados a operaciones reales.
         </p>

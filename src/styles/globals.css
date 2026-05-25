@@ -2300,13 +2300,35 @@ a.contact__data {
 
 .about__title::after,
 .curriculum__title::after,
-.portfolio__title::after,
 .blog__title::after,
 .contact__title::after {
   content: "";
   position: absolute;
   top: 2rem;
   right: -2.5rem;
+  width: 5rem;
+  height: 3rem;
+  background-image: repeating-radial-gradient(
+    circle,
+    var(--principal-color),
+    var(--principal-color) 1px,
+    transparent 0,
+    transparent 100%
+  );
+  background-size: 6px 6px;
+  opacity: 0.5;
+}
+
+.portfolio__title .title__color {
+  position: relative;
+  padding-right: 2.5rem;
+}
+
+.portfolio__title .title__color::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  right: 0;
   width: 5rem;
   height: 3rem;
   background-image: repeating-radial-gradient(
