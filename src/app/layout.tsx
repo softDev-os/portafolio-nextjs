@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Consultoría en arquitectura de software, automatización con IA y workflows operativos con prueba real antes del contacto.",
   authors: [{ name: "Juan Fontalvo" }],
   icons: {
-    icon: "/assets/img/Ico_JDev.ico",
+    icon: "/assets/img/logo.svg",
   },
   openGraph: {
     type: "website",
