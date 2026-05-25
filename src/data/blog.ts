@@ -16,7 +16,7 @@ const articles: BlogArticle[] = [
     category: "Automatización",
     date: "2026-05-20",
     dateDisplay: "20/05/2026",
-    image: "/assets/img/articulo-1.jpg",
+    image: "/assets/img/blog-automatizacion.png",
     summary:
       "Armé un flujo de intake que captura contexto, evalúa ajuste y deja la conversación lista para que una persona haga el seguimiento. Cuento la arquitectura, qué decisiones tomé y qué aprendí.",
     content: [
@@ -39,7 +39,7 @@ const articles: BlogArticle[] = [
     category: "IA Aplicada",
     date: "2026-05-15",
     dateDisplay: "15/05/2026",
-    image: "/assets/img/articulo-3.jpg",
+    image: "/assets/img/blog-memoria.png",
     summary:
       "Un agente de IA sin memoria es como un dev que arranca cada día sin leer el historial del repo. Integré Engram para que los agentes retengan decisiones, bugs corregidos y contexto entre sesiones.",
     content: [
@@ -62,7 +62,7 @@ const articles: BlogArticle[] = [
     category: "Automatización",
     date: "2026-05-10",
     dateDisplay: "10/05/2026",
-    image: "/assets/img/articulo-2.jpg",
+    image: "/assets/img/blog-handoff.png",
     summary:
       "Automatizar no es eliminar personas. Diseñé un flujo donde la IA clasifica y prepara contexto, pero frena y deriva a un humano cuando corresponde. Te cuento los criterios y cómo lo armé.",
     content: [
