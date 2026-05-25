@@ -4,6 +4,7 @@ import {
   checkFlagshipCompleteness,
   getFlagshipCaseStudies,
 } from "@/data/projects";
+import CaseDiagram from "@/components/CaseDiagram";
 
 export const metadata: Metadata = {
   title: "Casos reales de automatización e IA",
@@ -42,6 +43,7 @@ export default function Portafolio() {
                 <span className="portfolio__metadata-badge">{caseStudy.metadataLabel}</span>
               )}
               <h2 className="portfolio__case-title">{caseStudy.title}</h2>
+              <CaseDiagram caseIndex={index} />
               <div className="portfolio__case-grid">
                 <section>
                   <h3>Problema</h3>
