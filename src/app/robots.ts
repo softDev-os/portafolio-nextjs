@@ -1,13 +1,12 @@
 import type { MetadataRoute } from "next";
+import { siteOrigin } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tech-local.com";
-
-  return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: `${siteUrl}/sitemap.xml`,
-  };
+	return {
+		rules: {
+			userAgent: "*",
+			allow: "/",
+		},
+		sitemap: `${siteOrigin}/sitemap.xml`,
+	};
 }

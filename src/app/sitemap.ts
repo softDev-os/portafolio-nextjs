@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getArticles } from "@/data/blog";
+import { siteOrigin } from "@/lib/seo";
 
 type SitemapEntry = {
 	path: string;
@@ -22,19 +23,16 @@ const staticRoutes = [
 ] as readonly SitemapEntry[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tech-local.com";
-	const blogRoutes: SitemapEntry[] = getArticles().map(
-		(article) => ({
-			path: `/blog/${article.slug}`,
-			changeFrequency: "monthly",
-			priority: 0.6,
-			lastModified: new Date(article.date),
-		}),
-	);
+	const blogRoutes: SitemapEntry[] = getArticles().map((article) => ({
+		path: `/blog/${article.slug}`,
+		changeFrequency: "monthly",
+		priority: 0.6,
+		lastModified: new Date(article.date),
+	}));
 
 	return [...staticRoutes, ...blogRoutes].map(
 		({ path, changeFrequency, priority, lastModified }) => ({
-			url: `${siteUrl}${path}`,
+			url: `${siteOrigin}${path}`,
 			lastModified: lastModified ?? STATIC_PUBLISHED,
 			changeFrequency,
 			priority,
