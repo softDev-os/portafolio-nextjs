@@ -39,7 +39,7 @@
 		padding: 2.5rem 1.5rem 3rem;
 	}
 
-	/* Sidebar → header compacto (menos altura — mejor proporción tipo app) */
+	/* Sidebar → header compacto */
 	.sidebar {
 		border-radius: 0;
 		height: auto;
@@ -181,19 +181,6 @@
 		align-items: flex-start;
 	}
 
-	.curriculum__container {
-		flex-direction: column;
-	}
-
-	.curriculum__left,
-	.curriculum__right {
-		flex-basis: 100%;
-	}
-
-	.curriculum__right {
-		padding: 0;
-	}
-
 	.contact__container {
 		flex-direction: column;
 	}
@@ -210,81 +197,7 @@
 		flex-basis: 100%;
 	}
 
-	/* Sobre Mí - tablet específico */
-	.about__personal-info {
-		flex-direction: column;
-	}
-
-	.personal-info__description {
-		font-size: 1.4rem;
-	}
-
-	.services__service {
-		flex-basis: 100%;
-		margin-right: 0;
-		margin-bottom: 2rem;
-	}
-
-	.service__title {
-		font-size: 1.7rem;
-	}
-
-	.service__description {
-		text-align: left;
-	}
-
-	.review__text {
-		font-size: 1.4rem;
-	}
-
-	.prices__box {
-		flex-basis: 100%;
-	}
-
-	/* Curriculum - tablet específico */
-	.curriculum__container {
-		flex-direction: column;
-	}
-
-	.curriculum__left,
-	.curriculum__right {
-		flex-basis: 100%;
-	}
-
-	.curriculum__right {
-		padding: 0;
-	}
-
-	.timeline__header {
-		flex-basis: 28%;
-	}
-
-	.timeline__description-container {
-		width: 72%;
-	}
-
-	.curriculum__subtitle {
-		font-size: 1.9rem;
-	}
-
-	.certificates__container {
-		gap: 1.5rem;
-	}
-
-	.certificates__certificate {
-		flex-basis: 100%;
-		flex-direction: column;
-	}
-
-	.certificate__logo {
-		width: 100%;
-		min-width: unset;
-	}
-}
-
-/* Tablet mejorado (768px – 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-	/* Sobre Mí - mejoras */
+	/* Sobre Mí - tablet */
 	.about__personal-info {
 		flex-direction: column;
 		gap: 2rem;
@@ -304,16 +217,29 @@
 		margin-bottom: 1.2rem;
 	}
 
+	.personal-info__description {
+		font-size: 1.4rem;
+	}
+
 	.services__service {
 		flex-basis: calc(50% - 1.5rem);
+		margin-right: 0;
 		margin-bottom: 2rem;
+	}
+
+	.service__title {
+		font-size: 1.7rem;
 	}
 
 	.service__description {
 		text-align: left;
 	}
 
-	/* Curriculum en tablet - stack vertical */
+	.review__text {
+		font-size: 1.4rem;
+	}
+
+	/* Curriculum - tablet */
 	.curriculum__container {
 		flex-direction: column;
 		gap: 2rem;
@@ -322,6 +248,10 @@
 	.curriculum__left,
 	.curriculum__right {
 		flex-basis: 100%;
+	}
+
+	.curriculum__right {
+		padding: 0;
 	}
 
 	.timeline__header {
@@ -333,8 +263,8 @@
 		width: 70%;
 	}
 
-	.curriculum__right {
-		padding: 0;
+	.curriculum__subtitle {
+		font-size: 1.9rem;
 	}
 
 	.certificates__container {
@@ -343,9 +273,15 @@
 
 	.certificates__certificate {
 		flex-basis: calc(50% - 1rem);
+		flex-direction: column;
 	}
 
-	/* Reseñas - mejor layout */
+	.certificate__logo {
+		width: 100%;
+		min-width: unset;
+	}
+
+	/* Reseñas - tablet */
 	.reviews__review {
 		flex-basis: 100%;
 		margin-right: 0;
@@ -357,13 +293,13 @@
 		max-height: 8rem;
 	}
 
-	/* Precios */
+	/* Precios - tablet */
 	.prices__box {
 		flex-basis: 100%;
 		margin: 0;
 	}
 
-	/* Extra info */
+	/* Extra info - tablet */
 	.extra__info {
 		flex-basis: calc(50% - 1rem);
 	}
@@ -687,8 +623,6 @@
 		align-items: flex-start;
 	}
 
-	/* Blog */
-
 	/* Contacto */
 	.contact__container {
 		flex-direction: column;
@@ -724,6 +658,59 @@
 
 	.form__group--textarea {
 		height: 15rem;
+	}
+
+	/* Curriculum */
+	.curriculum__container {
+		flex-direction: column;
+		gap: 2.4rem;
+	}
+
+	.curriculum__left,
+	.curriculum__right {
+		flex-basis: 100%;
+		width: 100%;
+		padding: 0;
+	}
+
+	.curriculum__capabilities {
+		grid-template-columns: 1fr;
+	}
+
+	.timelines__timeline {
+		flex-direction: column;
+		gap: 1.2rem;
+		padding-left: 2.2rem;
+	}
+
+	.timeline__header,
+	.timeline__description-container {
+		width: 100%;
+		flex-basis: auto;
+		text-align: left;
+		padding: 0;
+	}
+
+	.timeline__divider {
+		left: 0.7rem;
+		top: 0.5rem;
+		bottom: 0;
+	}
+
+	.curriculum__certificates,
+	.certificates__container {
+		margin-top: 2.4rem;
+		gap: 1.6rem;
+	}
+
+	.certificates__certificate {
+		flex-basis: 100%;
+		flex-direction: column;
+	}
+
+	.certificate__logo {
+		width: 100%;
+		min-width: 0;
 	}
 }
 
@@ -870,8 +857,7 @@
 		margin: 0.2rem;
 	}
 
-	/* Certificados stacked */
-
+	/* Certificados */
 	.certificate__logo {
 		width: 100%;
 		padding: 1.5rem;
@@ -925,61 +911,3 @@
 		padding: 1rem 2.5rem;
 	}
 }
-
-/* =====================
-   Responsive fixes — curriculum and contact
-   ===================== */
-@media (max-width: 767px) {
-	.curriculum__container {
-		flex-direction: column;
-		gap: 2.4rem;
-	}
-
-	.curriculum__left,
-	.curriculum__right {
-		flex-basis: 100%;
-		width: 100%;
-		padding: 0;
-	}
-
-	.curriculum__capabilities {
-		grid-template-columns: 1fr;
-	}
-
-	.timelines__timeline {
-		flex-direction: column;
-		gap: 1.2rem;
-		padding-left: 2.2rem;
-	}
-
-	.timeline__header,
-	.timeline__description-container {
-		width: 100%;
-		flex-basis: auto;
-		text-align: left;
-		padding: 0;
-	}
-
-	.timeline__divider {
-		left: 0.7rem;
-		top: 0.5rem;
-		bottom: 0;
-	}
-
-	.curriculum__certificates,
-	.certificates__container {
-		margin-top: 2.4rem;
-		gap: 1.6rem;
-	}
-
-	.certificates__certificate {
-		flex-basis: 100%;
-		flex-direction: column;
-	}
-
-	.certificate__logo {
-		width: 100%;
-		min-width: 0;
-	}
-}
-

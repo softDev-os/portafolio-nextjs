@@ -5,18 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/next";
 import { siteOrigin } from "@/lib/seo";
-import "@/styles/variables.css";
-import "@/styles/reset.css";
-import "@/styles/layout.css";
-import "@/styles/sidebar.css";
-import "@/styles/home.css";
-import "@/styles/portfolio.css";
-import "@/styles/blog.css";
-import "@/styles/contact.css";
-import "@/styles/pages.css";
-import "@/styles/footer.css";
-import "@/styles/responsive.css";
-import "@/styles/dark-mode.css";
+import "@/styles/index.css";
 
 const poppins = Poppins({
 	subsets: ["latin"],
@@ -98,6 +87,10 @@ export default function RootLayout({
 							'!function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}}()',
 					}}
 				/>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
 			</head>
 			<body className={poppins.className}>
 				<a href="#main-content" className="skip-link">
@@ -112,10 +105,6 @@ export default function RootLayout({
 				</div>
 				<Analytics />
 				<ScrollToTop />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-				/>
 			</body>
 		</html>
 	);

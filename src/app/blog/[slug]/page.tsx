@@ -73,7 +73,7 @@ export default async function BlogArticle({
 
 				<div className="blog-article__body">
 					{article.content.map((paragraph, i) => (
-						<p key={i}>{paragraph}</p>
+						<p key={`${paragraph.slice(0, 40)}-${i}`}>{paragraph}</p>
 					))}
 				</div>
 
