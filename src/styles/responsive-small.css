@@ -55,18 +55,6 @@
 		margin-bottom: 1.5rem;
 	}
 
-	.about__title,
-	.services__title,
-	.reviews__title,
-	.clients__title,
-	.prices__title,
-	.curriculum__title,
-	.portfolio__title,
-	.blog__title,
-	.contact__title {
-		font-size: 2rem;
-	}
-
 	.about__title::after,
 	.curriculum__title::after,
 	.services__title::after,
@@ -126,9 +114,6 @@
 	}
 
 	/* Habilidades */
-	.curriculum__subtitle {
-		font-size: 1.6rem;
-	}
 
 	.curriculum__subheader {
 		margin-bottom: 1.2rem;

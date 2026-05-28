@@ -38,7 +38,7 @@
 }
 
 .personal-info__description {
-	font-size: 1.5rem;
+	font-size: var(--font-size-body);
 	line-height: 2.4rem;
 }
 
@@ -100,7 +100,7 @@
 .curriculum__subtitle,
 .form-header__title {
 	display: inline-block;
-	font-size: 2.1rem;
+	font-size: var(--font-size-heading-md);
 	padding-right: 1.2rem;
 	position: relative;
 }
@@ -231,7 +231,7 @@
 
 .method__step-title {
 	margin-bottom: 0.8rem;
-	font-size: 1.65rem;
+	font-size: var(--font-size-heading-sm);
 }
 
 .method__description,
@@ -239,4 +239,3 @@
 	color: var(--color-texts);
 	line-height: 1.65;
 }
-

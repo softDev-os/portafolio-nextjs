@@ -30,7 +30,7 @@
 .blog__title,
 .contact__title {
 	display: inline-block;
-	font-size: 3.2rem;
+	font-size: var(--font-size-heading-lg);
 	position: relative;
 }
 

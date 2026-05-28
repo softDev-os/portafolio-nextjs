@@ -2,49 +2,56 @@
    Variables
    ===================== */
 :root {
-  --principal-color: #f7b935;
-  --secundario-color: #50b1b1;
-  --terciario-color: #0c0d1c;
-  --cuaternario-color: #99b47a;
-  --a-color: #e6ad2e;
+	--principal-color: #f7b935;
+	--secundario-color: #50b1b1;
+	--terciario-color: #0c0d1c;
+	--cuaternario-color: #99b47a;
+	--a-color: #e6ad2e;
 
-  --color-principal: #ffffff;
-  --color-secundary: #04b4e0;
-  --color-background: #f2f7f9;
-  --color-trasparent: transparent;
-  --color-icon: #b5b6b7;
-  --color-titles: #222222;
-  --color-subtitles: #888;
-  --color-texts: #555;
-  --color-border-reviews: #e5e6e7;
-  --color-company-reviews: #a5a6a7;
-  --backgroud-color-certificate: #f5f5f5;
-  --background-color-contact: #fcfcfc;
+	--color-principal: #ffffff;
+	--color-secundary: #04b4e0;
+	--color-background: #f2f7f9;
+	--color-trasparent: transparent;
+	--color-icon: #b5b6b7;
+	--color-titles: #222222;
+	--color-subtitles: #888;
+	--color-texts: #555;
+	--color-border-reviews: #e5e6e7;
+	--color-company-reviews: #a5a6a7;
+	--backgroud-color-certificate: #f5f5f5;
+	--background-color-contact: #fcfcfc;
 
-  /* Sidebar — superficie y sombras */
-  --sidebar-surface: linear-gradient(
-    168deg,
-    #f9c552 0%,
-    #f7b935 45%,
-    #e8a820 100%
-  );
-  --sidebar-shadow-bar:
-    0 10px 36px -14px rgba(12, 13, 28, 0.2),
-    0 4px 12px -6px rgba(12, 13, 28, 0.08);
-  --sidebar-highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  --sidebar-edge: rgba(12, 13, 28, 0.07);
-  --ease-sidebar: cubic-bezier(0.33, 1, 0.68, 1);
-  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+	/* Sidebar — superficie y sombras */
+	--sidebar-surface: linear-gradient(
+		168deg,
+		#f9c552 0%,
+		#f7b935 45%,
+		#e8a820 100%
+	);
+	--sidebar-shadow-bar:
+		0 10px 36px -14px rgba(12, 13, 28, 0.2),
+		0 4px 12px -6px rgba(12, 13, 28, 0.08);
+	--sidebar-highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+	--sidebar-edge: rgba(12, 13, 28, 0.07);
+	--ease-sidebar: cubic-bezier(0.33, 1, 0.68, 1);
+	--ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --profile-text: #ffffff;
-  --profile-muted: rgba(255, 255, 255, 0.88);
+	--profile-text: #ffffff;
+	--profile-muted: rgba(255, 255, 255, 0.88);
 
-  --social-bg: #ffffff;
-  --social-color: #0c0d1c;
-  --social-icon-hover: #ffffff;
-  --social-gh-bg: #333;
-  --social-gh-text: #333;
-  --social-li-bg: #0a66c2;
-  --social-li-text: #0a66c2;
-  --social-ig-text: #d92e7f;
+	--social-bg: #ffffff;
+	--social-color: #0c0d1c;
+	--social-icon-hover: #ffffff;
+	--social-gh-bg: #333;
+	--social-gh-text: #333;
+	--social-li-bg: #0a66c2;
+	--social-li-text: #0a66c2;
+	--social-ig-text: #d92e7f;
+
+	/* Fluid Typography — clamp(min, preferred, max) */
+	--font-size-body: clamp(1.4rem, 1.2rem + 0.5vw, 1.6rem);
+	--font-size-heading-sm: clamp(1.6rem, 1.4rem + 0.5vw, 2rem);
+	--font-size-heading-md: clamp(2rem, 1.6rem + 1vw, 2.8rem);
+	--font-size-heading-lg: clamp(2.4rem, 2rem + 1vw, 3.2rem);
+	--font-size-hero: clamp(3rem, 2.5rem + 1.5vw, 4rem);
 }
