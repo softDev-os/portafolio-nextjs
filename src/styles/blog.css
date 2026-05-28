@@ -53,7 +53,7 @@
 	display: block;
 	transition: all 0.3s ease-in-out;
 	z-index: 1;
-	aspect-ratio: 16 / 7;
+	aspect-ratio: 400 / 185;
 }
 
 .article__top:hover .article__image {
