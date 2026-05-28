@@ -343,3 +343,15 @@
 	opacity: 1;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.portfolio__link,
+	.portfolio__case-card,
+	.portfolio__case-stack li,
+	.gallery__item,
+	.gallery__image,
+	.gallery__category,
+	.gallery__icon {
+		transition: none;
+		animation: none;
+	}
+}

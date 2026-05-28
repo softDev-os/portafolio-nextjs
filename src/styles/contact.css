@@ -211,3 +211,13 @@ a.contact__data {
 	border: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.contact__data {
+		animation: none;
+	}
+
+	.form__input,
+	.form__button {
+		transition: none;
+	}
+}

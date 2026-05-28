@@ -113,6 +113,10 @@
 		flex-basis: 100%;
 	}
 
+	.blog__articles {
+		grid-template-columns: 1fr;
+	}
+
 	.extra__info {
 		flex-basis: 100%;
 	}

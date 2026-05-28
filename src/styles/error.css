@@ -1,0 +1,62 @@
+/* =====================
+   Error page
+   ===================== */
+.error-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 60vh;
+	gap: 1.6rem;
+	padding: 2rem;
+	text-align: center;
+}
+
+.error-title {
+	font-size: 2.4rem;
+	color: var(--color-titles);
+}
+
+.error-message {
+	font-size: 1.6rem;
+	max-width: 48rem;
+}
+
+.error-actions {
+	display: flex;
+	gap: 1.2rem;
+	margin-top: 1rem;
+}
+
+.error-btn-primary {
+	padding: 1rem 2rem;
+	border-radius: 0.8rem;
+	border: none;
+	background: var(--principal-color);
+	color: var(--terciario-color);
+	font-weight: 600;
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+
+.error-btn-primary:hover {
+	opacity: 0.85;
+}
+
+.error-btn-secondary {
+	display: inline-flex;
+	align-items: center;
+	padding: 1rem 2rem;
+	border-radius: 0.8rem;
+	border: 2px solid var(--principal-color);
+	color: var(--color-titles);
+	font-weight: 600;
+	font-size: 1.4rem;
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+}
+
+.error-btn-secondary:hover {
+	opacity: 0.85;
+}

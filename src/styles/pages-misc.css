@@ -275,6 +275,10 @@
 
 .certificate__date {
 	font-size: 1.2rem;
+	color: #444;
+}
+
+[data-theme="dark"] .certificate__date {
 	color: var(--color-texts);
 }
 
@@ -329,4 +333,12 @@
 
 .not-found__link:hover {
 	opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.extra__info,
+	.knowledges__option,
+	.not-found__link {
+		transition: none;
+	}
 }

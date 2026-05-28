@@ -145,3 +145,8 @@
 	margin-bottom: 1.5rem;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.clients__link {
+		transition: none;
+	}
+}

@@ -166,6 +166,11 @@
 	}
 
 	/* Contenido — tablet */
+	.method__steps,
+	.principles__list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	.gallery__item {
 		flex-basis: 50%;
 	}

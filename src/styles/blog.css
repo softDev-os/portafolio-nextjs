@@ -53,6 +53,7 @@
 	display: block;
 	transition: all 0.3s ease-in-out;
 	z-index: 1;
+	aspect-ratio: 16 / 7;
 }
 
 .article__top:hover .article__image {
@@ -192,4 +193,3 @@
 	color: var(--color-texts);
 	margin-bottom: 1.8rem;
 }
-
