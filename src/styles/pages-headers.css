@@ -1,0 +1,61 @@
+/* ===================== Pages — Headers ===================== */
+/* =====================
+   Páginas interiores — override de content__page
+   ===================== */
+.content__about,
+.content__curriculum,
+.content__portfolio,
+.content__blog,
+.content__contact {
+	display: block;
+	width: 100%;
+	min-height: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+/* Cabeceras de sección */
+.about__header,
+.curriculum__header,
+.portfolio__header,
+.blog__header,
+.contact__header {
+	margin-bottom: 2rem;
+	display: inline-block;
+}
+
+.about__title,
+.curriculum__title,
+.portfolio__title,
+.blog__title,
+.contact__title {
+	display: inline-block;
+	font-size: 3.2rem;
+	position: relative;
+}
+
+.about__title::after,
+.curriculum__title::after,
+.blog__title::after,
+.contact__title::after {
+	content: "";
+	position: absolute;
+	top: 2rem;
+	right: -2.5rem;
+	width: 5rem;
+	height: 3rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.5;
+}
+
+.portfolio__title .title__color {
+	position: relative;
+	padding-right: 2.5rem;
+}

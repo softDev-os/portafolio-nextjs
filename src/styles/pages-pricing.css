@@ -1,0 +1,83 @@
+/* ===================== Pages — Pricing ===================== */
+/* Precios */
+.prices__container {
+	margin-bottom: 5rem;
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+}
+
+.prices__box {
+	flex-basis: 50%;
+	border: 2px solid var(--color-border-reviews);
+	padding: 3rem;
+	text-align: center;
+	border-radius: 1.5rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.prices__box:hover {
+	box-shadow: 0 1.8rem 2.4rem -0.5rem rgba(0, 0, 0, 0.15);
+	transform: translateY(-1rem);
+}
+
+.prices__subtitle {
+	margin-bottom: 3rem;
+}
+
+.prices__text {
+	display: inline-block;
+	position: relative;
+}
+
+.prices__box:hover .prices__text::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -0.3rem;
+	height: 0.2rem;
+	background-color: var(--principal-color);
+}
+
+.prices__price {
+	padding-bottom: 1rem;
+}
+
+.prices__number {
+	display: block;
+	font-size: 4.2rem;
+	line-height: 1;
+	color: var(--terciario-color);
+}
+
+.prices__advice {
+	display: block;
+	color: var(--color-subtitles);
+}
+
+.prices__buy {
+	padding: 2.5rem 0 3rem 0;
+}
+
+.prices__btn {
+	display: inline-block;
+	border: 2px solid var(--color-border-reviews);
+	box-shadow: 0 10px 10px -8px var(--color-border-reviews);
+	border-radius: 3rem;
+	padding: 1.2rem 3.1rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.prices__btn:hover {
+	background-color: var(--principal-color);
+	color: var(--color-principal);
+	border-color: var(--principal-color);
+	transform: translateY(-2px);
+}
+
+.prices__reward {
+	font-size: 1.4rem;
+	padding: 0.6rem 0;
+}
+

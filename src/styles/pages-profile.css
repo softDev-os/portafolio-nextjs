@@ -1,0 +1,242 @@
+/* ===================== Pages — Profile & Method ===================== */
+
+.portfolio__title .title__color::after {
+	content: "";
+	position: absolute;
+	top: 2rem;
+	right: 0;
+	width: 5rem;
+	height: 3rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.5;
+}
+
+.title__color,
+.subtitles__color {
+	color: var(--principal-color);
+}
+
+/* =====================
+   Sobre Mí — info personal
+   ===================== */
+.about__personal-info {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-bottom: 5rem;
+}
+
+.personal-info__bio {
+	flex-basis: 56%;
+}
+
+.personal-info__description {
+	font-size: 1.5rem;
+	line-height: 2.4rem;
+}
+
+.personal-info__data {
+	flex-basis: 44%;
+	padding: 0 1.5rem;
+	margin-left: 2rem;
+}
+
+.personal-info__option {
+	margin-bottom: 1rem;
+}
+
+.personal-info__title {
+	margin-right: 0.5rem;
+	color: var(--principal-color);
+	font-weight: 600;
+}
+
+/* =====================
+   Secciones compartidas (about, reviews, clients, prices, extra)
+   ===================== */
+.about__services,
+.about__method,
+.about__principles,
+.about__reviews,
+.about__clients,
+.about__prices,
+.about__extra,
+.about__trust {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+.services__header,
+.method__header,
+.principles__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header,
+.trust__header,
+.curriculum__subheader,
+.contact__form-header {
+	display: inline-block;
+	padding-right: 0;
+	position: relative;
+	margin-bottom: 2.5rem;
+}
+
+.services__title,
+.method__title,
+.principles__title,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title,
+.trust__title,
+.curriculum__subtitle,
+.form-header__title {
+	display: inline-block;
+	font-size: 2.1rem;
+	padding-right: 1.2rem;
+	position: relative;
+}
+
+.curriculum__subtitle:not(.curriculum__subtitle--split),
+.form-header__title {
+	white-space: nowrap;
+	padding-right: 0;
+}
+
+.curriculum__subtitle .title__color,
+.form-header__title .title__color {
+	position: relative;
+	padding-right: 1.2rem;
+}
+
+.curriculum__subtitle .title__color::after,
+.form-header__title .title__color::after {
+	content: "";
+	position: absolute;
+	top: 1.5rem;
+	right: 0;
+	width: 3rem;
+	height: 2rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.6;
+}
+
+.services__title::after,
+.method__title::after,
+.principles__title::after,
+.reviews__title::after,
+.clients__title::after,
+.prices__title::after,
+.extra__title::after,
+.trust__title::after {
+	content: "";
+	position: absolute;
+	top: 1.5rem;
+	right: 0;
+	width: 3rem;
+	height: 2rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.6;
+}
+
+.profile__hero {
+	width: 100%;
+	margin-bottom: 4rem;
+	padding: 2.4rem;
+	border: 0.1rem solid var(--color-border-reviews);
+	border-radius: 1.8rem;
+	background: linear-gradient(
+		145deg,
+		rgba(247, 185, 53, 0.14),
+		var(--color-principal)
+	);
+}
+
+.profile__eyebrow {
+	margin-bottom: 1rem;
+	color: var(--principal-color);
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.profile__headline {
+	max-width: 76rem;
+	font-size: clamp(2.4rem, 5vw, 3.6rem);
+	line-height: 1.15;
+	letter-spacing: -0.04em;
+}
+
+.profile__summary {
+	display: grid;
+	gap: 1.2rem;
+	max-width: 72rem;
+	margin-top: 1.8rem;
+	color: var(--color-texts);
+	font-size: 1.55rem;
+	line-height: 1.75;
+}
+
+.profile__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+	margin-top: 2.4rem;
+}
+
+.method__steps,
+.principles__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.4rem;
+}
+
+.method__step,
+.principles__item {
+	border: 0.1rem solid var(--color-border-reviews);
+	border-radius: 1.4rem;
+	padding: 1.8rem;
+}
+
+.method__index {
+	display: inline-flex;
+	margin-bottom: 1rem;
+	color: var(--principal-color);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.method__step-title {
+	margin-bottom: 0.8rem;
+	font-size: 1.65rem;
+}
+
+.method__description,
+.principles__item {
+	color: var(--color-texts);
+	line-height: 1.65;
+}
+

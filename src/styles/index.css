@@ -6,7 +6,13 @@
 @import "./portfolio.css";
 @import "./blog.css";
 @import "./contact.css";
-@import "./pages.css";
+@import "./pages-headers.css";
+@import "./pages-profile.css";
+@import "./pages-services.css";
+@import "./pages-pricing.css";
+@import "./pages-misc.css";
 @import "./footer.css";
-@import "./responsive.css";
+@import "./responsive-tablet.css";
+@import "./responsive-mobile.css";
+@import "./responsive-small.css";
 @import "./dark-mode.css";
