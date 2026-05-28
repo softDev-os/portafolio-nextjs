@@ -46,6 +46,12 @@ body {
 	outline-offset: 0.3rem;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.skip-link {
+		transition: none;
+	}
+}
+
 h1,
 h2,
 h3,

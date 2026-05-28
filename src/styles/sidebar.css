@@ -250,6 +250,18 @@
 	.sidebar__social-item:focus-within {
 		transform: none;
 	}
+
+	.nav-float__icon {
+		transition: none;
+	}
+
+	.nav-float__overlay {
+		transition: none;
+	}
+
+	.nav-float__link {
+		transition: none;
+	}
 }
 
 /* Copyright */
@@ -375,4 +387,3 @@
 	outline-offset: 0.35rem;
 	box-shadow: 0 0 0 0.6rem rgba(247, 185, 53, 0.18);
 }
-

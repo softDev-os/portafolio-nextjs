@@ -193,3 +193,13 @@
 	color: var(--color-texts);
 	margin-bottom: 1.8rem;
 }
+
+@media (prefers-reduced-motion: reduce) {
+	.article__image {
+		transition: none;
+	}
+
+	.article__top:hover .article__image {
+		transform: none;
+	}
+}

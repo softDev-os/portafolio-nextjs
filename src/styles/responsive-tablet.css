@@ -278,6 +278,11 @@
 		min-width: unset;
 	}
 
+	/* Curriculum subtitle - tablet */
+	.curriculum__subtitle {
+		font-size: 1.9rem;
+	}
+
 	/* Reseñas - tablet */
 	.reviews__review {
 		flex-basis: 100%;

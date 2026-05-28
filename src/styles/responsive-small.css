@@ -113,6 +113,23 @@
 		grid-template-columns: 1fr;
 	}
 
+	/* Curriculum subtitle & page titles - small */
+	.curriculum__subtitle {
+		font-size: 1.6rem;
+	}
+
+	.about__title,
+	.services__title,
+	.reviews__title,
+	.clients__title,
+	.prices__title,
+	.curriculum__title,
+	.portfolio__title,
+	.blog__title,
+	.contact__title {
+		font-size: 2rem;
+	}
+
 	/* Habilidades */
 
 	.curriculum__subheader {

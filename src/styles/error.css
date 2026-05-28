@@ -60,3 +60,10 @@
 .error-btn-secondary:hover {
 	opacity: 0.85;
 }
+
+@media (prefers-reduced-motion: reduce) {
+	.error-btn-primary,
+	.error-btn-secondary {
+		transition: none;
+	}
+}
