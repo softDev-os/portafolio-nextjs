@@ -29,10 +29,10 @@
 	padding: 3rem 3.5rem;
 }
 
-/* Home: sin padding ni scroll interno; el hero ocupa el panel completo */
+/* Home: sin padding; scroll vertical habilitado para hero + prueba + pipeline */
 .layout__main:has(.content__page--home) {
 	padding: 0;
-	overflow: hidden;
+	overflow: hidden auto;
 }
 
 .layout__main:has(.content__page--home) .footer {
@@ -102,4 +102,3 @@
 	color: var(--color-subtitles);
 	margin-bottom: 6rem;
 }
-

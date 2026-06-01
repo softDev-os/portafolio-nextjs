@@ -94,6 +94,50 @@
 	outline-offset: 2px;
 }
 
+/* Dark mode — credential blocks */
+[data-theme="dark"] .curriculum__left,
+[data-theme="dark"] .curriculum__right {
+	background: #181936;
+	border-color: #2a2b42;
+}
+
+[data-theme="dark"] .timelines__timeline {
+	background: #1c1d38;
+	border-color: #2a2b42;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .timelines__timeline:hover {
+	border-color: rgba(247, 185, 53, 0.3);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .capability-card {
+	background: #1c1d38;
+	border-color: #2a2b42;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .capability-card:hover {
+	border-color: rgba(247, 185, 53, 0.3);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .capability-card__tools li {
+	background: rgba(247, 185, 53, 0.1);
+	border-color: rgba(247, 185, 53, 0.15);
+	color: var(--terciario-color);
+}
+
+[data-theme="dark"] .certificates__certificate {
+	background: #181936;
+	border-color: #2a2b42;
+}
+
+[data-theme="dark"] .certificates__certificate:hover {
+	border-color: rgba(247, 185, 53, 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.sidebar__theme-toggle {
 		transition-duration: 0.01ms;

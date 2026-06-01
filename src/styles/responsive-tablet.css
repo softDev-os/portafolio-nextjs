@@ -30,9 +30,16 @@
 		padding-bottom: 9rem;
 	}
 
+	.layout__main:has(.content__page--home) {
+		padding: 0;
+		overflow: visible;
+		height: auto;
+	}
+
 	.content__page--home {
-		min-height: min(62vh, 48rem);
-		padding: 2.5rem 1.5rem 3rem;
+		min-height: auto;
+		overflow: visible;
+		padding: 2.5rem 1.5rem calc(7.5rem + env(safe-area-inset-bottom, 0px));
 	}
 
 	/* Sidebar → header compacto */
@@ -242,17 +249,13 @@
 
 	/* Curriculum - tablet */
 	.curriculum__container {
-		flex-direction: column;
-		gap: 2rem;
+		grid-template-columns: 1fr;
+		gap: 1.6rem;
 	}
 
 	.curriculum__left,
 	.curriculum__right {
-		flex-basis: 100%;
-	}
-
-	.curriculum__right {
-		padding: 0;
+		padding: 2rem;
 	}
 
 	.timeline__header {
@@ -265,17 +268,16 @@
 	}
 
 	.certificates__container {
-		gap: 2rem;
+		gap: 1.4rem;
 	}
 
 	.certificates__certificate {
-		flex-basis: calc(50% - 1rem);
-		flex-direction: column;
+		grid-template-columns: 1fr;
 	}
 
 	.certificate__logo {
 		width: 100%;
-		min-width: unset;
+		padding: 1.6rem;
 	}
 
 	/* Curriculum subtitle - tablet */

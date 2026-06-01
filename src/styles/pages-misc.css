@@ -46,30 +46,77 @@
 /* =====================
    Curriculum
    ===================== */
+/* --- Curriculum grid: two deliberate panels --- */
 .curriculum__container {
 	width: 100%;
-	display: flex;
-	flex-direction: row;
-	gap: 1.5rem;
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(28rem, 0.92fr);
+	gap: 2rem;
+	align-items: start;
 }
 
 .curriculum__left {
-	flex-basis: 58%;
+	min-width: 0;
+	padding: 2.4rem;
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.6rem;
+	background: var(--color-principal);
 }
 
+.curriculum__right {
+	min-width: 0;
+	padding: 2.4rem;
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.6rem;
+	background: var(--color-principal);
+}
+
+.content__page.content__curriculum .curriculum__subheader {
+	max-width: 100%;
+}
+
+.content__page.content__curriculum .curriculum__subtitle {
+	white-space: normal;
+	text-wrap: balance;
+}
+
+/* --- Timelines --- */
 .curriculum__timelines {
-	margin-bottom: 5rem;
+	margin-bottom: 3.2rem;
+}
+
+.curriculum__timelines:last-child {
+	margin-bottom: 0;
 }
 
 .timelines__timeline {
 	position: relative;
 	width: 100%;
-	margin-bottom: 1.5rem;
+	min-width: 0;
+	margin-bottom: 1.6rem;
 	display: flex;
 	flex-direction: row;
+	padding: 2rem;
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.4rem;
+	background: var(--background-color-contact);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.timelines__timeline:hover {
+	border-color: rgba(247, 185, 53, 0.35);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.timelines__timeline:last-child {
+	margin-bottom: 0;
 }
 
 .timeline__header {
+	min-width: 0;
 	flex-basis: 30%;
 	text-align: right;
 	padding-right: 2.5rem;
@@ -79,6 +126,7 @@
 	margin: 0.3rem 0;
 	line-height: 1.9rem;
 	font-size: 1.4rem;
+	font-weight: 600;
 }
 
 .timeline__company {
@@ -93,26 +141,30 @@
 }
 
 .timeline__description-container {
+	min-width: 0;
 	width: 70%;
 	padding: 0 1.5rem 0 2.5rem;
+	overflow-wrap: anywhere;
 }
 
 .timeline__title {
 	font-size: 1.6rem;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.4rem;
+	font-weight: 600;
 }
 
 .timeline__description {
 	font-size: 1.4rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0;
+	line-height: 1.6;
 }
 
 .timeline__divider {
 	position: absolute;
-	top: 0;
+	top: 2rem;
 	left: 30%;
-	bottom: -1.8rem;
-	width: 0.1rem;
+	bottom: 2rem;
+	width: 0.12rem;
 	background-color: var(--color-border-reviews);
 }
 
@@ -138,28 +190,34 @@
 	border-radius: 10rem;
 }
 
-.curriculum__right {
-	flex-basis: 41%;
-	padding: 0 1.5rem;
-}
-
+/* --- Capability cards --- */
 .curriculum__capabilities {
 	width: 100%;
-	margin-bottom: 3rem;
 	display: grid;
-	gap: 1.4rem;
+	gap: 1.6rem;
 }
 
 .capability-card {
-	padding: 1.6rem;
-	border: 0.1rem solid var(--color-border-reviews);
-	border-radius: 1.2rem;
+	min-width: 0;
+	padding: 2rem;
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.4rem;
 	background: var(--background-color-contact);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.capability-card:hover {
+	border-color: rgba(247, 185, 53, 0.35);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .capability-card__title {
-	margin-bottom: 1rem;
+	margin-bottom: 1.2rem;
 	font-size: 1.6rem;
+	font-weight: 600;
 }
 
 .capability-card__evidence {
@@ -167,11 +225,12 @@
 	gap: 0.8rem;
 	color: var(--color-texts);
 	line-height: 1.6;
+	overflow-wrap: anywhere;
 }
 
 .capability-card__evidence li {
 	position: relative;
-	padding-left: 1.4rem;
+	padding-left: 1.6rem;
 }
 
 .capability-card__evidence li::before {
@@ -189,16 +248,21 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.6rem;
-	margin-top: 1.2rem;
+	margin-top: 1.4rem;
+	border-top: 1px solid var(--color-border-reviews);
+	padding-top: 1.2rem;
 }
 
 .capability-card__tools li {
-	padding: 0.35rem 0.8rem;
+	max-width: 100%;
+	padding: 0.35rem 0.9rem;
 	border-radius: 999px;
-	background: rgba(247, 185, 53, 0.16);
+	background: rgba(247, 185, 53, 0.14);
 	color: var(--terciario-color);
 	font-size: 1.15rem;
 	font-weight: 500;
+	border: 1px solid rgba(247, 185, 53, 0.18);
+	overflow-wrap: anywhere;
 }
 
 .knowledges__list {
@@ -221,31 +285,35 @@
 	opacity: 0.85;
 }
 
+/* --- Certificates: grid layout --- */
 .curriculum__certificates {
-	margin-top: 3rem;
+	margin-top: 2.4rem;
 }
 
 .certificates__container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.6rem;
 }
 
 .certificates__certificate {
-	flex-basis: calc(50% - 1.5rem);
-	border: 0.2rem solid var(--color-border-reviews);
-	border-radius: 0.8rem;
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.2rem;
 	overflow: hidden;
+	background: var(--color-principal);
+	transition: border-color 0.2s ease;
+}
+
+.certificates__certificate:hover {
+	border-color: rgba(247, 185, 53, 0.3);
 }
 
 .certificate__logo {
-	width: 15rem;
-	min-width: 15rem;
+	width: 12rem;
 	background-color: var(--backgroud-color-certificate);
-	padding: 2.5rem;
+	padding: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -258,23 +326,30 @@
 }
 
 .certificate__content {
-	padding: 2rem 2.5rem;
+	min-width: 0;
+	padding: 1.8rem 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow-wrap: anywhere;
 }
 
 .certificate__title {
-	font-size: 1.6rem;
-	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+	margin-bottom: 0.4rem;
+	font-weight: 600;
+	overflow-wrap: anywhere;
 }
 
 .certificate__id {
 	display: block;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	color: var(--color-subtitles);
 	margin-bottom: 0.3rem;
 }
 
 .certificate__date {
-	font-size: 1.2rem;
+	font-size: 1.15rem;
 	color: #444;
 }
 
@@ -338,7 +413,10 @@
 @media (prefers-reduced-motion: reduce) {
 	.extra__info,
 	.knowledges__option,
-	.not-found__link {
+	.not-found__link,
+	.timelines__timeline,
+	.capability-card,
+	.certificates__certificate {
 		transition: none;
 	}
 }
