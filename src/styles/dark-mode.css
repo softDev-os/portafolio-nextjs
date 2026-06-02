@@ -59,41 +59,6 @@
 	background: rgba(247, 185, 53, 0.16);
 }
 
-/* Theme toggle button */
-.sidebar__theme-toggle {
-	position: absolute;
-	top: 1.8rem;
-	right: 1.8rem;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 4.4rem;
-	height: 4.4rem;
-	min-width: 4.4rem;
-	min-height: 4.4rem;
-	border: 2px solid rgba(255, 255, 255, 0.35);
-	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.1);
-	color: #fff;
-	cursor: pointer;
-	transition:
-		background 0.25s ease,
-		transform 0.25s ease,
-		border-color 0.25s ease;
-	z-index: 15;
-}
-
-.sidebar__theme-toggle:hover {
-	background: rgba(255, 255, 255, 0.22);
-	border-color: rgba(255, 255, 255, 0.6);
-	transform: scale(1.08);
-}
-
-.sidebar__theme-toggle:focus-visible {
-	outline: 2px solid #fff;
-	outline-offset: 2px;
-}
-
 /* Dark mode — credential blocks */
 [data-theme="dark"] .curriculum__left,
 [data-theme="dark"] .curriculum__right {
@@ -136,23 +101,6 @@
 
 [data-theme="dark"] .certificates__certificate:hover {
 	border-color: rgba(247, 185, 53, 0.3);
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.sidebar__theme-toggle {
-		transition-duration: 0.01ms;
-	}
-}
-
-@media (max-width: 767px) {
-	.sidebar__theme-toggle {
-		top: calc(0.55rem + env(safe-area-inset-top, 0px));
-		right: 1.6rem;
-		width: 3.6rem;
-		height: 3.6rem;
-		min-width: 3.6rem;
-		min-height: 3.6rem;
-	}
 }
 
 @media (max-width: 480px) {

@@ -272,6 +272,52 @@
 	color: rgba(255, 255, 255, 0.7);
 }
 
+/* ThemeToggle — structural (shared across themes) */
+.sidebar__theme-toggle {
+	position: absolute;
+	top: 1.8rem;
+	right: 1.8rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 4.4rem;
+	height: 4.4rem;
+	min-width: 4.4rem;
+	min-height: 4.4rem;
+	border: 2px solid rgba(255, 255, 255, 0.35);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	cursor: pointer;
+	transition:
+		background 0.25s ease,
+		transform 0.25s ease,
+		border-color 0.25s ease;
+	z-index: 15;
+}
+
+.sidebar__theme-toggle:hover {
+	background: rgba(255, 255, 255, 0.22);
+	border-color: rgba(255, 255, 255, 0.6);
+	transform: scale(1.08);
+}
+
+.sidebar__theme-toggle:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+	.sidebar__theme-toggle {
+		top: calc(0.55rem + var(--safe-top));
+		right: 1.6rem;
+		width: 3.6rem;
+		height: 3.6rem;
+		min-width: 3.6rem;
+		min-height: 3.6rem;
+	}
+}
+
 /* =====================
    Nav flotante derecha
    ===================== */

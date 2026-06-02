@@ -29,12 +29,13 @@
 	padding: 3rem 3.5rem;
 }
 
-/* Home: sin padding; scroll vertical habilitado para hero + prueba + pipeline */
+/* Home shell — desktop scroll container ownership */
 .layout__main:has(.content__page--home) {
 	padding: 0;
 	overflow: hidden auto;
 }
 
+/* Home shell — hide footer in scroll container */
 .layout__main:has(.content__page--home) .footer {
 	display: none;
 }
