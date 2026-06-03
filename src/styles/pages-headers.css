@@ -31,28 +31,6 @@
 .contact__title {
 	display: inline-block;
 	font-size: var(--font-size-heading-lg);
-	position: relative;
-}
-
-.about__title::after,
-.curriculum__title::after,
-.blog__title::after,
-.contact__title::after {
-	content: "";
-	position: absolute;
-	top: 2rem;
-	right: -2.5rem;
-	width: 5rem;
-	height: 3rem;
-	background-image: repeating-radial-gradient(
-		circle,
-		var(--principal-color),
-		var(--principal-color) 1px,
-		transparent 0,
-		transparent 100%
-	);
-	background-size: 6px 6px;
-	opacity: 0.5;
 }
 
 .portfolio__title .title__color {

@@ -1,0 +1,131 @@
+/* ===================== Visual Primitives ===================== */
+
+/* Section title dot decoration */
+.title-dot,
+.about__title,
+.curriculum__title,
+.blog__title,
+.contact__title {
+	position: relative;
+	padding-right: 2.5rem;
+}
+
+.title-dot::after,
+.about__title::after,
+.curriculum__title::after,
+.blog__title::after,
+.contact__title::after {
+	content: "";
+	position: absolute;
+	top: 2rem;
+	right: 0;
+	width: 5rem;
+	height: 3rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.5;
+}
+
+.title-dot--sm,
+.services__title,
+.method__title,
+.principles__title,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title,
+.trust__title {
+	position: relative;
+	padding-right: 1.2rem;
+}
+
+.title-dot--sm::after,
+.services__title::after,
+.method__title::after,
+.principles__title::after,
+.reviews__title::after,
+.clients__title::after,
+.prices__title::after,
+.extra__title::after,
+.trust__title::after {
+	content: "";
+	position: absolute;
+	top: 1.5rem;
+	right: 0;
+	width: 3rem;
+	height: 2rem;
+	background-image: repeating-radial-gradient(
+		circle,
+		var(--principal-color),
+		var(--principal-color) 1px,
+		transparent 0,
+		transparent 100%
+	);
+	background-size: 6px 6px;
+	opacity: 0.6;
+}
+
+/* Card / panel surface */
+.card-surface,
+.curriculum__left,
+.curriculum__right,
+.timelines__timeline,
+.capability-card,
+.certificates__certificate {
+	border: 1px solid var(--color-border-reviews);
+	border-radius: 1.4rem;
+	background: var(--color-principal);
+}
+
+.card-surface--alt,
+.timelines__timeline,
+.capability-card {
+	background: var(--background-color-contact);
+}
+
+.card-surface--interactive {
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.card-surface--interactive:hover {
+	border-color: rgba(247, 185, 53, 0.35);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card-surface--interactive:focus-visible,
+.timelines__timeline:focus-visible,
+.capability-card:focus-visible {
+	outline: 2px solid var(--principal-color);
+	outline-offset: 2px;
+}
+
+/* Badge / tag / pill */
+.badge,
+.portfolio__metadata-badge,
+.blog-article__category,
+.portfolio__case-index,
+.capability-card__tools li {
+	display: inline-block;
+	padding: 0.3rem 0.8rem;
+	border-radius: 999px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--terciario-color);
+	background: rgba(247, 185, 53, 0.18);
+}
+
+.badge--index,
+.portfolio__case-index,
+.capability-card__tools li {
+	background: rgba(247, 185, 53, 0.12);
+}

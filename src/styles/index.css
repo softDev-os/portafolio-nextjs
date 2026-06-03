@@ -1,5 +1,6 @@
 @import "./variables.css";
 @import "./reset.css";
+@import "./primitives.css";
 @import "./layout.css";
 @import "./sidebar.css";
 @import "./home.css";

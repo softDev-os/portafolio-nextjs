@@ -136,31 +136,6 @@
 	opacity: 0.6;
 }
 
-.services__title::after,
-.method__title::after,
-.principles__title::after,
-.reviews__title::after,
-.clients__title::after,
-.prices__title::after,
-.extra__title::after,
-.trust__title::after {
-	content: "";
-	position: absolute;
-	top: 1.5rem;
-	right: 0;
-	width: 3rem;
-	height: 2rem;
-	background-image: repeating-radial-gradient(
-		circle,
-		var(--principal-color),
-		var(--principal-color) 1px,
-		transparent 0,
-		transparent 100%
-	);
-	background-size: 6px 6px;
-	opacity: 0.6;
-}
-
 .profile__hero {
 	width: 100%;
 	margin-bottom: 4rem;

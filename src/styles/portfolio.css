@@ -189,21 +189,10 @@
 .portfolio__case-index {
 	display: inline-flex;
 	margin-bottom: 0.8rem;
-	padding: 0.35rem 0.9rem;
-	border-radius: 999px;
-	background: rgba(247, 185, 53, 0.12);
 }
 
 .portfolio__metadata-badge {
 	display: inline-flex;
-	padding: 0.35rem 0.9rem;
-	border-radius: 999px;
-	font-size: 1.1rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-	color: var(--terciario-color);
-	background: rgba(247, 185, 53, 0.18);
 	margin-bottom: 0.4rem;
 }
 

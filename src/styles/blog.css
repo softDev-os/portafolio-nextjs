@@ -144,16 +144,7 @@
 }
 
 .blog-article__category {
-	display: inline-block;
-	padding: 0.3rem 0.8rem;
 	margin-bottom: 0.8rem;
-	border-radius: 999px;
-	font-size: 1.1rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-	color: var(--terciario-color);
-	background: rgba(247, 185, 53, 0.18);
 }
 
 .blog-article__title {
