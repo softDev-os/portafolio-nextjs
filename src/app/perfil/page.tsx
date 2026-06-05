@@ -103,13 +103,13 @@ export default function SobreMi() {
 				>
 					<Link
 						href="/casos-reales"
-						className="home-hero__cta-link home-hero__cta-link--primary"
+						className="home-hero__cta-link home-hero__cta-link--primary btn btn--primary"
 					>
 						Ver casos reales primero
 					</Link>
 					<Link
 						href="/contacto"
-						className="home-hero__cta-link home-hero__cta-link--secondary"
+						className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
 					>
 						Conversar con contexto
 					</Link>

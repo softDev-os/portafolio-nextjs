@@ -85,7 +85,7 @@ export default function Contacto() {
 						<div className="contact__actions">
 							<a
 								href={primarySalesContact.url}
-								className="home-hero__cta-link home-hero__cta-link--primary"
+								className="home-hero__cta-link home-hero__cta-link--primary btn btn--primary"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -93,7 +93,7 @@ export default function Contacto() {
 							</a>
 							<Link
 								href="/casos-reales"
-								className="home-hero__cta-link home-hero__cta-link--secondary"
+								className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
 							>
 								Revisar casos antes
 							</Link>

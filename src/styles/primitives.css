@@ -129,3 +129,54 @@
 .capability-card__tools li {
 	background: rgba(247, 185, 53, 0.12);
 }
+
+/* --- Button primitives --- */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 1rem 2.4rem;
+	border-radius: 3.2rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease,
+		color 0.25s ease,
+		border-color 0.25s ease,
+		opacity 0.2s ease;
+}
+
+.btn--primary {
+	background: var(--principal-color);
+	color: #0c0d1c;
+	border: 0;
+}
+
+.btn--outline {
+	background: transparent;
+	border: 2px solid var(--terciario-color);
+	color: var(--terciario-color);
+}
+
+/* --- Focus-visible keyboard ring --- */
+.btn:focus-visible,
+.nav-float__link:focus-visible,
+.home-hero__cta-link:focus-visible,
+.contact__data:focus-visible,
+.footer__link:focus-visible,
+.footer__social-link:focus-visible,
+.form__button:focus-visible,
+.error-btn-primary:focus-visible,
+.error-btn-secondary:focus-visible,
+.not-found__link:focus-visible,
+.portfolio__link:focus-visible,
+.blog-article__back:focus-visible,
+.article__link:focus-visible {
+	outline: 0.3rem solid var(--principal-color);
+	outline-offset: 0.35rem;
+	box-shadow: 0 0 0 0.6rem rgba(247, 185, 53, 0.18);
+}

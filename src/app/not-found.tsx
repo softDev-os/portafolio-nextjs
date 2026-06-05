@@ -16,7 +16,7 @@ export default function NotFound() {
 				La ruta que buscas no existe o fue movida. Volvé al inicio y seguí desde
 				ahí.
 			</p>
-			<Link href="/" className="not-found__link">
+			<Link href="/" className="not-found__link btn btn--primary">
 				Ir al inicio
 			</Link>
 		</section>

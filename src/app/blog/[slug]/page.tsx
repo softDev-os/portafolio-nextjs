@@ -88,13 +88,13 @@ export default async function BlogArticle({
 					<div className="home-hero__cta">
 						<Link
 							href="/casos-reales"
-							className="home-hero__cta-link home-hero__cta-link--primary"
+							className="home-hero__cta-link home-hero__cta-link--primary btn btn--primary"
 						>
 							Ver casos reales
 						</Link>
 						<Link
 							href="/contacto"
-							className="home-hero__cta-link home-hero__cta-link--secondary"
+							className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
 						>
 							Consultar por WhatsApp
 						</Link>

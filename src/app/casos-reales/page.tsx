@@ -97,7 +97,7 @@ export default function Portafolio() {
         </p>
         <Link
           href="/contacto"
-          className="home-hero__cta-link home-hero__cta-link--secondary"
+          className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
         >
           Contactar con contexto
         </Link>

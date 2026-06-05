@@ -16,10 +16,10 @@ export default function Error({
 				Ocurrió un error inesperado. Podés intentar de nuevo o volver al inicio.
 			</p>
 			<div className="error-actions">
-				<button type="button" onClick={reset} className="error-btn-primary">
+				<button type="button" onClick={reset} className="error-btn-primary btn btn--primary">
 					Intentar de nuevo
 				</button>
-				<Link href="/" className="error-btn-secondary">
+				<Link href="/" className="error-btn-secondary btn btn--outline">
 					Volver al inicio
 				</Link>
 			</div>
