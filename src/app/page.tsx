@@ -110,26 +110,40 @@ export default function Home() {
 				<div className="home-proof__grid">
 					{flagshipCaseStudies.map((study) => (
 						<article key={study.id} className="case-card">
-							<div className="case-card__meta">
+							<header className="case-card__header">
 								{study.metadataLabel && (
 									<span className="case-card__badge">
 										{study.metadataLabel}
 									</span>
 								)}
 								<h3 className="case-card__title">{study.title}</h3>
+							</header>
+
+							<div className="case-card__section">
+								<span className="case-card__section-label">Problema</span>
+								<p className="case-card__problem">{study.problem}</p>
 							</div>
-							<p className="case-card__problem">{study.problem}</p>
+
 							{study.outcomes.length > 0 && (
-								<p className="case-card__outcome">{study.outcomes[0]}</p>
+								<div className="case-card__section case-card__section--outcome">
+									<span className="case-card__section-label">
+										Resultado observado
+									</span>
+									<p className="case-card__outcome">{study.outcomes[0]}</p>
+								</div>
 							)}
-							<ul
-								className="case-card__stack"
-								aria-label="Tecnologías utilizadas"
-							>
-								{study.stack.slice(0, 3).map((item) => (
-									<li key={item}>{item}</li>
-								))}
-							</ul>
+
+							<div className="case-card__section case-card__section--stack">
+								<span className="case-card__section-label">Stack</span>
+								<ul
+									className="case-card__stack"
+									aria-label="Tecnologías utilizadas"
+								>
+									{study.stack.slice(0, 3).map((item) => (
+										<li key={item}>{item}</li>
+									))}
+								</ul>
+							</div>
 						</article>
 					))}
 				</div>
