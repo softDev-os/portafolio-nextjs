@@ -20,7 +20,7 @@ export default function Home() {
 			<div className="home-hero">
 				<header className="home-hero__left">
 					<p className="home-hero__eyebrow">
-						Arquitectura de software + IA aplicada
+						Tecnología práctica + IA aplicada
 					</p>
 
 					<h1 className="page__name home-hero__name">
@@ -28,15 +28,15 @@ export default function Home() {
 					</h1>
 
 					<p className="page__job home-hero__role">
-						Arquitecto de software / Ingeniero IA
+						Creador tech / Software / IA aplicada
 					</p>
 
 					<div className="home-hero__divider" aria-hidden="true" />
 
 					<p className="home-hero__tagline">
-						Diseño sistemas operativos con IA para ventas, soporte y
-						conocimiento interno — automatizados, auditables y con control
-						humano.
+						Ayudo a personas y negocios a comprar, reparar, automatizar y
+						aprovechar mejor su tecnología — desde PCs y laptops hasta software
+						y sistemas con IA.
 					</p>
 
 					<div className="home-hero__cta">
@@ -50,7 +50,7 @@ export default function Home() {
 							href="/contacto"
 							className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
 						>
-							Diseñar un workflow conmigo
+							Hablemos de tu solución
 						</Link>
 					</div>
 				</header>
