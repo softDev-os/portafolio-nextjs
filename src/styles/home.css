@@ -371,6 +371,7 @@
 	position: relative;
 	z-index: 1;
 	width: 100%;
+	padding-top: 0.25rem;
 }
 
 .home-proof__heading {
@@ -379,7 +380,7 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: var(--principal-color);
-	margin-bottom: 1.6rem;
+	margin-bottom: 1.8rem;
 	opacity: 0;
 	animation: homeHeroIn 0.85s var(--ease-sidebar) 0.45s forwards;
 }
@@ -387,7 +388,7 @@
 .home-proof__grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 1.4rem;
+	gap: 1.5rem;
 }
 
 .case-card {
@@ -513,6 +514,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.6rem;
+	margin-top: 0.25rem;
 	row-gap: 0.75rem;
 	padding: 1.2rem 1.5rem;
 	background: linear-gradient(
@@ -777,12 +779,17 @@
 		order: -1;
 	}
 
+	.home-proof {
+		padding-top: 0;
+	}
+
 	.home-proof__grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.home-pipeline {
 		gap: 0.5rem;
+		margin-top: 0;
 		padding: 1rem 1.2rem;
 	}
 }
@@ -828,6 +835,7 @@
 
 	.home-proof__grid {
 		grid-template-columns: 1fr;
+		gap: 1.1rem;
 	}
 
 	.case-card {
@@ -862,6 +870,7 @@
 
 	.home-proof__heading {
 		font-size: 1.05rem;
+		margin-bottom: 1.2rem;
 	}
 
 	.control-room {
