@@ -3,9 +3,9 @@ import Link from "next/link";
 import { getFlagshipCaseStudies } from "@/data/projects";
 
 export const metadata: Metadata = {
-	title: "Juan Fontalvo — Arquitectura de software e IA aplicada",
+	title: "Juan Fontalvo — Tecnología práctica, software e IA aplicada",
 	description:
-		"Consultoría en arquitectura de software y automatización con IA basada en casos reales.",
+		"Soluciones tech para personas y negocios: PCs, laptops, reparaciones, software, automatización e IA aplicada con casos reales.",
 	alternates: {
 		canonical: "/",
 	},

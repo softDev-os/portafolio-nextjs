@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Juan Fontalvo — Arquitecto de software / Ingeniero IA";
+export const alt = "Juan Fontalvo — Tecnología práctica + IA aplicada";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -47,7 +47,7 @@ export default async function Image() {
 						margin: 0,
 					}}
 				>
-					Architect / AI Engineer
+					Creador tech / Software / IA aplicada
 				</p>
 				<h1
 					style={{
@@ -69,8 +69,7 @@ export default async function Image() {
 						maxWidth: "80%",
 					}}
 				>
-					Automatización con IA · Workflows operativos · Prueba real antes del
-					contacto
+					PCs · Laptops · Software · Automatización · Soluciones reales
 				</p>
 			</div>
 		</div>,

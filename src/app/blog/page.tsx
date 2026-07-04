@@ -6,7 +6,7 @@ import { getArticles } from "@/data/blog";
 export const metadata: Metadata = {
 	title: "Blog",
 	description:
-		"Notas sobre automatización con IA, arquitectura de software y workflows operativos.",
+		"Notas sobre tecnología práctica, PCs, laptops, IA, software, automatización y soluciones reales.",
 	alternates: {
 		canonical: "/blog",
 	},
@@ -20,8 +20,8 @@ export default function Blog() {
 			<header className="blog__header">
 				<h1 className="blog__title">Blog</h1>
 				<p className="blog__intro">
-					Notas sobre automatización con IA, workflows operativos y patrones de
-					arquitectura que aplico en proyectos reales.
+					Notas sobre tecnología práctica, PCs, laptops, IA, software y
+					automatización aplicadas a problemas reales.
 				</p>
 			</header>
 
@@ -44,7 +44,17 @@ export default function Blog() {
 									/>
 								</div>
 								<div className="article__logo">
-									<svg className="article__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor" /></svg>
+									<svg
+										className="article__icon"
+										viewBox="0 0 24 24"
+										aria-hidden="true"
+										focusable="false"
+									>
+										<path
+											d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+											fill="currentColor"
+										/>
+									</svg>
 								</div>
 							</Link>
 						</div>
@@ -68,8 +78,8 @@ export default function Blog() {
 				aria-label="Siguiente paso después de leer el blog"
 			>
 				<p>
-					Si una nota conecta con un problema de tu operación, revisá los casos
-					o abrí una consulta calificada por WhatsApp.
+					Si una nota conecta con un problema o decisión tech, revisá los casos
+					o abrí una consulta por WhatsApp.
 				</p>
 				<div className="home-hero__cta">
 					<Link

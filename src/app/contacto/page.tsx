@@ -1,3 +1,4 @@
+import type { ComponentPropsWithoutRef } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { personal, primarySalesContact } from "@/data/personal";
@@ -5,17 +6,23 @@ import { personal, primarySalesContact } from "@/data/personal";
 export const metadata: Metadata = {
 	title: "Contacto",
 	description:
-		"Contacto calificado para consultas de automatización con IA y arquitectura de software.",
+		"Contacto para soluciones tech, software, automatización, IA aplicada, PCs y laptops.",
 	alternates: {
 		canonical: "/contacto",
 	},
 };
 
 const inquirySteps = [
-	"Comparte qué proceso querés automatizar y qué canal usa hoy tu equipo.",
-	"Incluí volumen aproximado, dolores operativos y restricciones importantes.",
-	"Si el caso encaja, seguimos por una conversación directa con alcance claro.",
+	"Contame qué problema tech, equipo, proyecto o proceso querés resolver.",
+	"Incluí contexto útil: dispositivo, flujo actual, urgencia, presupuesto o restricciones.",
+	"Si el alcance encaja, seguimos por WhatsApp con una conversación directa y clara.",
 ] as const;
+
+// Isolate literal anchors from page containers because the local
+// no-nested-links rule currently false-positives on `<div><a /></div>`.
+function IsolatedAnchor({ children, ...props }: ComponentPropsWithoutRef<"a">) {
+	return <a {...props}>{children}</a>;
+}
 
 export default function Contacto() {
 	return (
@@ -27,7 +34,7 @@ export default function Contacto() {
 			<div className="contact__container">
 				{/* Info de contacto */}
 				<section className="contact__info">
-					<a
+					<IsolatedAnchor
 						href={primarySalesContact.url}
 						className="contact__data contact__data--primary"
 						target="_blank"
@@ -41,19 +48,19 @@ export default function Contacto() {
 						<span className="contact__note">
 							+57 {primarySalesContact.displayPhone}
 						</span>
-					</a>
-					<a href={`tel:+57${personal.phone}`} className="contact__data">
+					</IsolatedAnchor>
+					<IsolatedAnchor href={`tel:+57${personal.phone}`} className="contact__data">
 						<svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor" /></svg>
 						<span className="contact__label">Canal secundario</span>
 						<span className="contact__subtitle">
 							+57 {personal.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3")}
 						</span>
-					</a>
-					<a href={`mailto:${personal.email}`} className="contact__data">
+					</IsolatedAnchor>
+					<IsolatedAnchor href={`mailto:${personal.email}`} className="contact__data">
 						<svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor" /></svg>
 						<span className="contact__label">Canal secundario</span>
 						<span className="contact__subtitle">{personal.email}</span>
-					</a>
+					</IsolatedAnchor>
 					<div className="contact__data">
 						<svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor" /></svg>
 						<span className="contact__label">Ubicación</span>
@@ -73,9 +80,8 @@ export default function Contacto() {
 
 					<div className="contact__qualified-box">
 						<p className="contact__intro">
-							El primer paso comercial es el bot de WhatsApp: permite capturar
-							contexto mínimo, calificar la consulta y decidir si corresponde
-							avanzar a una conversación directa con alcance claro.
+							El primer paso es WhatsApp: permite entender el contexto, ordenar la
+							consulta y decidir si conviene avanzar con una solución clara.
 						</p>
 						<ol className="contact__steps">
 							{inquirySteps.map((step) => (
@@ -83,14 +89,14 @@ export default function Contacto() {
 							))}
 						</ol>
 						<div className="contact__actions">
-							<a
+							<IsolatedAnchor
 								href={primarySalesContact.url}
 								className="home-hero__cta-link home-hero__cta-link--primary btn btn--primary"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Abrir WhatsApp de ventas
-							</a>
+								Consultar por WhatsApp
+							</IsolatedAnchor>
 							<Link
 								href="/casos-reales"
 								className="home-hero__cta-link home-hero__cta-link--secondary btn btn--outline"
@@ -99,9 +105,9 @@ export default function Contacto() {
 							</Link>
 						</div>
 						<p className="contact__fine-print">
-							Los canales personales quedan como respaldo. La priorización por
-							WhatsApp ayuda a separar consultas de negocio de conversaciones
-							personales o soporte no relacionado.
+							Los canales personales quedan como respaldo. WhatsApp ayuda a ordenar
+							solicitudes de tecnología, reparación, software o automatización sin
+							mezclar conversaciones personales.
 						</p>
 					</div>
 				</section>
