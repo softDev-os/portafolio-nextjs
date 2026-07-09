@@ -46,3 +46,6 @@ next-env.d.ts
 .env*.local
 # Local Pi runtime state
 .atl/
+
+# Private CV drafts and generated PDFs (never commit personal data)
+.private-cv/
